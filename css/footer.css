@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/* 한글폰트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+/* 영문폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Ponzu';
+    src: url(../font/ponzu-extralight.otf) format('opentype');
+}
+
+
+/* reset */
+* {margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin: 0; padding: 0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline: none;}
+a:focus {outline: none}
+img {vertical-align: middle;}
+html {font-size: 10px;}
+
+
+
+/* 폰트 */
+footer .en {font-family: 'Montserrat', sans-serif; font-weight: 300;}
+footer .en2 {font-family: 'Ponzu';}
+footer .bold {font-weight: bold;}
+
+
+
+/* layout */
+footer .title {font-family: 'Montserrat', sans-serif; font-size: 18rem; color: #c1ff3e; font-weight: 300;}
+
+
+/* footer */
+footer {height: 100vh; overflow: hidden; position: relative; color: #fff ;}
+footer .footerVideo {position: absolute; z-index: -1;}
+
+footer .textBox {position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);}
+footer .textBox .title { color: #fff; line-height: 1; text-align: center; font-weight: 200; margin-bottom: 5rem;}
+footer .textBox span {display: block;}
+footer .textBox .mail {font-size: 10rem; color: #c1ff3e; border: #c1ff3e solid 1px; border-radius: 500px; height: 38%; width: 120%; position: absolute; left: 50%; transform: translateX(-50%); overflow: hidden; transition: all 0.5s; display: block;}
+footer .textBox .mail::before, footer .textBox .mail::after {position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%; color: #c1ff3e; content: '010. 2434. 8190';  transition: all 0.5s; width: 100%; text-align: center;}
+footer .textBox .mail::before {transform: translate(-50%, 100%); background: #c1ff3e; color: #101010; text-align: center; border-radius: 50% 50% 0 0 ;width: 100%; height: 100%; transition: all 0.6s; font-weight: 400; font-size: 11rem;}
+
+/* hover */
+footer .textBox .mail:hover {width: 135%; height: 40%; transition: all 0.5s; }
+footer .textBox .mail:hover::before {transform: translate(-50%, -50%) scale(1.05); transition: all 0.5s; border-radius: 0 0 0 0;}
+footer .textBox .mail:hover::after {transform: translate(-50%, -150%) scale(0.95); transition: all 0.6s;}
+
+
+footer .textBox .mail a {display: block; width: 100%; height: 100%; border-radius: 500px;}
+
+footer .footerBottom {position: absolute; left: 0; bottom: 0; width: 100%; padding: 3rem 0; align-items: center;}
+footer .footerBottom .in {width: 93%; margin: 0 auto; display: flex; justify-content: space-between;}
+footer .footerBottom .in a {display: block; width: 3.5%;}
+footer .footerBottom .text {font-weight: 200; font-size: 2rem; display: flex; justify-content: space-between; width: 70%; line-height: 1.6;}
+footer .footerBottom .in .contact {width: 30%;}
+footer .footerBottom .in img {animation: rotate_image 6s linear infinite;transform-origin: 50% 50%; width: 100%;}
+footer .footerBottom .text .green {color: #c1ff3e;}
+footer .footerBottom .text span {color: #c1ff3e; display: inline-block; width:26%;}
+
+@keyframes rotate_image{
+    100% {transform: rotate(360deg);}
+}
+
+
+/* goTop */
+.goTop {position: absolute; right: 3%; bottom: 12%; display: block; border: 1px solid #fff; border-radius: 100%; height:6rem; width: 6rem; text-align: center; line-height: 6rem; mix-blend-mode: difference; z-index: 100; font-weight: 400; font-size: 1.6rem; transition: all 0.2s;}
+.goTop:hover {transform: skewX(-10deg) scale(1.05); transition: all 0.2s;}
+
+
+/* 반응형 작은 폰트 사이즈 조절 */
+@media screen and (max-width: 1600px) {html {font-size: 9.5px;}} 
+@media screen and (max-width: 1500px) {html {font-size: 9px;}}
+
+
+/* responsiveWeb */
+/* pc 1650px ~ 1301px */ /* 1460px */
+@media screen and (max-width:1650px) {
+
+}
+
+
+
+/* tablet 1300px ~ 1025px */ /* 1100px */
+@media screen and (max-width:1300px) {
+    footer .footerBottom .in a {width: 5.5%;}
+    footer .footerBottom .text {width: 85%;}
+    footer .footerBottom .in .contact {width: 35%;}
+    .goTop {width: 8rem; height: 8rem; line-height: 8rem; font-size: 2rem;}
+    footer .textBox .mail:hover::before {padding-top: 3%;}
+
+}
+
+
+
+/* tablet 1024px ~ 801px */ /* 900px */
+@media screen and (max-width:1024px) {
+    footer .footerBottom .in {width: 91%;}
+    footer .footerBottom .in a {display: none;}
+    footer .footerBottom .text {width: 100%;}
+    footer .title {font-size: 14rem;}
+    footer .textBox .mail {font-size: 8rem;}
+    footer .textBox .mail::before {font-size: 9rem;}
+    .goTop {right: 4%; bottom: 11%;}
+}
+
+
+
+/* mobile 800px ~ 501px */ /* 600px */
+@media screen and (max-width:800px) {
+    footer .title {font-size: 20vw;}
+    footer .textBox .mail {font-size: 10vw; width: 105%;}
+    footer .textBox .mail::before {font-size: 11vw;}
+    footer .textBox .mail:hover::before {padding-top: 5%;}
+    footer .textBox .mail:hover {width: 117%;}
+    footer .footerBottom .text .green {display: none;}
+    footer .footerBottom .in .contact {width: 60%;}
+}
+
+
+
+
+/* mobile 500px이하 */ /* 390px */
+@media screen and (max-width:500px) {
+    footer .textBox .title {margin-bottom: 3rem;}
+    footer .footerBottom {padding: 4rem 2rem;}
+    footer .footerBottom .text  {flex-wrap: wrap; }
+    footer .footerBottom .text p:nth-child(3) {width: 100%; font-size: 1.8rem; line-height: 1.2;}
+    footer .footerBottom .text .contact {width: 100%;}
+    .goTop {right: 6%; bottom: 20%;}
+}
+
+
+
+
+
+
+
+

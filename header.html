@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio_header</title>
+    <link rel="stylesheet" href="css/header.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script>
+        // a속성 제거
+        $(document).on('click', 'a[href="#"]', function(e){
+            e.preventDefault();
+        });
+
+
+        // fixheader
+        $(function(){
+            var prevScrollTop = 0;
+            document.addEventListener('scroll',function(){
+                var nowScrollTop = $(window).scrollTop();
+
+                if(nowScrollTop > prevScrollTop){
+                    $('header').addClass('active');
+                } else {
+                    $('header').removeClass('active');
+                }
+                prevScrollTop = nowScrollTop;
+            });
+
+            $('.menuOpen').on('click', function(){
+                $('header').addClass('active');
+                $('header').removeClass('active');
+            });
+        });
+
+
+
+
+
+        //fixHeader 함수
+        function fixHeader(){
+            if(scrollTop > 150) {
+                $('header').addClass('on')
+            } else {
+                $('header').removeClass('on')
+            }
+        };
+
+
+
+
+
+        // 스크롤과 윈도우창 조절 시 이벤트
+        $(window).on('scroll resize', function(){
+            scrollTop = $(document).scrollTop();
+            fixHeader();
+        });
+
+
+
+
+
+        // gnbMenu
+        $(function(){
+            $('.menuOpen').on('click', function(){
+                $('nav.gnb').toggleClass('on');
+            });
+            $('.section').on('click', function(){
+                $('nav.gnb').removeClass('on');
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="#" class="menuOpen">
+        <span class="a"></span>
+        <span class="b"></span>
+    </a>
+    <!-- header -->
+    <header>
+        <div class="innerHeader">
+            <a href="index.html" class="logo"><img src="image/logo_wh.svg" alt="흰색 로고"></a>
+            <div class="list en">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="works.html">WORKS</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav class="gnb en">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="works.html">WORKS</a></li>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

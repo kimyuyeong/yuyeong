@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuyeong Portfolio_works sub_05_consumer</title>
+    <link rel="stylesheet" href="css/works_sub_style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+            $("#header").load("header.html");
+            $("#footer_workssub").load("footer_workssub.html");
+        });
+    </script>
+    <style>
+        .main .fixMenu .top ul li:nth-child(2) a:hover {background: none; color: inherit; font-weight: inherit;}
+        .main .fixMenu .top ul li:nth-child(3) a:hover {background: none; color: inherit; font-weight: inherit;}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <div id="header"></div>
+        <section class="main">
+            <!-- left fixmenu -->
+            <div class="fixMenu en">
+                <div class="top">
+                    <h3>mode</h3>
+                    <ul>
+                        <li>
+                            <a href="http://dbdud8190.dothome.co.kr/consumer/index.html" onclick="window.open(this.href, '_blank', 'width=1920, height=1080'); return false;">pc</a>
+                        </li>
+                        <li>
+                            <a href="#" style="opacity: 0.2; pointer-events: none;">tablet</a>
+                        </li>
+                        <li>
+                            <a href="#" style="opacity: 0.2; pointer-events: none;">mobile</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <a href="works_sub_04_hanwha.html" class="prev"><img src="image/arrow_wh.png" alt=""></a>
+                    <a href="works_sub_06_daebang.html" class="next"><img src="image/arrow_wh.png" alt=""></a>
+                </div>
+            </div>
+
+            <!-- right contents -->
+            <div class="con">
+                <h2><span class="aniWrap">한국소비자원</span></h2>
+                <div class="detail">
+                    <ul class="left">
+                        <li>
+                            <h3>overview</h3>
+                            <p>
+                                <span class="aniWrap">
+                                    한국소비자원 웹사이트를 클론코딩하였습니다.<br class="res_br">
+                                    코딩 기초를 다지기 시작할 때 박스구조를 익히고<br class="res_br">
+                                    간단한 CSS애니메이션을 적용하는 것 위주로 제작하였습니다.<br class="res_br">
+                                    Scrolla를 사용하여 스크롤 애니메이션을 적용하였고<br class="res_br">
+                                    페이지 하단에 goTop 버튼을 배치하였습니다.
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <h3>keypoint</h3>
+                            <p>
+                                <span class="aniWrap">
+                                    스크롤 애니메이션<br>
+                                    goTop 버튼 배치<br>
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <h3>program</h3>
+                            <p><span class="aniWrap">Visual Studio Code</span></p>
+                        </li>
+                    </ul>
+                    <ul class="right">
+                        <li class="styleGuide"><h3>style guide</h3></li>
+                        <li class="color">
+                            <h3>color</h3>
+                            <div class="list" style="text-transform: uppercase;">
+                                <p style="background: #ddd; color: #101010;">#dddddd</p>
+                                <p style="background: #333; color: #fff;">#333333</p>
+                                <p style="background: #f57454; color: #fff;">#f57454</p>
+                                <p style="background: #425ca6; color: #fff;">#425ca6</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>font</h3>
+                            <p>
+                                <span class="aniWrap">
+                                    Nanum Gothic
+                                </span>
+                            </p>
+                        </li>
+                        <li>
+                            <h3>concept</h3>
+                            <p><span class="aniWrap">#기초 #박스구조</span></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- section mode -->
+        <section class="mode">
+            <div class="inner">
+                <div class="pc">
+                    <a href="http://dbdud8190.dothome.co.kr/consumer/index.html" onclick="window.open(this.href, '_blank', 'width=1920, height=1080'); return false;" class="aniWrap animate" data-animate="motion">
+                        <img src="image/works_sub/consumer_pc.png" alt="">
+                    </a>
+                </div>
+                <div class="fullpage animate" data-animate="motion"><img src="image/works_sub/consumer_full.png" alt=""></div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer>
+            <div class="footerBottom">
+                <a href="#top" class="en goTop">TOP</a>
+                <div class="in">
+                    <a href="index.html"><img src="image/logo_green.svg" alt=""></a>
+                    <div class="text en">
+                        <p class="green">KIM YUYEONG<br>YEONSU-GU, INCHEON</p>
+                        <P class="contact">
+                            <span>PHONE</span>010. 2434. 8190<br>
+                            <span>E-MAIL</span>dbdud8190@naver.com</P>
+                        <p><br>PORTFOLIO DEC. 2023</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

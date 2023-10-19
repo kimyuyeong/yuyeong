@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuyeong Portfolio_portfolio</title>
+    <link rel="stylesheet" href="css/portfolio_style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/portfolio_script.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="js/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <div id="header"></div>
+
+        <!-- 빠른이동 메뉴 -->
+        <div class="moveList">
+            <ul>
+                <li><a href="#move_part1" class="menu-01">Part.1</a></li>
+                <li><a href="#move_part2" class="menu-02">Part.2</a></li>
+                <li><a href="#move_part3" class="menu-03">Part.3</a></li>
+                <li><a href="#move_part4" class="menu-04">Part.4</a></li>
+                <li><a href="#move_part5" class="menu-05">Part.5</a></li>
+            </ul>
+        </div>
+
+        <!-- visual -->
+        <section class="visual"> 
+            <div class="inner">
+                <p class="leftText en">PORTFO<br>LIO</p>
+                <p class="rightText en2">PRO<br>CESS</p>
+                <p class="img"><img src="image/portfolio/visual_illust.svg" alt=""></p>
+            </div>
+        </section>
+
+        <!-- part1 -->
+        <section class="part1 scroll" id="move_part1">
+            <div class="mainTitle">
+                <div class="titInner">
+                    <h2 class="en2 animate" data-animate="motion"><span class="aniWrap">Part.1</span></h2>
+                    <p>기초 분석</p>
+                </div>
+            </div>
+            <div class="inner">
+                <div class="brain" id="move_brain">
+                    <div class="textBox animate" data-animate="motion">
+                        <div class="commonTitle animate" data-animate="motion">
+                            <p class="num en2">01</p>
+                            <h3 class="en" data-splitting >brainstorming</h3>
+                        </div>
+                        <div class="sub"> 
+                            <p class="tit en">about me</p>
+                            <p class="detail">
+                                포트폴리오를 제작하기 위해 먼저 <span class="bold">‘나’에 대한 고민</span>을 시작했습니다.<br class="res_br">
+                                나는 어떤 사람인지, 어떠한 길을 걸어 왔는지, 나에 대해 어떤 것을 <span class="bold">궁금해 할 지</span>에<br class="res_br">
+                                대한 생각을 <span class="bold">브레인스토밍</span>으로 정리하였습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imgBox animate" data-animate="motion">
+                        <img src="image/portfolio/brainstorming.png" alt="">
+                    </div>
+                </div>
+                <div class="affinity" id="move_affinity">
+                    <div class="commonTitle animate" data-animate="motion">
+                        <p class="num en2">02</p>
+                        <h3 class="en" data-splitting>Affinity Diagram</h3>
+                    </div>
+                    <div class="top animate" data-animate="motion">
+                        <!-- step1 -->
+                        <div class="step1">
+                            <div class="textBox">
+                                <p class="tit en">step1</p>
+                                <p class="detail">
+                                    <span class="bold">브레인스토밍</span>으로 나온 단어들 중 저를 표현하는 <span class="bold">키워드들을 도출</span>하였습니다.
+                                </p>
+                            </div>
+                            <div class="imgBox">
+                                <img src="image/portfolio/affinity.png" alt="">
+                            </div>
+                        </div>
+                        <!-- step2 -->
+                        <div class="step2">
+                            <div class="textBox">
+                                <p class="tit en">step2</p>
+                                <p class="detail">
+                                    1단계에서 도출한 단어들을 <span class="bold">카데고리화</span>하여 정리하였습니다.
+                                </p>
+                            </div>
+                            <ul class="wordBox">
+                                <li>
+                                    <p class="main">기본 정보</p>
+                                    <p class="sub">
+                                        정보<br>
+                                        자기소개<br>
+                                        교육<br>
+                                        자격증<br>
+                                        스토리<br>
+                                        학력<br>
+                                        취미<br>
+                                        연락처
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="main">스킬능력</p>
+                                    <p class="sub">
+                                        코딩<br>
+                                        html/css/js 등<br>
+                                        디자인<br>
+                                        포토샵/일러스트 등<br>
+                                        드로잉<br>
+                                        uiux<br>
+                                        기획 제작
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="main">성격</p>
+                                    <p class="sub">
+                                        성실함<br>
+                                        노력형<br>
+                                        자기계발<br>
+                                        아이디어<br>
+                                        밝음<br>
+                                        친화력<br>
+                                        포용력<br>
+                                        풍부한 상상력<br>
+                                        꼼꼼함<br>
+                                        계획형
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottom animate" data-animate="motion">
+                        <div class="step3">
+                            <div class="textBox">
+                                <p class="tit en">step3</p>
+                                <p class="detail">
+                                    2단계에서 카테고리화 한 단어들을 종합하여 포트폴리오의 기반이 될<br class="res_br">
+                                    <span class="bold">큰 키워드를 도출</span>하고 <span class="bold">문구화</span>하였습니다.
+                                </p>
+                            </div>
+                            <div class="sentence">
+                                <ul class="topText">
+                                    <li class="left">나는</li>
+                                    <li class="center">
+                                        <ul class="in">
+                                            <li>아이디어가 많은</li>
+                                            <li>창의적인</li>
+                                            <li>유연한 사고</li>
+                                        </ul>
+                                    </li>
+                                    <li class="right">의 장점을 가진,</li>
+                                </ul>
+                                <ul class="bottomText">
+                                    <li class="left"></li>
+                                    <li class="center">
+                                        <ul class="in">
+                                            <li>코딩</li>
+                                            <li>디자인</li>
+                                        </ul>
+                                    </li>
+                                    <li class="right">을 잘하는 사람</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="insights" id="move_insights">
+                    <div class="textBox">
+                        <div class="commonTitle animate" data-animate="motion">
+                            <p class="num en2">03</p>
+                            <h3 class="en" data-splitting>Discover insights</h3>
+                        </div>
+                        <div class="sub"> 
+                            <p class="tit en">slogan</p>
+                            <p class="detail">
+                                어피니티다이어그램에서 도출된 문구를 기반으로 ‘나’를 나타낼 수 있는<br class="res_br">
+                                <span class="bold">대표 슬로건 두 개를 도출</span>하였습니다.<br class="res_br">
+                                <span class="bold">‘나는 유영중이다’</span> 라는 문구는 저의 이름을 활용한 일종의 언어유희이자<br class="res_br">
+                                창의적인 아이디어와 유연한 사고를 가진 <span class="bold">장점</span>을 나타내는 슬로건입니다.<br class="res_br">
+                                <span class="bold">‘디자인, 코딩 모두 잘 하는 멀티 플레이어’</span>는 디자이너였던 제가 코딩이라는<br class="res_br">
+                                능력을 확장하게 되면서 가지게 된 <span class="bold">능력적 장점</span>을 나타낸 슬로건입니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slogan animate" data-animate="motion">
+                        <div class="slogan1">
+                            <p class="korean">나는 유영 중이다<span class="line"></span></p>
+                            <p class="english en">I am swimming</p>
+                        </div>
+                        <div class="slogan2">
+                            <p class="korean">코딩, 디자인 모두 잘 하는 멀티 플레이어<span class="line"></span></p></p>
+                            <p class="english en">Multiplayer good at both coding and design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- part2 -->
+        <section class="part2 scroll" id="move_part2">
+            <div class="mainTitle">
+                <div class="titInner">
+                    <h2 class="en2 animate" data-animate="motion"><span class="aniWrap">Part.2</span></h2>
+                    <p>레퍼런스 조사</p>
+                </div>
+            </div>
+            <div class="inner" id="move_reference">
+                <div class="commonTitle animate" data-animate="motion" >
+                    <h3 class="en" data-splitting>Reference research</h3>
+                </div>
+                <div class="main animate" data-animate="motion">
+                    <h3 class="greenTitle en"><span class="aniWrap">Main Reference</span></h3>
+                    <div class="textBox">
+                        <p class="tit en">cuberto</p>
+                        <p class="detail">
+                            해외 에이전시인 ‘CUBERTO’ 웹사이트를 대표 레퍼런스로 선정하였습니다.<br class="res_br">
+                            포트폴리오 전체적인 무드와 레이아웃을 참고하였으며<br class="res_br">
+                            index의 visual, video, introduce, work, ncs, footer섹션에 적용하였습니다.
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <div class="a">
+                            <p class="sketch"><img src="image/portfolio/main_1_sketch.png" alt="" ></p>
+                            <p class="ex"><img src="image/portfolio/main_1.png" alt="" ></p>
+                        </div>
+                        <div class="b">
+                            <p class="sketch"><img src="image/portfolio/main_2_sketch.png" alt="" ></p>
+                            <p class="ex"><img src="image/portfolio/main_2.png" alt="" ></p>
+                        </div>
+                        <div class="c">
+                            <p class="sketch"><img src="image/portfolio/main_3_sketch.png" alt="" ></p>
+                            <p class="ex"><img src="image/portfolio/main_3.png" alt="" ></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sub -->
+                <div class="sub1 animate" data-animate="motion">
+                    <div class="textBox">
+                        <h3 class="greenTitle en"><span class="aniWrap">Sub Reference</span></h3>
+                        <p class="tit en">flashform</p>
+                        <p class="detail">
+                            해외 웹사이트 서비스 브랜드 ‘Frashform’ 사이트입니다.<br class="res_br">
+                            index의 배너, about 페이지의 timeline, contact 페이지 레이아웃에 참고하여<br class="res_br">
+                            적용하였습니다.
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <div class="a">
+                            <p class="sketch">
+                                <img src="image/portfolio/sub_1_sketch.png" alt="" >
+                            </p>
+                            <p class="ex">
+                                <img src="image/portfolio/sub_1.png" alt="" >
+                            </p>
+                        </div>
+                        <div class="b">
+                            <p class="ex">
+                                <img src="image/portfolio/sub_2.png" alt="" >
+                            </p>
+                        </div>
+                        <div class="c">
+                            <p class="ex">
+                                <img src="image/portfolio/sub_3.png " alt="" >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub2 animate" data-animate="motion">
+                    <div class="textBox">
+                        <p class="tit en">okcest</p>
+                        <p class="detail">
+                            해외 에이전시 ‘okcest’ 사이트입니다.<br class="res_br">
+                            index의 hobby 섹션에 참고하여 적용하였습니다. 
+                        </p>
+                    </div>
+                    <div class="imgBox">
+                        <div class="a">
+                            <p class="sketch">
+                                <img src="image/portfolio/sub_4_sketch.png" alt="" >
+                            </p>
+                            <p class="ex">
+                                <img src="image/portfolio/sub_4.png" alt="" >
+                            </p>
+                        </div>
+                        <div class="b">
+                            <p class="ex">
+                                <img src="image/portfolio/sub_5.png" alt="" >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub3 animate" data-animate="motion">
+                    <div class="cosmos">
+                        <div class="imgBox">
+                            <p class="sketch">
+                                <img src="image/portfolio/sub_6_sketch.png" alt="" >
+                            </p>
+                            <p class="ex">
+                                <img src="image/portfolio/sub_6.png" alt="" >
+                            </p>
+                        </div>
+                        <div class="textBox">
+                            <p class="tit en">cosmos</p>
+                            <p class="detail">
+                                해외 사이트 ‘cosmos’ 입니다.<br class="res_br">
+                                전체적인 우주 분위기를 참고하였으며 about hobby 섹션에 참고하여 적용하였습니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="deduxer">
+                        <div class="imgBox">
+                            <p class="sketch">
+                                <img src="image/portfolio/sub_7_sketch.png" alt="" >
+                            </p>
+                            <p class="ex">
+                                <img src="image/portfolio/sub_7.png" alt="" >
+                            </p>
+                        </div>
+                        <div class="textBox">
+                            <p class="tit en">deduxer</p>
+                            <p class="detail">
+                                해외 에이전시 ‘Deduxer’ 사이트입니다.<br class="res_br">
+                                about strength 섹션에 참고하여 적용하였습니다. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- part3 -->
+        <section class="part3 scroll" id="move_part3">
+            <div class="mainTitle">
+                <div class="titInner">
+                    <h2 class="en2 animate" data-animate="motion"><span class="aniWrap">Part.3</span></h2>
+                    <p>기획 및 디자인 설계</p>
+                </div>
+            </div>
+            <div class="inner">
+                <div class="info" id="move_info">
+                    <div class="textBox">
+                        <div class="commonTitle animate" data-animate="motion">
+                            <p class="num en2">01</p>
+                            <h3 class="en" data-splitting>Information structure diagram</h3>
+                        </div>
+                        <div class="sub"> 
+                            <p class="tit">정보구조도</p>
+                            <p class="detail">
+                                포트폴리오의 전체적인 틀을 구상하기 위해 <span>정보구조도</span>를 작성하였습니다.<br class="res_br">
+                                <span>home, abuot, works, portfolio, contact</span> 5개의 큰 인덱스로 구성하였으며<br class="res_br">
+                                해당 인덱스의 콘텐츠 요소들과 works에서 이동하는 작업물 상세 페이지인<br class="res_br">
+                                <span>works sub</span>까지 구상하였습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="con animate" data-animate="motion">
+                        <div class="titleBox">
+                            <p class="txt en">Portfolio</p>
+                            <p class="line"><img src="image/portfolio/line.svg" alt=""></p>
+                        </div>
+                        <ul>
+                            <li>
+                                <p class="listTitle en">Home</p>
+                                <p class="list">
+                                    main<br>
+                                    영상<br>
+                                    키워드<br>
+                                    about intro<br>
+                                    skills<br>
+                                    hobby intro<br>
+                                    works intro<br>
+                                    portfolio intro<br>
+                                    ncs<br>
+                                    contact(footer)
+                                </p>
+                            </li>
+                            <li>
+                                <p class="listTitle en">About</p>
+                                <p class="list">
+                                    main<br>
+                                    자기소개<br>
+                                    기본 정보<br>
+                                    timeline<br>
+                                    strength<br>
+                                    hobby<br>
+                                    contact(footer)
+                                </p>
+                            </li>
+                            <li>
+                                <div class="works1">
+                                    <p class="listTitle en">Works</p>
+                                    <p class="list">
+                                        main<br>
+                                        coding<br>
+                                        uiux & planning<br>
+                                        graphic design<br>
+                                        contact(footer)
+                                    </p>
+                                </div>
+                                <div class="works2">
+                                    <p class="listTitle en">Works sub</p>
+                                    <p class="list">
+                                        작업물 설명<br>
+                                        pc/tablet/mobile mode<br>
+                                        fullpage(완성본)<br>
+                                        footer
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="listTitle en">Portfolio</p>
+                                <p class="list">
+                                    main<br>
+                                    기초분석<br>
+                                    레퍼런스 조사<br>
+                                    기획 및 디자인 설계<br>
+                                    제작<br>
+                                    완성 결과물<br>
+                                    contact(footer)
+                                </p>
+                            </li>
+                            <li>
+                                <p class="listTitle en">Contact</p>
+                                <p class="list">
+                                    main<br>
+                                    연락처
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flow animate" data-animate="motion" id="move_flow">
+                    <div class="textBox">
+                        <div class="commonTitle animate" data-animate="motion">
+                            <p class="num en2">02</p>
+                            <h3 class="en" data-splitting>flowchart</h3>
+                        </div>
+                        <div class="sub"> 
+                            <p class="tit">플로우차트</p>
+                            <p class="detail">
+                                플로우차트를 제작해 <span>유저플로우</span>를 구상하였습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="imgBox">
+                        <img src="image/portfolio/flowchart.png" alt="">
+                    </div>
+                </div>
+
+                <div class="design" id="move_design">
+                    <div class="commonTitle animate" data-animate="motion">
+                        <p class="num en2">03</p>
+                        <h3 class="en" data-splitting>design system</h3>
+                    </div>
+                    <div class="color animate" data-animate="motion">
+                        <div class="textBox"> 
+                            <p class="tit en">color</p>
+                            <p class="detail">
+                                형광 초록 컬러인 <span>#C1FF3E</span>를 포인트 컬러로 사용하고<br class="res_br">
+                                화이트 <span>#fff</span>와 블랙 <span>#101010</span>을 사용하여 포인트 컬러가 더욱 돋보일 수 있도록 하였습니다.
+                            </p>
+                        </div>
+                        <ul class="colorList">
+                            <li>#C1FF3E</li>
+                            <li>#FFF</li>
+                            <li>#101010</li>
+                        </ul>
+                    </div>
+                    <div class="font">
+                        <div class="textBox"> 
+                            <p class="tit en">font</p>
+                            <p class="detail">
+                                한글 폰트는 깔끔한 느낌의 <span>‘프리텐다드’</span>를 사용하였고<br class="res_br">
+                                영어 폰트는 <span>심플한 ‘montserrat’</span>과 <span>디자인 폰트인 ‘ponzu’</span>를 사용하였습니다.<br class="res_br">
+                                베이직 폰트와 디자인 폰트를 함께 사용하여 디자인을 더욱 풍부하게 하였습니다.
+                            </p>
+                        </div>
+                        <div class="fontBox animate" data-animate="motion">
+                            <span class="plusLine1"></span>
+                            <span class="plusLine2"></span>
+                            <ul class="line1">
+                                <li class="sub en">sub 20px</li>
+                                <li class="korean en">KOREAN</li>
+                                <li class="pretendard">프리텐다드</li>
+                            </ul>
+                            <div class="english en">ENGLISH</div>
+                            <ul class="line2">
+                                <li class="sub en">main 180px</li>
+                                <li class="montserrat en">MONTSERRAT</li>
+                            </ul>
+                            <div class="ponzu en2">PONZU</div>
+                        </div>
+                    </div>
+                    <div class="illust">
+                        <div class="textBox"> 
+                            <p class="tit en">illust</p>
+                            <p class="detail">
+                                index 페이지 중간중간에 <span>일러스트</span>를 넣었습니다.<br class="res_br">
+                                포트폴리오 콘셉트에 맞추어 <span>우주를 유영하는 일러스트 캐릭터</span>로 제작하였으며<br class="res_br">
+                                해당 캐릭터는 <span>포트폴리오의 로고</span>로도 활용하였습니다.
+                            </p>
+                        </div>
+                        <div class="illustBox animate" data-animate="motion">
+                            <p class="guideBg">
+                                <img src="image/portfolio/illust_bg.png" alt="">
+                            </p>
+                            <ul>    
+                                <li><img src="image/portfolio/illust_1.png" alt=""></li>
+                                <li><img src="image/portfolio/illust_2.png" alt=""></li>
+                                <li><img src="image/portfolio/illust_3.png" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sketch" id="move_sketch">
+                    <div class="textBox">
+                        <div class="commonTitle animate" data-animate="motion">
+                            <p class="num en2">04</p>
+                            <h3 class="en" data-splitting>idea sketch</h3>
+                        </div>
+                        <div class="sub"> 
+                            <p class="tit">아이디어 스케치</p>
+                            <p class="detail">
+                                기획을 토대로 대략적인 디자인을 잡기 위해 <span>아이디어 스케치</span>를 진행하였습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <ul class="animate" data-animate="motion">
+                        <li><img src="image/portfolio/sketch_index.png" alt=""></li>
+                        <li><img src="image/portfolio/sketch_about.png" alt=""></li>
+                        <li><img src="image/portfolio/sketch_works.png" alt=""></li>
+                        <li><img src="image/portfolio/sketch_contact.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- part4 -->
+        <section class="part4 scroll" id="move_part4">
+            <div class="mainTitle">
+                <div class="titInner">
+                    <h2 class="en2 animate" data-animate="motion"><span class="aniWrap">Part.4</span></h2>
+                    <p>제작</p>
+                </div>
+            </div>
+            <div class="inner">
+                <!-- 01. wireframe -->
+                <div class="wireframe" id="move_wireframe">
+                    <div class="part4Title animate" data-animate="motion">
+                        <h3 class="en"><span class="en2">01</span>wireframe</h3>
+                    </div>
+                    <ul class="animate" data-animate="motion">
+                        <li>
+                            <p class="en2">Index</p>
+                            <img src="image/portfolio/wire_index.png" alt="">
+                        </li>
+                        <li>
+                            <p class="en2">About</p>
+                            <img src="image/portfolio/wire_about.png" alt="">
+                        </li>
+                        <li>
+                            <p class="en2">Works</p>
+                            <img src="image/portfolio/wire_works.png" alt="">
+                        </li>
+                        <li>
+                            <p class="en2">Works_sub</p>
+                            <img src="image/portfolio/wire_workssub.png" alt="">
+                        </li>
+                        <li>
+                            <p class="en2">Contact</p>
+                            <img src="image/portfolio/wire_contact.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 02. prototype -->
+                <div class="prototype" id="move_prototype">
+                    <div class="part4Title animate" data-animate="motion">
+                        <h3 class="en"><span class="en2">02</span>prototype</h3>
+                    </div>
+                    <ul class="animate" data-animate="motion">
+                        <li>
+                            <p class="en2">Index</p>
+                            <img src="image/portfolio/proto_index.png" alt="">
+                        </li>
+                        <li>
+                            <p class="en2">About</p>
+                            <img src="image/portfolio/proto_about.png" alt="">
+                        </li>
+                        <li>
+                            <p class="en2">Works</p>
+                            <img src="image/portfolio/proto_works.png" alt="">
+                        </li>
+                        <li>
+                            <p class="en2">Works_sub</p>
+                            <img src="image/portfolio/proto_workssub.png" alt="">
+                        </li>
+                        <li>
+                            <p class="en2">Contact</p>
+                            <img src="image/portfolio/proto_contact.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 03. storyboard -->
+                <div class="storyboard" id="move_storyboard">
+                    <div class="part4Title animate" data-animate="motion">
+                        <h3 class="en"><span class="en2">03</span>storyboard</h3>
+                    </div>
+                    <!-- index -->
+                    <div class="index_Story">
+                        <p class="en2 category">Index</p>
+                        <div class="cont">
+                            <div class="imgBox">
+                                <img src="image/portfolio/story_index.png" alt="">
+                            </div>
+                            <ul class="txtBox">
+                                <li class="first_header animate" data-animate="motion">
+                                    <p class="title en">header</p>
+                                    <p class="detail">
+                                        일러스트 로고와 index 리스트들로 구성, 스크롤을 내렸을 때 위로 사라졌다가<br class="res_br">
+                                        스크롤을 올리면 다시 나타나도록 구성<br>
+                                        모바일 버전 제작 시 리스트 숨기고 메뉴바 + 오른쪽에서 슬라이드 되는 메뉴 적용
+                                    </p>
+                                </li>
+                                <li class="second_visual animate" data-animate="motion">
+                                    <p class="title en">visual</p>
+                                    <div class="innerBox">
+                                        <p class="detail">
+                                            ‘I AM SWIMMING’ 슬로건 사용<br>
+                                            특정 단어에 hover했을 때 글씨 올라오는 효과 참고<br>
+                                            우주를 유영하는 일러스트 캐릭터 넣기<br>
+                                            하단에 작은 텍스트로 디자인 요소 구성
+                                        </p>
+                                        <p class="refe"><img src="image/portfolio/story_index_visual_img.png" alt=""></p>
+                                    </div>
+                                </li>
+                                <li class="con01_video animate" data-animate="motion">
+                                    <p class="title en">con01 _video</p>
+                                    <p class="detail">
+                                        scrolltrigger에 반응하여 visual 섹션에 걸쳐져 있다가<br>
+                                        스크롤 다운 시 라운드 모양으로 커지는 효과<br>
+                                        브이로그 형식의 일상 영상 편집 제작 후 첨부
+                                    </p>
+                                </li>
+                                <li class="con02_banner animate" data-animate="motion">
+                                    <p class="title en">con02 _banner</p>
+                                    <p class="detail">
+                                        나를 나타내는 대표 키워드를 영어와 한글 버전으로 넣기<br>
+                                        스크롤에 반응하여 움직이는 효과<br>
+                                        <br>
+                                        영문 : #diligent #responsibility #detailed #communication #idea #sense<br>
+                                        한글 : #성실 #책임감 #세심함 #소통 #아이디어 #센스 
+                                    </p>
+                                </li>
+                                <li class="con03_introduce animate" data-animate="motion">
+                                    <p class="title en">con03 _introduce</p>
+                                    <div class="innerBox">
+                                        <p class="detail">
+                                            about 페이지의 미리보기 섹션<br>
+                                            background-color : #fff 흰색 배경<br>
+                                            사진과 ‘HELLO THIS IS ME’ 텍스트 슬라이드 효과<br>
+                                            슬로건 의미 소개와 간단한 자기소개 넣기<br>
+                                            일러스트 로고 돌아가는 효과 적용
+                                        </p>
+                                        <p class="refe"><img src="image/portfolio/story_index_con03_img.png" alt=""></p>
+                                    </div>
+                                </li>
+                                <li class="con04_skills animate" data-animate="motion">
+                                    <p class="title en">con04 _skills</p>
+                                    <p class="detail">
+                                        다룰 수 있는 스킬을 소개하는 섹션<br>
+                                        스킬의 활용도를 나타내는 게이지 바 제작<br>
+                                        각 스킬 박스 hover시 카드가 뒤집히면서 설명이 나옴<br>
+                                        계단형식 배열로 시각적 재미 부여<br>
+                                        우주를 유영하는 일러스트 캐릭터 첨부
+                                    </p>
+                                </li>
+                                <li class="con05_hobby animate" data-animate="motion">
+                                    <p class="title en">con05 _hobby</p>
+                                    <div class="innerBox">
+                                        <p class="detail">
+                                            about 페이지의 hobby 섹션 미리보기<br>
+                                            3가지 취미(전시회 관람, 그림그리기, 패션)를<br>
+                                            설명과 이미지로 보여줌<br>
+                                            scrolltrigger를 활용하여 이미지 카드가 쌓이며<br>
+                                            좌측 텍스트도 함께 변경되는 형태의 효과 적용
+                                        </p>
+                                        <p class="refe"><img src="image/portfolio/story_index_con05_img.png" alt=""></p>
+                                    </div>
+                                </li>
+                                <li class="con06_works animate" data-animate="motion">
+                                    <p class="title en">con06 _works</p>
+                                    <div class="innerBox">
+                                        <p class="detail">
+                                            background-color : #fff 흰색 배경<br>
+                                            work 카테고리인 coding, uiux and planning,<br>
+                                            graphic design 세가지를 이미지로 배치<br>
+                                            각 카테고리의 이미지는 클레이 목업 등을 활용해 제작<br>
+                                            hover시 이미지 커지는 효과<br>
+                                            click시 work 페이지 내 해당 카테고리로 이동하며<br>
+                                            하단 more 버튼 클릭시에는 work 페이지 메인으로 이동
+                                        </p>
+                                        <p class="refe"><img src="image/portfolio/story_index_con06_img.png" alt=""></p>
+                                    </div>
+                                </li>
+                                <li class="con07_portfolio animate" data-animate="motion">
+                                    <p class="title en">con07 _portfolio</p>
+                                    <p class="detail">
+                                        포트폴리오 제작 과정 미리보기 섹션<br>
+                                        각 단계별 미리보기 이미지와 제목이 가로로 나열되는 디자인<br>
+                                        scrolltrigger를 활용하여 스크롤 시 가로로 슬라이드되는 효과 적용<br>
+                                        각 단계를 클릭하면 portfolio process 내 해당 단계로 이동<br>
+                                        more 버튼 클릭 시에는 portfolio process 메인으로 이동
+                                    </p>
+                                </li>
+                                <li class="con08_ncs animate" data-animate="motion">
+                                    <p class="title en">con08 _ncs</p>
+                                    <div class="innerBox">
+                                        <p class="detail">
+                                            ncs과정의 결과물을 보여주는 섹션<br>
+                                            리스트 형식으로 나열<br>
+                                            NCS 제목에 우주를 유영하는 일러스트 넣기<br>
+                                            각 리스트 hover시 이미지가 뜨는 효과
+                                        </p>
+                                        <p class="refe"><img src="image/portfolio/story_index_con08_img.png" alt=""></p>
+                                    </div>
+                                </li>
+                                <li class="end_footer animate" data-animate="motion">
+                                    <p class="title en">footer</p>
+                                    <div class="innerBox">
+                                        <p class="detail">
+                                            height : 100vh<br>
+                                            배경에 우주 영상 첨부<br>
+                                            이메일 주소 박스 hover시 텍스트 올라가는 효과<br>
+                                            하단에 이름, 연락처 등 정보 넣기<br>
+                                            로고 일러스트 돌아가는 효과
+                                        </p>
+                                        <p class="refe"><img src="image/portfolio/story_index_footer_img.png" alt=""></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- subPageWrap -->
+                    <div class="subPageWrap">
+                        <!-- about -->
+                        <div class="about_story">
+                            <p class="en2 category">About</p>
+                            <div class="cont">
+                                <div class="imgBox">
+                                    <img src="image/portfolio/proto_about.png" alt="">
+                                </div>
+                                <ul class="txtBox">
+                                    <li class="first_visual animate" data-animate="motion">
+                                        <p class="title en">visual</p>
+                                        <p class="detail">
+                                            background-color : #fff 흰색 배경<br>
+                                            index와 통일감 있게 심플한 디자인<br>
+                                            섹션이 겹쳐 올라오는 효과 적용
+                                        </p>
+                                    </li>
+                                    <li class="con01_who animate" data-animate="motion">
+                                        <p class="title en">con01 _who</p>
+                                        <p class="detail">
+                                            background-color : #101010 검은색 배경<br>
+                                            나에 대한 상세한 정보를 소개하는 섹션<br>
+                                            자기소개, 프로필, 연락처, MBTI, 수상내역,<br>
+                                            스킬,경험, 경력 및 자격증 적기<br>
+                                            가운데 프로필 사진 첨부 후 사진 주변으로 내용 배치
+                                        </p>
+                                    </li>
+                                    <li class="con02_timeline animate" data-animate="motion">
+                                        <p class="title en">con02 _timeline</p>
+                                        <p class="detail">
+                                            background-color : #b5e74c<br>
+                                            포인트 컬러에서 약간 톤 다운된 녹색 배경<br>
+                                            라이프 타임라인으로 내가 어떻게 살아왔는지,<br>
+                                            어떤 사람인지를 소개하는 섹션<br>
+                                            scrolltrigger를 활용하여 가로 스크롤로 타임라인 나타내기<br>
+                                            스크롤에 반응하여 콘텐츠가 나타나는 효과 적용<br>
+                                            두개의 height : 100vh div로 묶어 첫화면에서<br>
+                                            스크롤 시 하단으로 내려간 후 가로 스크롤 진행
+                                        </p>
+                                    </li>
+                                    <li class="con03_strengths animate" data-animate="motion">
+                                        <p class="title en">con03 _strengths</p>
+                                        <p class="detail">
+                                            background-color : #fff 흰색 배경<br>
+                                            나의 장점 및 강점을 소개하는 섹션<br>
+                                            스크롤 다운 시 오른쪽 텍스트는 고정, 강점 박스만 스크롤 됨<br>
+                                            <br>
+                                            &lt;4가지 강점&gt;<br>
+                                            깔끔하고 견고한 markup<br>
+                                            유연한 소통능력<br>
+                                            디자인 감각<br>
+                                            꼼꼼하고 정확한 업무
+                                        </p>
+                                    </li>
+                                    <li class="con04_hobby animate" data-animate="motion">
+                                        <p class="title en">con04 _hobby</p>
+                                        <p class="detail">
+                                            background-color : #101010 검은색 배경<br>
+                                            취미를 소개하는 섹션으로<br>
+                                            index hobby섹션에서 more로 연결<br>
+                                            scrolltrigger를 활용하여 제목은 배경에 고정되고<br>
+                                            이미지가 올라가는 효과 적용<br>
+                                            <br>
+                                            &lt;취미 3가지&gt;<br>
+                                            전시회 관람 : visit the exhibition<br>
+                                            그림그리기 : drawing<br>
+                                            패션 : fashion
+                                        </p>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+
+                        <!-- works -->
+                        <div class="works_story">
+                            <p class="en2 category">Works</p>
+                            <div class="cont">
+                                <div class="imgBox">
+                                    <img src="image/portfolio/proto_works.png" alt="">
+                                </div>
+                                <ul class="txtBox">
+                                    <li class="first_visual animate" data-animate="motion">
+                                        <p class="title en">visual</p>
+                                        <p class="detail">
+                                            index와 통일감 있게 심플한 디자인<br>
+                                            단어가 불규칙적으로 커지며 나타는 효과
+                                        </p>
+                                    </li>
+                                    <li class="con01_coding animate" data-animate="motion">
+                                        <p class="title en">con01 _coding</p>
+                                        <p class="detail">
+                                            scrolltrigger로 Coding 제목 고정<br>
+                                            코딩 리스트 hover시 이미지 따라다니는 효과 적용<br>
+                                            <br>
+                                            &lt;list&gt;<br>
+                                            클론코딩 10개<br>
+                                            웹사이트 리뉴얼 1개
+                                        </p>
+                                    </li>
+                                    <li class="con02_uiux animate" data-animate="motion">
+                                        <p class="title en">con02 _uiux</p>
+                                        <p class="detail">
+                                            3개의 uiux 기획 작업물 리스트 형태로 배치<br>
+                                            스크롤에 반응하여 이미지 및 텍스트 width가<br>
+                                            펼쳐지는 효과 적용<br>
+                                            <br>
+                                            &lt;list&gt;<br>
+                                            여기어때 어플 리뉴얼<br>
+                                            인천e음카드 웹사이트 리뉴얼<br>
+                                            패시네이션 PPL 기획
+                                        </p>
+                                    </li>
+                                    <li class="con03_design animate" data-animate="motion">
+                                        <p class="title en">con03 _design</p>
+                                        <p class="detail">
+                                            scrolltrigger로 오른쪽 제목 고정<br>
+                                            디자인 작업물 스크롤에 반응해서 올라감<br>
+                                            <br>
+                                            &lt;list&gt;<br>
+                                            디자인 포트폴리오<br>
+                                            광고 디자인 - 경력<br>
+                                            일러스트 브랜드 ‘105 street’
+                                        </p>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+
+                        <!-- works sub -->
+                        <div class="workssub_story">
+                            <p class="en2 category">Works_sub</p>
+                            <div class="cont">
+                                <div class="imgBox">
+                                    <img src="image/portfolio/proto_workssub.png" alt="">
+                                </div>
+                                <ul class="txtBox">
+                                    <li class="first_main animate" data-animate="motion">
+                                        <p class="title en">main</p>
+                                        <p class="detail">
+                                            works 작업물들을 클릭했을 때 이동하는 상세페이지<br>
+                                            index와 통일감 있게 심플한 디자인<br>
+                                            오른쪽 mode, 화살표 부분 고정<br>
+                                            mode 버튼을 누르면 해당 모드의 사이트 창이 뜨도록 함<br>
+                                            화살표를 클릭하면 다음 작업물 상세페이지로 넘어감<br>
+                                            overview, keypoint, program,<br>
+                                            styleguide(color, font, concept) 넣기
+                                        </p>
+                                    </li>
+                                    <li class="con01_mode animate" data-animate="motion">
+                                        <p class="title en">con01 _mode</p>
+                                        <p class="detail">
+                                            mode 미리보기 - 마스크 애니메이션 적용<br>
+                                            스크롤 시 아래에서 위로 올라오는 효과 적용
+                                        </p>
+                                    </li>
+                                    <li class="con02_fullpage animate" data-animate="motion">
+                                        <p class="title en">con02 _fullpage</p>
+                                        <p class="detail">
+                                            완성된 작업물 전체 페이지를 보여주는 섹션<br>
+                                            편하고 깔끔하게 볼 수 있도록 효과 적용하지 않음
+                                        </p>
+                                    </li>
+                                    <li class="end_footer animate" data-animate="motion">
+                                        <p class="title en">footer</p>
+                                        <p class="detail">
+                                            다른 페이지들의 footer와 다르게 적용<br>
+                                            심플하고 간단하게 넣어 서브페이지 차별화
+                                        </p>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+
+                        <!-- contact -->
+                        <div class="contact_story">
+                            <p class="en2 category">Contact</p>
+                            <div class="cont">
+                                <div class="imgBox">
+                                    <img src="image/portfolio/proto_contact.png" alt="">
+                                </div>
+                                <ul class="txtBox">
+                                    <li class="first_main animate" data-animate="motion">
+                                        <p class="title en">main</p>
+                                        <p class="detail">
+                                            ‘유능한 인재를 찾고 계신다면’<br>
+                                            ‘If you looking for competent worker’ 문구 넣기<br>
+                                            splitting 효과 적용
+                                        </p>
+                                    </li>
+                                    <li class="con_contact animate" data-animate="motion">
+                                        <p class="title en">con _contact</p>
+                                        <p class="detail">
+                                            #c1ff3e 컬러 박스가 올라와서 덮이는 효과<br>
+                                            번호, 이메일 연락처 적기<br>
+                                            일러스트 로고 돌아가는 효과
+                                        </p>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+                    </div> <!-- subPageWrap end -->
+                </div> <!-- storyboard end -->
+            </div>
+        </section>
+
+        <!-- part.5 -->
+        <section class="part5 scroll" id="move_part5">
+            <div class="mainTitle">
+                <div class="titInner">
+                    <h2 class="en2 animate" data-animate="motion"><span class="aniWrap">Part.5</span></h2>
+                    <p>UIUX 요구분석</p>
+                </div>
+            </div>
+            <div class="inner">
+                <!-- user needs -->
+                <div class="needs">
+                    <h2><span class="en">USER NEEDS</span>사용자가 원하는 포트폴리오?</h2>
+                    <div class="textBox">
+                        <p class="tit en">question</p>
+                        <p class="detail">
+                            사용자, 즉 면접관 혹은 인사담당자의 입장이라면 나의 포트폴리오를 통해<br class="res_br">어떤 것들을 알고 싶어 할 지에 대해 생각하여 4가지 질문을 도출하였습니다.
+                        </p>
+                    </div>
+                    <ul class="QBox animate" data-animate="motion">
+                        <li>알아야 할 기본 정보들이 잘 명시되었을까?</li>
+                        <li>흥미를 유도하는,<br>현재 트렌드에 맞는 디자인이 적용되었나?</li>
+                        <li>사용에 있어 불편함이 없을까?</li>
+                        <li>포트폴리오에 직무에 대한 능력이 나타나 있나?</li>
+                    </ul>
+                </div>
+
+                <!-- Q1. 알아야 할~ -->
+                <div class="Q1">
+                    <h2 class="QTitle animate" data-animate="motion">
+                        <span class="en2 Qnum">Q.1</span>
+                        <span class="aniWrap" data-splitting="">알아야 할 기본 정보들이 잘 명시되었을까?</span>
+                    </h2>
+                    <div class="top animate" data-animate="motion">
+                        <div class="left">
+                            <div class="textBox">
+                                <p class="tit en">Brainstorming</p>
+                                <p class="detail">
+                                    사용자가 ‘나’에 대해 궁금해할 만한 것들을 생각하며 <span class="bold">브레인스토밍</span>을 진행하였습니다.
+                                </p>
+                            </div>
+                            <div class="imgBox">
+                                <img src="image/portfolio/brainstorming.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="textBox">
+                                <p class="tit en">Categorization</p>
+                                <p class="detail">
+                                    브레인스토밍을 통해 면접관의 입장에서 궁금해할 만한 키워드인 <span class="bold"><br class="res_br">기본 정보, 스킬/능력, 성격</span>을 큰 <span class="bold">카테고리화</span>하여 정리하였습니다.
+                                </p>
+                            </div>
+                            <ul class="wordBox">
+                                <li>
+                                    <p class="main">기본 정보</p>
+                                    <p class="sub">
+                                        정보<br>
+                                        자기소개<br>
+                                        교육<br>
+                                        자격증<br>
+                                        스토리<br>
+                                        학력<br>
+                                        취미<br>
+                                        연락처
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="main">스킬능력</p>
+                                    <p class="sub">
+                                        코딩<br>
+                                        html/css/js 등<br>
+                                        디자인<br>
+                                        포토샵/일러스트 등<br>
+                                        드로잉<br>
+                                        uiux<br>
+                                        기획 제작
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="main">성격</p>
+                                    <p class="sub">
+                                        성실함<br>
+                                        노력형<br>
+                                        자기계발<br>
+                                        아이디어<br>
+                                        밝음<br>
+                                        친화력<br>
+                                        포용력<br>
+                                        풍부한 상상력<br>
+                                        꼼꼼함<br>
+                                        계획형
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="bottom animate" data-animate="motion">
+                        <div class="textBox">
+                            <p class="tit en">about</p>
+                            <p class="detail">
+                                index에 skills 섹션을 넣어 직무에 있어 가장 중요한 능력을 보여주고자 하였으며,<br class="res_br">
+                                about 페이지에 나에 대한 정보를 상세하게 넣어 포트폴리오를 보는 것만으로도<br class="res_br">
+                                나에 대한 정보를 알 수 있도록 하였습니다.
+                            </p>
+                        </div>
+                        <div class="imgBox">
+                            <p class="img"><img src="image/portfolio/part5_01-1.png" alt=""></p>
+                            <p class="img"><img src="image/portfolio/part5_01-2.png" alt=""></p>
+                        </div>
+                    </div>   
+                </div>
+
+                <!-- Q2. 흥미를 유도하는~ -->
+                <div class="Q2">
+                    <h2 class="QTitle animate" data-animate="motion">
+                        <span class="en2 Qnum">Q.2</span>
+                        <span class="aniWrap" data-splitting="">흥미를 유도하는, 현재 트렌드에 맞는 디자인이 적용되었나?</span>
+                    </h2>
+                    <div class="contBox animate" data-animate="motion">
+                        <div class="left">
+                            <div class="textBox">
+                                <p class="tit en">reference</p>
+                                <p class="detail">
+                                    국내외 해외 웹사이트들을 수없이 서치하며 트렌드를 확인하고<br class="res_br">
+                                    포트폴리오로 활용하기에 적합한 사이트를 선정하여 레퍼런스로 활용하였습니다.
+                                </p>
+                            </div>
+                            <div class="imgBox">
+                                <p class="img"><img src="image/portfolio/main_1.png" alt=""></p>
+                                <p class="img"><img src="image/portfolio/sub_1.png" alt=""></p>
+                                <p class="img"><img src="image/portfolio/sub_6.png" alt=""></p>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="textBox">
+                                <p class="tit en">color / illust</p>
+                                <p class="detail">
+                                    컬러는 요즘 트렌드에 맞게 블랙, 화이트 백그라운드에 비비드한
+                                    포인트 컬러를<br class="res_br">사용하였고, 일러스트 또한 최근 유행하는 무드에
+                                    맞게 제작하였습니다.<br class="res_br">
+                                    일러스트는 index 페이지 visual부분에 삽입하여 사용자의 흥미를 유도하고<br class="res_br">드로잉 능력을 보여줄 수 있도록 기획하였습니다.
+                                </p>
+                            </div>
+                            <div class="imgBox">
+                                <img src="image/portfolio/part5_02-1.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3. 사용에 있어~ -->
+                <div class="Q3">
+                    <h2 class="QTitle animate" data-animate="motion">
+                        <span class="en2 Qnum">Q.3</span>
+                        <span class="aniWrap" data-splitting="">사용에 있어 불편함이 없을까?</span>
+                    </h2>
+                    <div class="top animate" data-animate="motion">
+                        <div class="textBox">
+                            <p class="tit en">header</p>
+                            <p class="detail">
+                                어느 위치에 있던 원하는 곳으로 이동할 수 있도록 스크롤에 반응하는 헤더를 적용하였습니다.<br class="res_br">
+                                스크롤을 위로 올릴 때 헤더가 나타나며, 스크롤을 아래로 내릴 때는 메뉴바 아이콘이 남아 언제든지 헤더 리스트를 열어볼 수 있도록 구성하였습니다.<br class="res_br">
+                                또한 모바일 버전에서는 리스트가 사라지고 메뉴 아이콘만 남도록 하였습니다.
+                            </p>
+                        </div>
+                        <div class="imgBox">
+                            <img src="image/portfolio/part5_03-1.png" alt="">
+                            <img src="image/portfolio/part5_03-2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="bottom animate" data-animate="motion">
+                        <div class="left">
+                            <div class="textBox">
+                                <p class="tit en">gotop btn</p>
+                                <p class="detail">
+                                    한 페이지에 내용이 많기 때문에 편리한 상단이동을 위한 gotop 버튼을<br class="res_br">배치하였습니다. 사용자는 footer에서 최상단으로 이동할 수 있습니다.
+                                </p>
+                            </div>
+                            <div class="imgBox">
+                                <img src="image/portfolio/part5_03-3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="textBox">
+                                <p class="tit en">index</p>
+                                <p class="detail">
+                                    전체적으로 훑어보는 index 페이지 특성상 스크롤에 과한 제한을 두지 않기 위해<br class="res_br">
+                                    가로 스크롤을 최소화 하여 적용하였습니다.
+                                </p>
+                            </div>
+                            <div class="imgBox">
+                                <img src="image/portfolio/part5_03-4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4. 포트폴리오에~ -->
+                <div class="Q4">
+                    <h2 class="QTitle animate" data-animate="motion">
+                        <span class="en2 Qnum">Q.4</span>
+                        <span class="aniWrap" data-splitting="">포트폴리오에 직무에 대한 능력이 나타나 있나?</span>
+                    </h2>
+                    <div class="top animate" data-animate="motion">
+                        <div class="textBox">
+                            <p class="tit en">markup</p>
+                            <p class="detail">
+                                다소 복잡한 구조도 깔끔하게 markup할 수 있는 능력을 보여줄 수 있도록 기획하였습니다.<br>
+                                ex) works visual, about, portfolio font section
+                            </p>
+                        </div>
+                        <div class="imgBox">
+                            <div class="imgLeft">
+                                <img src="image/portfolio/part5_04-1.png" alt="">
+                                <img src="image/portfolio/part5_04-2.png" alt="">
+                            </div>
+                            <div class="imgRight">
+                                <img src="image/portfolio/part5_04-3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom animate" data-animate="motion">
+                        <div class="left">
+                            <div class="textBox">
+                                <p class="tit en">animation</p>
+                                <p class="detail">
+                                    애니메이션 효과를 다양하게 적용해 애니메이션 활용 능력을 보여주며<br class="res_br">
+                                    사용자가 지루함을 느끼지 않도록 기획하였습니다.<br>
+                                    <br>
+                                    ex) index visual
+                                </p>
+                            </div>
+                            <div class="imgBox">
+                                <img src="image/portfolio/part5_04-4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="textBox">
+                                <p class="tit en">scroll trigger</p>
+                                <p class="detail">
+                                    스크롤 트리거를 활용하여 트렌드에 맞는 애니메이션 활용이 가능함을 보여주며<br class="res_br">
+                                    보다 자연스럽고 화려한 애니메이션을 구현하였습니다.
+                                </p>
+                            </div>
+                            <div class="imgBox">
+                                <img src="image/portfolio/part5_04-5.png" alt="">
+                                <img src="image/portfolio/part5_04-6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

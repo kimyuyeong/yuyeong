@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+/* 한글폰트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+/* 영문폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Ponzu';
+    src: url(../font/ponzu-extralight.otf) format('opentype');
+}
+
+
+
+
+/* reset */
+* {margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin: 0; padding: 0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline: none;}
+a:focus {outline: none}
+img {vertical-align: middle;}
+html {font-size: 10px;}
+
+
+
+/* 폰트 */
+.en {font-family: 'Montserrat', sans-serif; font-weight: 300;}
+.en2 {font-family: 'Ponzu';}
+
+
+
+/* layout */
+body {background: #101010; font-family: 'Pretendard'; font-weight: 200; font-size: 1.8rem; color: #fff; line-height: 1.4;}
+.wrap {width: 100%; height: 100%; position: relative;}
+.wrap::before {content: ''; position: absolute; left: 0; top: 28rem; background: #c2c2c2; height: 1px; width: 100%;}
+
+
+
+
+/* section main */
+h3 {font-size: 2.2rem; font-weight: 400; font-family: 'Montserrat', sans-serif; text-transform: uppercase;}
+
+.main {height: 100vh;}
+.main .con { width: 88%; padding: 7% 4% 0; box-sizing: border-box; margin-left: auto;}
+.main .con h2 {font-size: 9rem; color: #c1ff3e; font-weight: 500; margin-bottom: 5%; overflow: hidden;}
+.main .con .detail {display: flex; justify-content: space-between;}
+.main .con .detail ul {width: 50%; height: 56vh; display: flex; justify-content: space-between; flex-direction: column;}
+.main .con .detail ul li.color .list {display: flex; gap: 3%;}
+.main .con .detail ul li.color .list p {background: #888888; padding: 4%; border-radius: 10px; color: #fff; font-weight: 300; transform: scale(0); opacity: 0; text-align: center;}
+.main .con .detail ul li.color .list p:nth-child(2) {background: #e7e7e7; color: #101010;}
+.main .con .detail ul li.color .list p:nth-child(3) {background: #cccccc; color: #101010;}
+.main .con .detail ul li.color .list p:nth-child(4) {background: #333333; color: #fff;}
+.main .con .detail ul li p {color: #c2c2c2; margin-top: 1rem; overflow: hidden; }
+
+/* animation */
+.main .aniWrap {display: block;}
+.main .con h2 .aniWrap {animation: upAni 1s;}
+.main .con .detail ul.left li:nth-child(1) p .aniWrap {animation: upAni 1s .3s forwards; transform: translateY(200px); opacity: 0;}
+.main .con .detail ul.left li:nth-child(2) p .aniWrap {animation: upAni 1s .3s forwards; transform: translateY(200px); opacity: 0;}
+.main .con .detail ul.left li:nth-child(3) p .aniWrap {animation: upAni 1s .4s forwards; transform: translateY(200px); opacity: 0;}
+
+@keyframes upAni {
+    0% {transform: translateY(200px); opacity: 0;}
+    100% {transform: translateY(0); opacity: 1;}
+}
+
+
+.main .con .detail ul li.color .list p:nth-child(1) {animation: colorAni 0.8s .5s forwards;}
+.main .con .detail ul li.color .list p:nth-child(2) {animation: colorAni 0.8s .6s forwards;}
+.main .con .detail ul li.color .list p:nth-child(3) {animation: colorAni 0.8s .7s forwards;}
+.main .con .detail ul li.color .list p:nth-child(4) {animation: colorAni 0.8s .8s forwards;}
+
+@keyframes colorAni {
+    0% {transform: scale(0); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+
+.main .con .detail ul.right li:nth-child(3) p .aniWrap {animation: upAni 1s .6s forwards; transform: translateY(200px); opacity: 0;}
+.main .con .detail ul.right li:nth-child(4) p .aniWrap {animation: upAni 1s .7s forwards; transform: translateY(200px); opacity: 0;}
+
+
+
+
+
+/* fixMenu */
+.main .fixMenu { height: 100vh; position: fixed; width: 12%; border-right: 1px solid #c2c2c2; padding: 18% 2% 5.5%; box-sizing: border-box;}
+.main .fixMenu .top { width: 100%; height: 100%; text-transform: uppercase;}
+.main .fixMenu .top ul {margin-top: 15%;}
+.main .fixMenu .top ul li a {display: inline-block; border: #c1ff3e solid 1px; border-radius: 50px; padding: 3% 10%; margin-bottom: 10%;}
+
+.main .fixMenu .btn {display: flex; justify-content: center; gap: 10%;}
+.main .fixMenu .btn a {display: block; width: 35%; filter: saturate(0%);}
+.main .fixMenu .btn a:nth-child(1) img {transform: rotate(180deg);}
+.main .fixMenu .btn a img {width: 100%;}
+
+/* hover */
+.main .fixMenu .top ul li a:hover {color: #101010; background: #c1ff3e; font-weight: 500;}
+.main .fixMenu .btn a:hover {filter: saturate(100%);}
+
+
+
+
+
+
+
+/* section mode */
+.mode {width: 88%; margin-left: auto; box-sizing: border-box; padding: 15% 4%;}
+.mode .inner {width: 100%; height: 100%;}
+.mode .inner a {display: block;}
+.mode .inner .pc a img, .mode .inner .tablet a img, .mode .inner .mobile a img {filter: brightness(60%); transition: all 0.3s;}
+.mode .inner .pc a:hover img, .mode .inner .tablet a:hover img, .mode .inner .mobile a:hover img {filter: brightness(100%); transition: all 0.3s;}
+
+
+/* pc */
+.mode .inner .pc {width: 52%; margin-left: 40%; position: relative; margin-bottom: 15%;}
+.mode .inner .pc img {width: 100%; border-radius: 20px;}
+.mode .inner .pc::before {content: 'PC MODE'; position: absolute; left: -16%; top: 0; font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 400;}
+
+
+/* tablet */
+.mode .inner .tablet {width: 25%; position: relative; margin-left: 5%; margin-bottom: 5%;}
+.mode .inner .tablet img {width: 100%; border-radius: 2rem;}
+.mode .inner .tablet::before {content: 'TABLET MODE'; position: absolute; right: -47%; bottom: 0; font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 400;}
+
+/* mobile */
+.mode .inner .mobile {width: 15%; position: relative; margin-left: 65%; margin-bottom: 20%;}
+.mode .inner .mobile img {width: 100%; border-radius: 1.5rem;}
+.mode .inner .mobile::before {content: 'MOBILE MODE'; position: absolute; left: -81%; bottom: 0; font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 400;}
+
+
+/* fullpage */
+.mode .inner .fullpage {width: 70%; position: relative; margin: 0 auto; margin-bottom: 10%;}
+.mode .inner .fullpage img {width: 100%; border-radius: 2rem;}
+.mode .inner .fullpage::before {content: 'FULLPAGE'; position: absolute; left: 0; top: -1.6%; font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 400;}
+
+
+/* animation */
+.mode .inner a .aniWrap {transform: translateY(200px); opacity: 0;}
+.mode .aniWrap.motion {position: relative; animation: imgAni 1s forwards;}
+.mode .inner .fullpage.motion img {animation: imgAni 1s forwards;}
+
+@keyframes imgAni {
+    0% {transform: translateY(200px); opacity: 1;}
+}
+
+.mode .aniWrap.motion::after {content: ''; width: 100%; height: 0; background: #101010; position: absolute; top: 0; left: 0; animation: mask 1s forwards;}
+
+@keyframes mask {
+    0% {height: 100%;}
+}
+
+
+
+/* works sub footer */
+footer .footerBottom {position: absolute; left: 0; bottom: 0; width: 100%; padding: 2.5% 0; align-items: center; background: #101010; border-top: 1px solid #c2c2c2;}
+footer .footerBottom .in {width: 93%; margin: 0 auto; display: flex; justify-content: space-between;}
+footer .footerBottom .in a {display: block; width: 3.5%;}
+footer .footerBottom .text {font-weight: 200; font-size: 2rem; display: flex; justify-content: space-between; width: 70%; line-height: 1.6;}
+footer .footerBottom .in .contact {width: 30%;}
+footer .footerBottom .in img {animation: rotate_image 6s linear infinite;transform-origin: 50% 50%; width: 100%;}
+footer .footerBottom .text .green {color: #c1ff3e;}
+footer .footerBottom .text span {color: #c1ff3e; display: inline-block; width:26%;}
+
+@keyframes rotate_image{
+    100% {transform: rotate(360deg);}
+}
+
+/* goTop */
+.goTop {position: absolute; right: 3%; bottom: 131%; display: block; border: 1px solid #fff; border-radius: 100%; height: 6rem; width: 6rem; text-align: center; line-height: 6rem; mix-blend-mode: difference; z-index: 100; font-weight: 400; font-size: 1.6rem; transition: all 0.2s;}
+.goTop:hover {transform: skewX(-10deg) scale(1.05); transition: all 0.2s;}
+
+
+
+
+
+/* 반응형 작은 폰트 사이즈 조절 */
+@media screen and (max-width: 1600px) {html {font-size: 9.5px;}} 
+@media screen and (max-width: 1500px) {html {font-size: 9px;}} 
+@media screen and (max-width: 1400px) {html {font-size: 8.5px;}} 
+@media screen and (max-width: 1200px) {html {font-size: 8px;}} 
+
+
+
+/* responsiveWeb */
+/* pc 1650px ~ 1301px */ /* 1460px */
+@media screen and (max-width:1650px) {
+    .wrap::before {top: 26rem;}
+    .main .con .detail ul li p {font-size: 2rem;}
+    .mode .inner .pc::before {left: -19%;}
+    .mode .inner .tablet::before {right: -56%;}
+    .mode .inner .mobile::before {left: -97%;}
+}
+
+
+/* tablet 1300px ~ 1025px */ /* 1100px */
+@media screen and (max-width:1300px) {
+    .main .fixMenu {height: 105vh;}
+    .res_br {display: none;}
+    .wrap::before {top: 27rem;}
+    .main {height: auto;}
+    .main .con { width: 82%;}
+    .main .con h2 {font-size: 9rem; margin-bottom: 8%; margin-top: 4%;}
+    h3 {font-size: 2.2rem;}
+    .main .con .detail ul {height: 70rem; width: 46%;}
+    .main .con .detail ul li p {font-size: 2.2rem; margin-top: 3%;}
+    .mode .inner .pc {height: auto;}
+    .main .fixMenu {width: 18%; padding: 27.5% 2.5% 14%;}
+    .main .fixMenu .top ul li a {font-size: 2.2rem;}
+    .main .con .detail ul li.color .list {flex-wrap: wrap;}
+    .main .con .detail ul li.color .list p {width: 40%; padding: 10% 0;}
+    
+    .mode {width: 82%;}
+    .mode .inner .pc {width: 70%; margin-left: 24%;}
+    .mode .inner .pc img {border-radius: 1.8rem;}
+    .mode .inner .tablet {width: 35%;}
+    .mode .inner .mobile {width: 21%;}
+    .mode .inner .fullpage {width: 80%;}
+    .mode .inner .fullpage::before {top: -2.2%;}
+
+    /* footer */
+    footer .footerBottom .in a {width: 5.5%;}
+    footer .footerBottom .text {width: 85%;}
+    footer .footerBottom .in .contact {width: 35%;}
+    .goTop {width: 8rem; height: 8rem; line-height: 8rem; font-size: 2rem;}
+}
+
+
+/* tablet 1024px ~ 801px */ /* 900px */
+@media screen and (max-width:1024px) {
+    .wrap::before {top: 5.9%;}
+    .main .con .detail ul {width: 45%;}
+    .main .con .detail ul li.color .list {flex-wrap: wrap;}
+    .main .con .detail ul li.color .list p {width: 40%;}
+    .main .fixMenu {padding: 28.5% 2.5% 14%;}
+
+    .mode .inner .pc::before {left: -24%;}
+    .mode .inner .tablet::before {right: -68%;}
+    .mode .inner .mobile::before {left: -119%;}
+    .mode .inner .fullpage::before {top: -2.8%;}
+
+    /* footer */
+    footer .footerBottom .in {width: 91%;}
+    footer .footerBottom .in a {display: none;}
+    footer .footerBottom .text {width: 100%;}
+}
+
+
+/* mobile 800px ~ 501px */ /* 600px */
+@media screen and (max-width:800px) {
+    .wrap::before {display: none;}
+
+    .main .con {width: 90%; margin: 0 auto;}
+    .main .con h2 {margin-top: 15%;}
+
+    .main .fixMenu {display: none;}
+    .main .con .detail {display: block;}
+    .main .con .detail ul.left {width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; flex-direction: row; height: 57rem;}
+    .main .con .detail ul.left li:nth-child(1) {width: 100%;}
+    .main .con .detail ul.left li:nth-child(2) {width: 50%;}
+    .main .con .detail ul.left li:nth-child(3) {width: 50%;}
+    .main .con .detail ul.right {width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; flex-direction: row;}
+    .main .con .detail ul.right li:nth-child(1) {width: 100%;}
+    .main .con .detail ul.right li:nth-child(2) {width: 100%;}
+    .main .con .detail ul.right li:nth-child(3) {width: 50%;}
+    .main .con .detail ul.right li:nth-child(4) {width: 50%;}
+    .main .fixMenu .top ul li a {font-size: 2.3rem;}
+    .main .con .detail ul li.color .list p {padding: 10% 4%;}
+    
+    .mode{width: 90%; margin: 0 auto;}
+    .mode .inner {margin-bottom: 30%;}
+    .mode .inner .pc {width: 90%; margin-left: auto; margin-bottom: 25%;}
+    .mode .inner .pc img, .mode .inner .tablet img, .mode .inner .mobile img, .mode .inner .fullpage img{border-radius: 1.3rem;}
+    .mode .inner .pc::before {left: 0; top: -18%;}
+    .mode .inner .tablet {width: 45%; margin-left: 0; margin-bottom: 25%;}
+    .mode .inner .tablet::before {right: -76%;}
+    .mode .inner .mobile {width: 26%; margin-bottom: 40%;}
+    .mode .inner .mobile::before {left: -135%;}
+    .mode .inner .fullpage::before {top: -3.5%;}
+
+    /* footer */
+    footer .footerBottom .text .green {display: none;}
+    footer .footerBottom .in .contact {width: 60%;}
+}
+
+
+
+/* mobile 500px이하 */ /* 390px */
+@media screen and (max-width:500px){
+    h3 {font-size: 2rem;}
+    .main .con h2 {margin-top: 23%; font-size: 6rem;} 
+    .main .con .detail ul li p {font-size: 1.8rem;}
+    .main .con .detail ul.left {height: 45rem;}
+    .main .con .detail ul.right {height: 56rem;}
+    .mode .inner {margin-bottom: 50%;}
+    .mode .inner .pc img, .mode .inner .tablet img, .mode .inner .mobile img, .mode .inner .fullpage img{border-radius: 1rem;}
+    .mode .inner .pc::before {top: -22%; font-size: 2rem;}
+    .mode .inner .tablet::before {right: -102%; font-size: 2rem;}
+    .mode .inner .mobile::before {font-size: 2rem; left: -183%;}
+    .mode .inner .fullpage {width: 95%;}
+    .mode .inner .fullpage::before {top: -4%; font-size: 2rem;}
+
+    /* footer */
+    footer .footerBottom {padding: 4rem 2rem;}
+    footer .footerBottom .text  {flex-wrap: wrap; }
+    footer .footerBottom .text p:nth-child(3) {width: 100%; font-size: 1.8rem; line-height: 1.2;}
+    footer .footerBottom .text .contact {width: 100%;}
+    .goTop {display: none;}
+}
+

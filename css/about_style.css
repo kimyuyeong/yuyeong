@@ -1,0 +1,663 @@
+@charset "utf-8";
+
+/* 한글폰트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+/* 영문폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Ponzu';
+    src: url(../font/ponzu-extralight.otf) format('opentype');
+}
+
+
+
+
+/* reset */
+* {margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin: 0; padding: 0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline: none;}
+a:focus {outline: none}
+img {vertical-align: middle;}
+html {font-size: 10px;}
+
+
+
+/* 폰트 */
+.en {font-family: 'Montserrat', sans-serif; font-weight: 300;}
+.en2 {font-family: 'Ponzu';}
+.bold {font-weight: bold;}
+.gr {color: #c1ff3e;}
+
+
+
+/* 공통요소 */
+.title {font-size: 6.3vw; line-height: 1;}
+.sub {margin-top: 4%; font-weight: 300;}
+
+
+
+
+/* layout */
+body {font-family: 'Pretendard'; font-weight: 200; font-size: 1.8rem; background: #fff; width: 100%; height: 100%; line-height: 1.5; color: #101010;}
+.wrap {position: relative; margin: 0 auto; overflow: hidden;  color: #101010;}
+
+
+
+
+
+/* visual */
+.visual {width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; background: #fff;}
+.visual .mainText {text-align: center; font-size: 9.4vw; line-height: 1;}
+.visual .mainText .intro {overflow: hidden;}
+.visual .mainText .intro span {animation: mainAni 1s .5s forwards; display: block; transform: translateY(100%);}
+
+/* myself */
+.visual .myself {color: transparent; border: #101010 1px solid; border-radius: 500px; padding: 0 5rem;  font-size: 8.9vw;  text-align: center;  transition: all 0.5s; transform-origin: center; box-sizing: border-box; position: relative; display: inline-block; overflow: hidden; margin-top: 2rem; animation: mainAni-myself .8s 0.8s forwards ease-out;}
+.visual .myself::before {position: absolute;  color: #101010; content: 'MYSELF';  transition: all 0.5s; display: block; animation: mainAni-before .6s 0.8s forwards ease-in-out;}
+.visual .myself::after {position: absolute;  color: #101010; content: 'MYSELF';  transition: all 0.5s; display: block; content: 'MYSELF'; background: #101010; color: #fff; text-align: center; border-radius: 50% 50% 0 0; width: 100%; height: 100%;  transition: all 0.7s; font-weight: 400; position: absolute; bottom: -100%; left: 0; animation: mainAni-after .6s 0.8s forwards ease-in-out;}
+
+/* myself hover */
+/* .visual .myself:hover {transform: scale(1.06); transition: all 0.5s;}
+.visual .myself:hover::after {transform: translate(0, -100%) scale(1.01); transition: all 0.5s; border-radius: 0;}
+.visual .myself:hover::before {transform: translate(0, -100%) scale(0.95); transition: all 0.6s;} */
+
+
+@keyframes mainAni {
+    0% {opacity: 0; transform: translateY(100%);}
+    100% {opacity: 1; transform: translateY(0%); transform-origin: top;}
+}
+
+
+@keyframes mainAni-myself {
+    0% {transform: scale(1); }
+    100% {transform: scale(1.06); transition: all 0.5s; }
+}
+
+@keyframes mainAni-after {
+    0% {transform: translateY(0) scale(1); border-radius: 50% 50% 0 0;}
+    100% {transform: translate(0, -100%) scale(1.01); transition: all 0.5s; border-radius: 0;}
+}
+
+@keyframes mainAni-before {
+    0% {transform: translateY(0) scale(1);}
+    100% {transform: translate(0, -100%) scale(0.95); transition: all 0.6s;}
+}
+
+
+
+
+
+/* con01 who */
+.con01 {background: #101010; color: #e3e3e3; padding: 25rem 0; position: relative;}
+/* index mark */
+.con01 .mark {position: absolute; top: -2%; left: 5%; width: 16%;}
+.con01 .mark img {width: 100%;}
+.con01 .mark::before {content: 'WHO AM I?'; font-family: 'Montserrat', sans-serif; font-weight: 300; font-size: 3rem; color: #c1ff3e; position: absolute; top: 63%; left: 50%; z-index: 1; width: 100%; transform: translate(-50%, -50%); text-align: center;}
+
+
+
+.con01 .title {color: #c1ff3e; font-weight: 500; font-size: 2.2rem; margin-bottom: 1rem;}
+.con01 .inner {width: 80%; margin: 0 auto;}
+.con01 .inner .top { display: flex; justify-content: space-between; overflow: hidden;}
+.con01 .inner .top .hello {display: flex; justify-content: space-between; width: 50%; position: relative;}
+.con01 .inner .top .hello .bottomLine{height: 1px; width: 0%; background: #c1ff3e; position: absolute; left: 0; bottom: 0;}
+.con01 .inner .top .hello h3 {font-size: 3.5rem; font-weight: 500; line-height: 1.3;}
+.con01 .inner .top .hello p {font-weight: 100; line-height: 1.2; margin: 8% 0 15%;}
+.con01 .inner .top .introduce { line-height: 1.5; transform: translateY(100%);}
+
+
+/* hello splitting animation */
+.splitting.motion .char {
+    display:inline-block;
+    animation: char-up .2s cubic-bezier(.5, 0, .5, 1) both;
+    animation-delay: calc(60ms * var(--char-index));
+    }
+    
+    @keyframes char-up {
+    0% {opacity: 0; transform: translateY(10px);}
+    10% {opacity: 0; transform: translateY(10px);}
+    }
+
+
+.con01 .inner .middle {margin: 12% 0; display: flex; justify-content: space-between; position: relative; width: 100%; }
+.con01 .inner .middle .left, .con01 .inner .middle .right { height: 100%; display: flex; flex-direction: column; justify-content: space-between; height: 80rem;}
+.con01 .inner .middle .left {width: 20%;}
+
+.con01 .inner .middle .right {width: 18%;}
+.con01 .inner .middle .right .skills ul {display: flex; flex-wrap: wrap;}
+.con01 .inner .middle .right .skills ul li {margin-right: 5%; margin-top: 5%; width: 25%;  opacity: 0;}
+.con01 .inner .middle .right .skills ul li img {width: 100%;}
+.con01 .inner .middle .right .mbti p.sub {margin: 8% 0;}
+.con01 .inner .middle .right .mbti p span.line {display: inline-block; border: 1px solid rgba(256, 256, 256, 0.7); padding: 0.3rem 1.5rem; border-radius: 50px;}
+.con01 .inner .middle .right .mbti p span.and {display: inline-block; margin: 0 2%;}
+.con01 .inner .middle .right .mbti ul.in li {list-style: disc; margin-bottom: 2%; list-style-position: inside;}
+
+.con01 .inner .middle .img {width: 35%; position: absolute; top: 10%; left: 50%; transform: translate(-50%, 0); filter: brightness(90%); border-radius: 20px; overflow: hidden;}
+.con01 .inner .middle .img img {width: 100%;}
+
+.con01 .inner .bottom {display: flex; justify-content: space-between;}
+.con01 .inner .bottom .left .experience {margin-bottom: 40%;}
+.con01 .inner .bottom .left span {display: block; font-weight: 100; color: #7c7c7c; font-size: 1.5rem; margin: 0.3rem 0 1.5rem;}
+
+.con01 .inner .bottom .right {width:60%;}
+.con01 .inner .bottom .right ul {margin-top: 3%;}
+.con01 .inner .bottom .right ul li {overflow: hidden;}
+.con01 .inner .bottom .right ul li .aniWrap {display: flex; justify-content: space-between; text-align: left; padding: 2% 0; box-sizing: border-box; position: relative;}
+.con01 .inner .bottom .right ul li::before {content: ''; width: 83.5%; height: 1px; background: #2f2f2f; position: absolute; right: 0; bottom: 0;}
+.con01 .inner .bottom .right ul li:nth-child(1)::before,.con01 .inner .bottom .right ul li:last-child::before {display: none;}
+
+.con01 .inner .bottom .right ul li p {width: 33.333%;}
+.con01 .inner .bottom .right ul li p.tit {text-align: center; width: 21%; font-weight: 400;}
+.con01 .inner .bottom .right ul li p.date {padding-left: 6%;}
+.con01 .inner .bottom .right ul li p.where {width: 28%;}
+
+/* cont01 career and certificates - bg */
+.con01 .inner .bottom .right ul li:nth-child(1) {background: url(../image/about/top_border.png) no-repeat center/contain; background-position: 0 0; margin-bottom: 4%;}
+.con01 .inner .bottom .right ul li:nth-child(2) {background: url(../image/about/top_border.png) no-repeat center/contain; background-position: 0 0;}
+
+
+
+/* animation */
+.con01 .inner .top.motion .hello .bottomLine {animation: lineAni 1.3s ease-in-out forwards;}
+
+@keyframes lineAni {
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+.con01 .inner .top.motion .introduce {animation: slideUp 1.5s .2s ease forwards; transform: translateY(100%);}
+
+.con01 .inner .middle .left .profile {overflow: hidden;}
+.con01 .inner .middle.motion .left .profile .aniWrap {animation: slideUp 0.8s .3s ease forwards; transform: translateY(100%);}
+
+.con01 .inner .middle .right .mbti {overflow: hidden;}
+.con01 .inner .middle.motion .right .mbti .aniWrap {animation: slideUp 0.8s .3s ease forwards; transform: translateY(100%);}
+
+.con01 .inner .middle .left .contact {overflow: hidden;}
+.con01 .inner .middle.motion .left .contact .aniWrap {animation: slideUp 0.8s .5s ease forwards; transform: translateY(100%);}
+
+.con01 .inner .middle .left .award {overflow: hidden;}
+.con01 .inner .middle.motion .left .award .aniWrap {animation: slideUp 0.8s .7s ease forwards; transform: translateY(100%);}
+
+.con01 .inner .middle.motion .img {animation: profileImg 1.4s forwards;}
+
+.con01 .inner .middle.motion .right .skills ul li:nth-child(1) {animation: skillsAni 0.4s 0.5s forwards;}
+.con01 .inner .middle.motion .right .skills ul li:nth-child(2) {animation: skillsAni 0.4s 0.6s forwards;}
+.con01 .inner .middle.motion .right .skills ul li:nth-child(3) {animation: skillsAni 0.4s 0.7s forwards;}
+.con01 .inner .middle.motion .right .skills ul li:nth-child(4) {animation: skillsAni 0.4s 0.8s forwards;}
+.con01 .inner .middle.motion .right .skills ul li:nth-child(5) {animation: skillsAni 0.4s 0.9s forwards;}
+.con01 .inner .middle.motion .right .skills ul li:nth-child(6) {animation: skillsAni 0.4s 1s forwards;}
+.con01 .inner .middle.motion .right .skills ul li:nth-child(7) {animation: skillsAni 0.4s 1.2s forwards;}
+.con01 .inner .middle.motion .right .skills ul li:nth-child(8) {animation: skillsAni 0.4s 1.3s forwards;}
+.con01 .inner .middle.motion .right .skills ul li:nth-child(9) {animation: skillsAni 0.4s 1.4s forwards;}
+.con01 .inner .middle.motion .right .skills ul li:nth-child(10) {animation: skillsAni 0.4s 1.5s forwards;}
+.con01 .inner .middle.motion .right .skills ul li:nth-child(11) {animation: skillsAni 0.4s 1.6s forwards;}
+
+.con01 .inner .bottom .left .experience {overflow: hidden;}
+.con01 .inner .bottom.motion .left .experience .aniWrap {animation: slideUp 1s .2s ease forwards; transform: translateY(100%);}
+
+.con01 .inner .bottom.motion .right ul li:nth-child(1) .aniWrap {animation: slideUp 0.8s .1s ease forwards; transform: translateY(100%);}
+.con01 .inner .bottom.motion .right ul li:nth-child(2) .aniWrap {animation: slideUp 0.8s .2s ease forwards; transform: translateY(100%);}
+.con01 .inner .bottom.motion .right ul li:nth-child(3) .aniWrap {animation: slideUp 0.8s .3s ease forwards; transform: translateY(100%);}
+.con01 .inner .bottom.motion .right ul li:nth-child(4) .aniWrap {animation: slideUp 0.8s .4s ease forwards; transform: translateY(100%);}
+.con01 .inner .bottom.motion .right ul li:nth-child(5) .aniWrap {animation: slideUp 0.8s .5s ease forwards; transform: translateY(100%);}
+.con01 .inner .bottom.motion .right ul li:nth-child(6) .aniWrap {animation: slideUp 0.8s .6s ease forwards; transform: translateY(100%);}
+.con01 .inner .bottom.motion .right ul li:nth-child(7) .aniWrap {animation: slideUp 0.8s .7s ease forwards; transform: translateY(100%);}
+
+.con01 .inner .bottom .left .education {overflow: hidden;}
+.con01 .inner .bottom.motion .left .education .aniWrap {animation: slideUp 1s 0.5s ease forwards; transform: translateY(100%);}
+
+
+
+@keyframes slideUp {
+    0% { transform: translateY(100%);}
+    100% { transform: translateY(0px);}
+}
+
+@keyframes profileImg {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes skillsAni {
+    0% {transform: scale(0); opacity: 1;}
+    100% {transform: scale(1); opacity: 1;}
+}
+
+
+
+
+/* con02 timeline */
+.con02 {width: 100%; background: #B5E74C; position: relative;}
+/* index mark */
+.con02 .mark {position: absolute; top: -0.8%; left: 21%; width: 16%;}
+.con02 .mark img {width: 100%;}
+.con02 .mark::before {content: 'TIMELINE'; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 3rem; color: #101010; position: absolute; top: 63%; left: 50%; z-index: 1; width: 100%; transform: translate(-50%, -50%); text-align: center;}
+
+
+/* topCont */
+.con02 .topCont {width: 100%; height: 100vh; padding: 25rem 0 2%; box-sizing: border-box;}
+.con02 .topCont .inner {width: 90%; height: 100%;  margin: 0 auto; display: flex; justify-content: space-between; position: relative;}
+.con02 .topCont .inner::before {content: 'SCROLL DOWN'; position: absolute; bottom: 0; left: 50%; font-size: 1.2rem; font-family: 'Montserrat', sans-serif; font-weight: 500; transform: rotate(-90deg); transform-origin: left bottom;}
+.con02 .topCont .inner .left {display: flex; justify-content: space-between; flex-direction: column;}
+.con02 .topCont .inner .left .textBox .title .aniWrap {display: block;}
+.con02 .topCont .inner .left .arrow {width: 9%;}
+.con02 .topCont .inner .left .arrow img {width: 100%;}
+
+.con02 .topCont .inner .right {display: flex; justify-content: flex-end;
+flex-direction: column;}
+.con02 .topCont .inner .right .num {font-size: 56rem; font-weight: bold; letter-spacing: -3rem;  line-height: 0.7;}
+.con02 .topCont .inner .right .age {font-weight: 400; font-size: 3rem; margin: 0 0 6% 4%;}
+
+
+/* animation */
+.con02 .topCont .inner .left .textBox .title p {overflow: hidden;}
+.con02 .topCont .inner .left .textBox.motion .title p.a .aniWrap {animation: slideUp .7s .2s ease forwards; transform: translateY(100%);}
+.con02 .topCont .inner .left .textBox.motion .title p.b .aniWrap {animation: slideUp .7s .4s ease forwards; transform: translateY(100%); }
+
+.con02 .topCont .inner .right.motion .num span.num2 {animation: numAni 1s ease; display: inline-block; }
+.con02 .topCont .inner .right.motion .num span.num5 {animation: numAni 1.2s ease; display: inline-block;}
+
+@keyframes numAni {
+    0% {transform: translateY(-60%);}
+    100% {transform: translateY(0);}
+}
+
+
+/* bottomCont */
+.con02 .bottomCont {width: 100%; height: 100vh; position: relative;}
+.con02 .bottomCont .svg {position: absolute; left: 7%; top: 14%; } 
+.con02 .bottomCont .svg path {opacity: 0.7;}
+
+
+
+/* .con02 .bottomCont::before {content: ''; position: absolute; left: 6.5%; top: 15%; background: #101010; width: 12px; height: 12px; border-radius: 100%;} */
+.con02 .bottomCont ul {margin-left: 20%; width: 100%; height: 100%; display: flex; position: absolute;}
+.con02 .bottomCont ul li {width: fit-content; height: fit-content; flex-shrink: 0; padding: 0 20%; position: relative; }
+.con02 .bottomCont ul li .textBox {opacity: 0;}
+.con02 .bottomCont ul li .detail {font-size: 1.8rem; font-weight: 300; position: relative;}
+.con02 .bottomCont ul li .detail::before {content: ''; width: 15%; height: 1px; background: #101010; position: absolute; left: 0; bottom: -50%;}
+.con02 .bottomCont ul li .year {font-size: 8rem; font-weight: bold; letter-spacing: -0.4rem; margin-top: 7%;}
+.con02 .bottomCont ul li .subText {font-size: 1.6rem; font-weight: 400; line-height: 1.4;}
+
+.con02 .bottomCont ul li.now {text-align: center;}
+.con02 .bottomCont ul li.now .tit {font-size: 18rem; font-weight: bold; border-bottom: #101010 1px solid; line-height: 1.1; }
+.con02 .bottomCont ul li.now .sub {margin-top: 7%}
+
+.con02 .bottomCont ul li:nth-child(1) {padding-top: 30%;}
+.con02 .bottomCont ul li:nth-child(2) {padding-top: 15%;}
+.con02 .bottomCont ul li:nth-child(3) {padding-top: 30%;}
+.con02 .bottomCont ul li:nth-child(4) {padding-top: 16%;}
+.con02 .bottomCont ul li:nth-child(5) {padding-top: 27%;}
+.con02 .bottomCont ul li:nth-child(6) {padding-top: 12%;}
+.con02 .bottomCont ul li:nth-child(7) {padding-top: 25%;}
+.con02 .bottomCont ul li:nth-child(8) {padding-top: 20%; padding-left: 6%;}
+
+
+.con02 .bottomCont ul li .ball {position: absolute; left: 0; top: 0; width: 1.5rem; height: 1.5rem; background: #101010; border-radius: 100%; display: block; transform: scale(0);}
+
+.con02 .bottomCont ul li.ani01 .ball {left: 38%; top: 69%;}
+.con02 .bottomCont ul li.ani02 .ball {left: 37.5%; top: 45.7%;}
+.con02 .bottomCont ul li.ani03 .ball {left: 37.5%; top: 65%;}
+.con02 .bottomCont ul li.ani04 .ball {left: 37.5%; top: 43%;}
+.con02 .bottomCont ul li.ani05 .ball {left: 36%; top: 57.6%;}
+.con02 .bottomCont ul li.ani06 .ball {left: 36.5%; top: 35.5%;}
+.con02 .bottomCont ul li.ani07 .ball {left: 36.5%; top: 52.3%;}
+.con02 .bottomCont ul li.now .ball {left: 35%; top: 103.5%;}
+
+
+
+
+
+
+
+/* con03 strength */
+.con03 {width: 100%; height: 100vh; padding: 18rem 0; box-sizing: border-box; position: relative; background: #fff; overflow: hidden;}
+/* index mark */
+.con03 .mark {position: absolute; top: -6%; left: 37%; z-index: 1; width: 16%;}
+.con03 .mark img {width: 100%;}
+.con03 .mark::before {content: 'STRENGTH'; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 3rem; color: #101010; position: absolute; top: 63%; left: 50%; z-index: 1; width: 100%; transform: translate(-50%, -50%); text-align: center;}
+
+.con03 .inner {width: 90%; height: 100%; margin: 0 auto; display: flex; justify-content: space-between;}
+.con03 .inner .left {display: flex; justify-content: space-between; flex-direction: column;}
+.con03 .inner .left .textBox .title p {text-transform: uppercase; overflow: hidden;}
+.con03 .inner .left .textBox .title span {display: block;}
+.con03 .inner .left .scroll {font-size: 2.5rem; font-weight: 400; color: #fff; background: #101010;  padding: 1rem 2.5rem; border-radius: 500px; width: 26%; text-align: center;}
+
+.con03 .inner .right {width: 40%;}
+.con03 .inner .right ul {width: 100%; height: 100%;}
+.con03 .inner .right ul li {background: #fff; width: 100%; height: 100%; flex-shrink: 0; border: #101010 1px solid; border-radius: 2rem; box-sizing: border-box; padding: 10%; display: flex; justify-content: space-between; flex-direction: column; margin-bottom: 10%; opacity: 0.2; transform: scale(0.9);}
+.con03 .inner .right ul li .icon {width: 13%; }
+.con03 .inner .right ul li .icon img {width: 100%;}
+.con03 .inner .right ul li .textBox .tit {font-size: 4rem; font-weight: 600; margin-bottom: 5%;}
+.con03 .inner .right ul li .textBox .subText {font-weight: 300; color: #4e4e4e;}
+
+/* animation */
+.con03 .inner .left .textBox .title p .aniWrap {display: block;}
+
+.con03 .inner .left .textBox.motion .title p.a .aniWrap {animation: slideUp .7s .2s ease forwards; transform: translateY(100%);}
+.con03 .inner .left .textBox.motion .title p.b .aniWrap {animation: slideUp .7s .4s ease forwards; transform: translateY(100%); }
+.con03 .inner .left .textBox.motion .title p.c .aniWrap {animation: slideUp .7s .6s ease forwards; transform: translateY(100%); }
+
+
+
+
+
+
+
+
+
+
+
+
+/* con04 hobby */
+.con04 {background: #101010; color: #fff;  text-align: center; position: relative;}
+/* index mark */
+.con04 .mark {position: absolute; top: -0.3%; left: 54%; width: 16%;}
+.con04 .mark img {width: 100%;}
+.con04 .mark::before {content: 'HOBBY'; font-family: 'Montserrat', sans-serif; font-weight: 400; font-size: 3rem; color: #c1ff3e; position: absolute; top: 63%; left: 50%; z-index: 1; width: 100%; transform: translate(-50%, -50%); text-align: center;}
+
+.con04 .mainTitle {width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.con04 .mainTitle .sub {color: #e3e3e3; margin-top: 2%;}
+
+/* hobby 공통요소 */
+.con04 .subTitle {width: 100%; height: 100vh; margin-top: 35vh;}
+.con04 .subTitle .sameTitle {color: #c1ff3e; font-size: 8rem; line-height: 1;}
+.con04 .subTitle .sameSub {font-size: 1.8rem; color: #e3e3e3; margin-top: 2%;}
+
+
+.con04 ul {padding-top: 35%; width: 100%;}
+.con04 ul.exhibitionList {padding-bottom: 50vh;}
+.con04 ul.drawingList {padding-bottom: 50vh;}
+.con04 .fashion {padding-bottom: 130vh;}
+
+
+.con04 ul li {width: 28%; z-index: 1;}
+.con04 ul li .imgBox {width: 100%; border-radius: 1.5rem; overflow: hidden;}
+.con04 ul li .imgBox img {width: 100%; opacity: 0.9;}
+
+
+.con04 ul.exhibitionList li:nth-child(1) {width: 25%; margin-left: 8%;}
+.con04 ul.exhibitionList li:nth-child(2) {width: 23%; margin-left: auto; margin-right: 5%;}
+.con04 ul.exhibitionList li:nth-child(3) {width: 25%; margin-left: 20%;}
+.con04 ul.exhibitionList li:nth-child(4) {width: 28%; margin-top: 15%; margin-left: 8%;}
+.con04 ul.exhibitionList li:nth-child(5) {width: 28%; margin-left: 70%; }
+.con04 ul.exhibitionList li:nth-child(6) {width: 25%; margin-left: 15%;}
+.con04 ul.exhibitionList li:nth-child(7) {width: 35%; margin-left: 55%;}
+
+
+.con04 ul.drawingList li:nth-child(1) {width: 23%; margin-left: 10%;}
+.con04 ul.drawingList li:nth-child(2) {width: 30%; margin-left: 66%;}
+.con04 ul.drawingList li:nth-child(3) {width: 25%; margin-left: 18%;}
+.con04 ul.drawingList li:nth-child(4) {width: 25%; margin-left: 68%; margin-top: 8%;}
+.con04 ul.drawingList li:nth-child(5) {width: 25%; margin-left: 10%; margin-top: 5%;}
+
+
+.con04 ul.fashionList li:nth-child(1) {width: 23%; margin-right: 10%; margin-left: auto;}
+.con04 ul.fashionList li:nth-child(2) {width: 23%; margin-left: 10%;}
+.con04 ul.fashionList li:nth-child(3) {width: 23%; margin-right: 10%; margin-left: auto;}
+.con04 ul.fashionList li:nth-child(4) {width: 23%; margin-left: 10%;}
+.con04 ul.fashionList li:nth-child(5) {width: 23%; margin-right: 10%; margin-left: auto;}
+.con04 ul.fashionList li:nth-child(6) {width: 23%; margin-left: 10%;}
+
+
+
+
+
+
+/* animation */
+.con04 .mainTitle .title p {overflow: hidden;}
+.con04 .mainTitle .title p .aniWrap {display: block;}
+
+.con04 .mainTitle .title.motion p.a .aniWrap {animation: slideUp .7s .1s ease forwards; transform: translateY(100%);}
+.con04 .mainTitle .title.motion p.b .aniWrap {animation: slideUp .7s .3s ease forwards; transform: translateY(100%); }
+
+
+
+
+
+/* 반응형 작은 폰트 사이즈 조절 */
+@media screen and (max-width: 1600px) {html {font-size: 9.5px;}} 
+@media screen and (max-width: 1500px) {html {font-size: 9px;}} 
+@media screen and (max-width: 1400px) {html {font-size: 8.5px;}} 
+@media screen and (max-width: 1200px) {html {font-size: 8px;}} 
+
+
+
+/* responsiveWeb */
+/* pc 1650px ~ 1301px */ /* 1460px */
+@media screen and (max-width:1650px) {
+    .title {font-size: 6vw;}
+    .con01 .mark {top: -1.8%;}
+    .con03 .inner .right {width: 44%;}
+    .con03 .inner .left .scroll {width: 29%;}
+    .con02 .mark {top: -0.6%;}
+    .con04 .mark {top: -0.25%;}
+    svg {display: none;}
+    .con02 .bottomCont ul li .ball {display: none;}
+}
+
+
+/* tablet 1300px ~ 1025px */ /* 1100px */
+@media screen and (max-width:1300px) {
+    .title {font-size: 7vw;}
+    .con01 .mark {width: 21%;}
+    .con01 {padding: 20% 0;}
+    .con01 .inner {width: 85%;}
+    .con01 .inner .top .hello {width: 45%;}
+    .con01 .inner .top.motion .introduce {width: 50%;}
+    .con01 .inner .middle {margin: 15% 0;}
+    .con01 .inner .middle .img {width: 40%;}
+    .con01 .inner .middle .left, .con01 .inner .middle .right {height: 70rem;}
+    .con01 .inner .middle .left {width: 23%;}
+    .con01 .inner .middle .right {width: 21%;}
+    .con01 .inner .bottom {flex-wrap: wrap;}
+    .con01 .inner .bottom .left {width: 100%; display: flex; justify-content: space-between; margin-bottom: 15%;}
+    .con01 .inner .bottom .left .experience {width: 45%; margin-bottom: 0;}
+    .con01 .inner .bottom .left .education {width: 45%;}
+    .con01 .inner .bottom .right {width: 78%;}
+    .con01 .res_br {display: none;}
+
+    .con02 .mark {width: 21%; top: -1.2%;}
+    .con02 .topCont {padding: 20% 0;}
+    .con02 .topCont .inner .right .num {font-size: 40vw;}
+    svg {display: none;}
+    .con02 .bottomCont {height: auto; position: initial;}
+    .con02 .bottomCont ul {position: initial; display: flex; justify-content: space-between; flex-wrap: wrap; margin-left: 0; width: 70%; margin: 0 auto; gap: 20%;}
+    .con02 .bottomCont ul li {flex-shrink: initial; padding: 0; width: 40%; margin: 0 auto;}
+    .con02 .bottomCont ul li:nth-child(2n) {margin-top: 40%;}
+    .con02 .bottomCont ul li:nth-child(1) {padding-top: 0;}
+    .con02 .bottomCont ul li:nth-child(2) {padding-top: 0;}
+    .con02 .bottomCont ul li:nth-child(3) {padding-top: 0;}
+    .con02 .bottomCont ul li:nth-child(4) {padding-top: 0;}
+    .con02 .bottomCont ul li:nth-child(5) {padding-top: 0;}
+    .con02 .bottomCont ul li:nth-child(6) {padding-top: 0;}
+    .con02 .bottomCont ul li:nth-child(7) {padding-top: 0; margin-right: 60%;}
+    .con02 .bottomCont ul li:nth-child(8) {padding-top: 0;}
+    .con02 .bottomCont ul li.now {width: auto; margin:20% auto 25%;}
+    .con02 .bottomCont ul li .ball {display: none;}
+    .con02 .bottomCont ul li .textBox {opacity: 1;}
+
+    .con03 {height: auto; padding: 20% 0;}
+    .con03 .res_br {display: none;}
+    .con03 .inner {display: block;}
+    .con03 .inner .left {margin-bottom: 10%;}
+    .con03 .inner .left .scroll {display: none;}
+    .con03 .inner .right {width: 100%;}
+    .con03 .inner .right ul {display: flex; flex-wrap: wrap; justify-content: space-between;}
+    .con03 .inner .right ul li {flex-shrink: initial; width: 48%; height: auto; opacity: 1; transform: scale(1); padding: 5%;}
+    .con03 .inner .right ul li:nth-child(1), .con03 .inner .right ul li:nth-child(2) {margin-bottom: 5%;}
+    .con03 .inner .right ul li:nth-child(3), .con03 .inner .right ul li:nth-child(4) {margin-bottom: 0;}
+    .con03 .inner .right ul li .textBox .tit {margin: 25% 0 5%;}
+
+    .con04 .mark {width: 21%; top: -0.5%;}
+    .con04 .mainTitle {height: auto; padding: 20% 0;}
+    .con04 .subTitle {height: auto; margin-top: 0;}
+    .con04 .subTitle .sameTitle {font-size: 6rem;}
+    .con04 .subTitle .sameSub {font-size: 1.5rem;}
+    .con04 ul {padding-top: 10%;}
+
+    .con04 .exhibition, .con04 .drawing {margin-bottom: 25%;}
+    .con04 ul.exhibitionList {padding-bottom: 0; display: flex; flex-wrap: wrap; justify-content: space-between; width: 80%; margin-right: auto; margin-left: auto;}
+    .con04 ul.exhibitionList li:nth-child(1) {width: 40%; margin-left: 0;}
+    .con04 ul.exhibitionList li:nth-child(2) {width: 38%; margin:0;}
+    .con04 ul.exhibitionList li:nth-child(3) {width: 42%; margin:0;}
+    .con04 ul.exhibitionList li:nth-child(4) {width: 42%; margin:0;}
+    .con04 ul.exhibitionList li:nth-child(5) {width: 45%; margin:0;}
+    .con04 ul.exhibitionList li:nth-child(6) {width: 38%; margin:0;}
+    .con04 ul.exhibitionList li:nth-child(7) {width: 55%; margin:0;}
+    .con04 ul.exhibitionList li {margin-bottom: 20%;}
+    .con04 ul.exhibitionList li:nth-child(2n) {margin-top: 20%;}
+
+
+    .con04 ul.drawingList {padding-bottom: 0; display: flex; flex-wrap: wrap; justify-content: space-between; width: 80%; margin-right: auto; margin-left: auto;}
+    .con04 ul.drawingList li:nth-child(1) {width: 40%; margin-left: 0;}
+    .con04 ul.drawingList li:nth-child(2) {width: 48%; margin-left: 0; margin-top: 15%;}
+    .con04 ul.drawingList li:nth-child(3) {width: 43%; margin-left: 0; margin-top: 15%;}
+    .con04 ul.drawingList li:nth-child(4) {width: 38%; margin-left: 0; margin-top: 8%;}
+    .con04 ul.drawingList li:nth-child(5) {width: 40%; margin-left: 40%; margin-top: 10%;}
+
+    .con04 .fashion {padding-bottom: 30%;}
+    .con04 ul.fashionList li:nth-child(1) {width: 30%;}
+    .con04 ul.fashionList li:nth-child(2) {width: 30%;}
+    .con04 ul.fashionList li:nth-child(3) {width: 30%;}
+    .con04 ul.fashionList li:nth-child(4) {width: 30%;}
+    .con04 ul.fashionList li:nth-child(5) {width: 30%;}
+    .con04 ul.fashionList li:nth-child(6) {width: 30%;}
+    .con04 ul.fashionList li:nth-child(2n) {margin-top:-10%;}
+}
+
+
+/* tablet 1024px ~ 801px */ /* 900px */
+@media screen and (max-width:1024px) {
+    .title {font-size: 8vw;}
+    .visual .myself {line-height: 1.2; padding: 0 3rem;}
+    .con01 .mark {width: 25%; top: -1.6%;}
+    .con01 .mark::before {font-size: 2.5rem;}
+    .con01 .inner {width: 80%;}
+    .con01 .inner .top {display: block;}
+    .con01 .inner .top .hello {width: 100%; margin-bottom: 8%;}
+    .con01 .inner .top.motion .introduce {width: 61%; margin-left: auto;}
+    .con01 .inner .middle {margin-bottom: 20%;}
+    .con01 .inner .middle.motion .img {display: none;}
+    .con01 .inner .middle .left {width: 45%;}
+    .con01 .inner .middle .right {width: 45%;}
+    .con01 .inner .middle .right .skills ul li {width: 19%;}
+    .con01 .inner .bottom .left {margin-bottom: 20%;}
+    .con01 .inner .bottom .right {width: 100%;}
+    
+    .con02 .mark {width: 25%; top: -1%;}
+    .con02 .mark::before {font-size: 2.5rem;}
+    .con02 .topCont .inner .right .num {font-size: 39vw;}
+    .con02 .bottomCont ul {width: 75%;}
+
+    .con02 .topCont {height: auto;}
+    .con02 .topCont .inner {display: block;}
+    .con02 .topCont .inner::before {display: none;}
+    .con02 .topCont .inner .left {margin-bottom: 20%;}
+    .con02 .topCont .inner .right {width: fit-content; margin-left: auto;}
+    .con02 .topCont .inner .right .num {letter-spacing: -2rem; font-size: 48vw;}
+    .con02 .topCont .inner .left .arrow {position: absolute; left: 0; bottom: 0; width: 7%;}
+    .con02 .bottomCont ul li .year {font-size: 6rem; white-space: nowrap;}
+    .con02 .bottomCont ul li.now .tit {font-size: 12rem;}
+    .con02 .bottomCont ul li:nth-child(8) {padding-left: 0;}
+    .con02 .bottomCont ul li:nth-child(2n) {margin-top: 46%;}
+
+    .con04 .mark {width: 25%; top: -0.6%;}
+    .con04 .mark::before {font-size: 2.5rem;}
+}
+
+
+/* mobile 800px ~ 501px */ /* 600px */
+@media screen and (max-width:800px) {
+    .title {font-size: 11vw;}
+    .visual .mainText {font-size: 12vw;}
+    .visual .myself {font-size: 12vw;}
+
+    .con01 {padding: 25% 0;}
+    .con01 .title {margin-bottom: 1.3rem;}
+    .con01 .mark {width: 30%; top: -1.2%;}
+    .con01 .mark::before {font-size: 2rem;}
+    .con01 .inner .top.motion .introduce {width: 100%;}
+    .con01 .inner .middle {margin: 23% 0;}
+    .con01 .inner .middle .right .skills ul li {width: 26%;}
+    .con01 .inner .bottom .left {display: block; margin-bottom: 23%;}
+    .con01 .inner .bottom .left .experience {width: 100%; margin-bottom: 23%;}
+    .con01 .inner .bottom .left .education {width: 100%;}
+    .con01 .inner .bottom .right ul {margin-top: 5%;}
+    .con01 .inner .bottom .right ul li p.tit {width: 17%;}
+    .con01 .inner .bottom .right ul li p.date {display: none;}
+    .con01 .inner .bottom .right ul li p.where {width: 35%;}
+
+    .con02 .res_br {display: none;}
+    .con02 .mark {width: 30%; top: -1%;}
+    .con02 .mark::before {font-size: 2rem;}
+    .con02 .topCont .inner .left {margin-bottom: 30%;}
+    
+    .con03 {padding: 25% 0;}
+    .con03 .inner .right ul li {width: 90%; margin: 0 auto;}
+    .con03 .inner .right ul li:nth-child(3) {margin-bottom: 5%;}
+
+    .con04 .mark {width: 30%; top: -0.7%;}
+    .con04 .mark::before {font-size: 2rem;}
+    .con04 ul li .imgBox {border-radius: 1rem;}
+    .con04 .subTitle .sameTitle {font-size: 4.5rem;}
+}
+
+
+
+/* mobile 500px이하 */ /* 390px */
+@media screen and (max-width:500px){
+    .mark {display: none;}
+    .con01 .inner .top .hello .logo {display: none;}
+    .con01 .inner .middle {display: block;}
+    .con01 .inner .middle .left {width: 100%;}
+    .con01 .inner .middle .right {width: 100%;}
+    .con01 .inner .middle .left {height: 45rem; margin-bottom: 25%;}
+    .con01 .inner .middle .right {height: 66rem; margin-bottom: 25%;}
+    .con01 .inner .middle .right .skills ul li {width: 20%;}
+    .con01 .inner .bottom .right ul li p.tit {width: 22%;}
+    .con01 .inner .bottom .right ul li p.where {display: none;}
+    .con01 .inner .bottom .right ul li p {width: 62%;}
+    .con01 .inner .bottom .right ul li:nth-child(1) {background: none;}
+    .con01 .inner .bottom .right ul li:nth-child(2) {background: none;}
+
+    .con02 .bottomCont ul li {width: 100%; margin-bottom: 30%;}
+    .con02 .bottomCont ul li:nth-child(2n) {margin-top: 0;}
+    .con02 .bottomCont ul li:nth-child(7) {margin-right: 0;}
+    .con02 .bottomCont ul li.now .tit {font-size: 9rem;}
+
+    .con03 .inner .right ul li {border-radius: 1.2rem; padding: 9%;}
+    .con03 .inner .right ul li .icon {width: 16%;}
+    .con03 .inner .right ul li .textBox .tit {font-size: 3.2rem;}
+
+    .con04 .subTitle .sameTitle {font-size: 3.5rem;}
+    .con04 ul.exhibitionList {display: block;} 
+    .con04 ul.exhibitionList li:nth-child(1) {width: 100%; margin-bottom: 10%;}
+    .con04 ul.exhibitionList li:nth-child(2) {width: 100%; margin-top: 0; margin-bottom: 10%;}
+    .con04 ul.exhibitionList li:nth-child(3) {width: 100%; margin-bottom: 10%;}
+    .con04 ul.exhibitionList li:nth-child(4) {width: 100%; margin-top: 0; margin-bottom: 10%;}
+    .con04 ul.exhibitionList li:nth-child(5) {width: 100%; margin-bottom: 10%;}
+    .con04 ul.exhibitionList li:nth-child(6) {width: 100%; margin-top: 0; margin-bottom: 10%;}
+    .con04 ul.exhibitionList li:nth-child(7) {width: 100%;}
+
+    .con04 ul.drawingList {display: block;}
+    .con04 ul.drawingList li:nth-child(1) {width: 100%; margin-bottom: 10%;}
+    .con04 ul.drawingList li:nth-child(2) {width: 100%; margin-bottom: 10%; margin-top: 0;}
+    .con04 ul.drawingList li:nth-child(3) {width: 100%; margin-bottom: 10%; margin-top: 0;}
+    .con04 ul.drawingList li:nth-child(4) {width: 100%; margin-bottom: 10%;}
+    .con04 ul.drawingList li:nth-child(5) {width: 100%; margin-left: 0;}
+
+    .con04 ul.fashionList {display: block; width: 80%; margin: 0 auto;}
+    .con04 ul.fashionList li:nth-child(1) {width: 100%; margin-bottom: 10%; margin-right: 0; margin-left: 0;}
+    .con04 ul.fashionList li:nth-child(2) {width: 100%; margin-bottom: 10%; margin-top: 0; margin-left: 0;}
+    .con04 ul.fashionList li:nth-child(3) {width: 100%; margin-bottom: 10%; margin-right: 0; margin-left: 0;}
+    .con04 ul.fashionList li:nth-child(4) {width: 100%; margin-bottom: 10%; margin-top: 0; margin-left: 0;}
+    .con04 ul.fashionList li:nth-child(5) {width: 100%; margin-bottom: 10%; margin-right: 0; margin-left: 0;}
+    .con04 ul.fashionList li:nth-child(6) {width: 100%; margin-top: 0; margin-left: 0;}
+
+}

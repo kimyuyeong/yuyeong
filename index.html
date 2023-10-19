@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuyeong Portfolio_index</title>
+    <link rel="stylesheet" href="css/index_style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/index_script.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <div id="header"></div>
+        <!-- section.visual -->
+        <section class="visual">
+            <div class="illust"><img src="image/visual_illust.svg" alt=""></div>
+            <div class="mainTitle en">
+                <p><span class="mask">YUYEONG's</span></p>
+                <p><span class="mask">portfolio</span></d>
+                <p><span class="mask"><span class="dashBar">_</span> I AM</span></p>
+                <p><span class="mask"><span class="swim en2">SWIMMING</span></span></p>
+            </div>
+            <div class="bottom en">
+                <ul>
+                    <li>KIM YUYEONG</li>
+                    <li>SCROLL DOWN</li>
+                    <li>portfolio ver.1</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- con01 -->
+        <section class="con01">
+            <div class="videoWrap">
+                <video autoplay="" muted="" loop="" playinline=""><source src="image/vlog4.mp4" type="video/mp4"></video>
+            </div>
+        </section>
+
+        <!-- con02 -->
+        <section class="con02">
+            <div class="enBanner en">#diligent #responsibility #detailed #communication #idea #sense</div>
+            <div class="koBanner">#성실 #책임감 #세심함 #소통 #아이디어 #센스</div>
+            <div class="enBanner2 en">#communication #idea #sense #diligent #responsibility #detailed</div>
+        </section>
+
+        <!-- con03 -->
+        <section class="con03">
+            <h3 class="en">INTRODUCE intro</h3>
+            <div class="top">
+                <div class="helloBox">
+                    <div class="img">
+                        <img src="image/hello_1.png" alt="">
+                    </div>
+                    <div class="text">
+                        HELLO<br><span class="en2">THIS IS ME</span>
+                    </div>
+                </div>
+                <div class="helloBox">
+                    <div class="img">
+                        <img src="image/hello_1.png" alt="">
+                    </div>
+                    <div class="text">
+                        HELLO<br> <span class="en2">THIS IS ME</span>
+                    </div>
+                </div>
+                <div class="helloBox">
+                    <div class="img">
+                        <img src="image/hello_1.png" alt="">
+                    </div>
+                    <div class="text">
+                        HELLO<br> <span class="en2">THIS IS ME</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner">
+                <div class="bottom animate" data-animate="motion">
+                    <span class="line"></span>
+                    <img src="image/logo_bk.svg" alt="" class="logo">
+                    <div class="text animate" data-animate="motion"">
+                        <div class="leftText">
+                            <p class="small">안녕하세요.<br>
+                            <br>
+                            우주를 자유롭게 <span class="bold">유영</span>하듯,<br>
+                            유연한 사고를 하는 퍼블리셔</p>
+                            <p class="big"><span class="bold">김유영</span>입니다.</p>
+                        </div>
+                        <div class="rightText">
+                            저는 어렸을때 부터 미술, 예술 분야에 두각을 드러내며<br class="res_br">
+                            일러스트 문구 브랜드 운영, 이모티콘 제작 등 다양한 도전을 하였습니다.<br>
+                            이후 IT 회사의 디자이너로 근무하며 개발직군에 관심을 가지게 되었고<br class="res_br">
+                            퍼블리셔로의 새로운 도전을 하게 되었습니다.<br class="res_br">
+                            <br>
+                            퍼블리셔의 매력은 사용자의 편의성, 사용성을 모두 고려하며<br class="res_br">
+                            디자인 감각을 통해 더 좋은 사용자 경험을 만들어 내는 것이라고 생각합니다.<br>
+                            <br>
+                            저는 퍼블리싱은 물론 디자인까지 놓치지 않는 퍼블리셔가 되겠습니다.
+                        </div>
+                    </div>
+                </div>
+                <div class="btn"><a href="about.html" class="moreBtn en">MORE →</a></div>
+            </div>
+        </section>
+
+        <!-- con04 skills -->
+        <section class="con04">
+            <div class="inner">
+                <div class="text animate" data-animate="motion">
+                    <p class="title"><span>SKILLS</span></p>
+                    <p class="subText"><span>html/css/js 등의 탄탄한 코딩 스킬을 겸비하였고<br>디자인 툴인 포토샵, 일러스트를 능숙하게 다룹니다.</span></p>
+                </div>
+                <div class="skillsBox animate" data-animate="motion">
+                    <ul>
+                        <li class="first">
+                            <div class="flip html">
+                                <p class="illust"><img src="image/skills_illust.svg" alt=""></p>
+                                <div class="card">
+                                    <!-- front -->
+                                    <div class="front">
+                                        <img src="image/skill_html.svg" alt="">
+                                        <p class="en">Visual Studio Code</p>
+                                    </div>
+                                    <!-- back -->
+                                    <div class="back">
+                                        <p class="title en">HTML</p>
+                                        <p class="percent en">95%</p>
+                                        <p class="detail">박스구조의 html 원리를 이해하고 <br>있으며 각 상황에 맞는 빠르고<br>정확한 html 구조를 그려낼 수 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip css">
+                                <div class="card">
+                                    <!-- front -->
+                                    <div class="front">
+                                        <img src="image/skill_css.svg" alt="">
+                                        <p class="en">Visual Studio Code</p>
+                                    </div>
+                                    <!-- back -->
+                                    <div class="back">
+                                        <p class="title en">CSS</p>
+                                        <p class="percent en">95%</p>
+                                        <p class="detail">html 구조작업 후<br> 
+                                            다양한 디자인 작업은 물론<br>
+                                            반응형까지 제작이 가능합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip js">
+                                <div class="card">
+                                    <!-- front -->
+                                    <div class="front">
+                                        <img src="image/skill_js.svg" alt="">
+                                        <p class="en">Java Script</p>
+                                    </div>
+                                    <!-- back -->
+                                    <div class="back">
+                                        <p class="title en">Java Script</p>
+                                        <p class="percent en">90%</p>
+                                        <p class="detail">플러그인을 사용한<br>
+                                            다양한 애니메이션 적용이 가능하며<br>
+                                            코드 응용력이 강합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> <!-- first end --> 
+                        <li class="second">
+                            <div class="flip jq">
+                                <div class="card">
+                                    <!-- front -->
+                                    <div class="front">
+                                        <img src="image/skill_jq.svg" alt="">
+                                        <p class="en">JQuery</p>
+                                    </div>
+                                    <!-- back -->
+                                    <div class="back">
+                                        <p class="title en">JQuery</p>
+                                        <p class="percent en">90%</p>
+                                        <p class="detail">플러그인을 사용한<br>
+                                            다양한 애니메이션 적용이 가능하며<br>
+                                            코드 응용력이 강합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip figma">
+                                <div class="card">
+                                    <!-- front -->
+                                    <div class="front">
+                                        <img src="image/skill_figma.svg" alt="">
+                                        <p class="en">Figma</p>
+                                    </div>
+                                    <!-- back -->
+                                    <div class="back">
+                                        <p class="title en">Figma</p>
+                                        <p class="percent en">95%</p>
+                                        <p class="detail">피그마를 활용한 디자인 작업과<br>
+                                            프로토타입 제작이 가능합니다<br>
+                                            팀원들과의 협업툴로 사용했던<br>
+                                            경험이 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip ps">
+                                <div class="card">
+                                    <!-- front -->
+                                    <div class="front">
+                                        <img src="image/skill_ps.svg" alt="">
+                                        <p class="en">Photoshop</p>
+                                    </div> 
+                                    <!-- back -->
+                                    <div class="back">
+                                        <p class="title en">Photoshop</p>
+                                        <p class="percent en">95%</p>
+                                        <p class="detail">그래픽 작업 및 디자인 작업,<br>
+                                            사진 보정 등 실무로 다져진<br>
+                                            포토샵 활용능력이 강합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip ai">
+                                <div class="card">
+                                    <!-- front -->
+                                    <div class="front">
+                                        <img src="image/skill_ai.svg" alt="">
+                                        <p class="en">Illustrator</p>
+                                    </div>
+                                    <!-- back -->
+                                    <div class="back">
+                                        <p class="title en">Illustrator</p>
+                                        <p class="percent en">95%</p>
+                                        <p class="detail">기본적인 툴을 능숙하게 다루며<br>
+                                            패스를 활용한 다양한 아이콘 및<br>SVG 일러스트 작업이 가능합니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> <!-- second end -->
+                        <li class="third">
+                            <div class="flip id">
+                                <div class="card">
+                                    <!-- front -->
+                                    <div class="front">
+                                        <img src="image/skill_id.svg" alt="">
+                                        <p class="en">Indesign</p>
+                                    </div>
+                                    <!-- back -->
+                                    <div class="back">
+                                        <p class="title en">Indesign</p>
+                                        <p class="percent en">80%</p>
+                                        <p class="detail">편집 디자인 포트폴리오 제작 시<br>
+                                            인디자인을 활용해<br>
+                                            책으로 인쇄한 경험이 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip drawing">
+                                <div class="card">
+                                    <!-- front -->
+                                    <div class="front">
+                                        <img src="image/skill_drawing.svg" alt="">
+                                        <p class="en">Drawing</p>
+                                    </div>
+                                    <!-- back -->
+                                    <div class="back">
+                                        <p class="title en">Drawing</p>
+                                        <p class="percent en">85%</p>
+                                        <p class="detail">아이콘, 이모티콘 및<br>
+                                            다양한 일러스트 드로잉 능력을<br>
+                                            가지고 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flip pr">
+                                <div class="card">
+                                    <!-- front -->
+                                    <div class="front">
+                                        <img src="image/skill_pr.png" alt="">
+                                        <p class="en">Premiere Pro</p>
+                                    </div>
+                                    <!-- back -->
+                                    <div class="back">
+                                        <p class="title en">Premiere Pro</p>
+                                        <p class="percent en">75%</p>
+                                        <p class="detail">기본적인 편집이 가능하며<br>
+                                            영상 광고소재 제작 실무에서<br>
+                                            사용한 경험이 있습니다.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li> <!-- third end -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- con05 hobby -->
+        <section class="con05">
+            <div class="hobby">
+                <div class="hobby-slider">
+                    <div class="nomal en">HOBBY</div>
+                    <div class="outline en">HOBBY</div>
+                    <!-- clone -->
+                    <div class="nomal en clone">HOBBY</div>
+                    <div class="outline en clone">HOBBY</div>
+                    <div class="nomal en clone">HOBBY</div>
+                    <div class="outline en clone">HOBBY</div>
+                    <div class="nomal en clone">HOBBY</div>
+                    <div class="outline en clone">HOBBY</div>
+                    <div class="nomal en clone">HOBBY</div>
+                    <div class="outline en clone">HOBBY</div>
+                </div>
+            </div>
+            <div class="hobbyCont">
+                <div class="inner">
+                    <div class="textBox animate" data-animate="motion">
+                        <h2 class="en">HOBBIES <span class="en2">I LOVE</span></h2>
+                        <P>제가 사랑하는 취미 3가지인 전시회 관람, 드로잉, 패션을 소개합니다.<br>'more'버튼을 클릭해 더 자세히 알아볼 수 있습니다.</P>
+                        <a href="about.html" class="moreBtn en">MORE →</a>
+                    </div>
+                    <ul class="imgBox">
+                        <li class="img1"><img src="image/hobby_exhibition3.png" alt=""></li>
+                        <li class="img2 upBox"><img src="image/hobby_drawing3.png" alt=""></li>
+                        <li class="img3 upBox"><img src="image/hobby_fashion3.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- con06 works -->
+        <section class="con06">
+            <div class="inner">
+                <div class="text animate" data-animate="motion">
+                    <p class="subText">
+                        <span>그동안 성실히 제작해 온 작업물을 소개합니다.<br>
+                            해당 영역과 ‘more’를 클릭해 더 다양한 작업물을 자세하게 살펴볼 수 있습니다.
+                        </span>
+                    </p>
+                    <p class="title"><span>WORKS</span></p>
+                </div>
+                <div class="bottom animate" data-animate="motion">
+                    <div class="coding">
+                        <a href="works.html#move_coding"><img src="image/works_coding.png" alt=""></a>
+                    </div>
+                    <div class="uiux">
+                        <a href="works.html#move_uiux"><img src="image/works_uiux.png" alt=""></a>
+                    </div>
+                    <div class="design">
+                        <a href="works.html#move_design"><img src="image/works_design.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="btn"><a href="works.html" class="moreBtn en">MORE →</a></div>
+            </div>
+        </section>
+
+        <!-- con07 portfolio -->
+        <section class="con07">
+            <div class="inner">
+                <div class="top animate" data-animate="motion">
+                    <div class="title">
+                        <div><span class="a">PORTFOLIO</span></div>
+                        <div><span class="b en2">PROCESS</span></div>
+                    </div>
+                    <div class="sub">
+                        <div class="btn"><a href="portfolio.html" class="moreBtn en">MORE →</a></div>
+                        <p class="subText">
+                            <span>
+                            포트폴리오 제작 과정입니다.<br>기획부터 디자인, 구현까지 꼼꼼히 기록하고 제작하였습니다.<br>
+                            각 콘텐츠를 클릭하면 해당 기획과정 페이지로 이동합니다.
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <ul class="en">
+                    <li>
+                        <a href="portfolio.html#move_brain">
+                            <p>brainstorming</p>
+                            <img src="image/port_1.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_affinity">
+                            <p>affinity diagram</p>
+                            <img src="image/port_2.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_insights">
+                            <p>discover insights</p>
+                            <img src="image/port_3.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_reference">
+                            <p>Reference research</p>
+                            <img src="image/port_4.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_info">
+                            <p>Information<br>structure diagram</p>
+                            <img src="image/port_5.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_flow">
+                            <p>flowchart</p>
+                            <img src="image/port_6.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_design">
+                            <p>design system</p>
+                            <img src="image/port_7.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_sketch">
+                            <p>idea sketch</p>
+                            <img src="image/port_8.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_wireframe">
+                            <p>wireframe</p>
+                            <img src="image/port_9.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_prototype">
+                            <p>prototype</p>
+                            <img src="image/port_10.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_storyboard">
+                            <p>storyBoard</p>
+                            <img src="image/port_11.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="portfolio.html#move_part5">
+                            <p>user needs</p>
+                            <img src="image/port_12.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- con08 -->
+        <section class="con08">
+            <div class="top animate" data-animate="motion">
+                <p class="illust"><img src="image/ncs_illust.svg" alt="">
+                </p>
+                <p class="title">
+                    <span>NCS</span>
+                </p>
+                <p class="subText"><span>강남 이젠 아카데미에서 약 6개월 과정의<br>
+                    ‘스마트 웹콘텐츠 UIUX 디자인 & 프론트엔드’ ncs를 수행한 결과물입니다.</span>
+                </p>
+            </div>
+            <ul>
+                <li class="first">
+                    <div class="in">
+                        <div class="text">
+                            <p>교과목</p>
+                            <p>능력단위</p>
+                            <p>결과물</p>
+                        </div>
+                        <p></p>
+                    </div>
+                </li>
+                <li>
+                    <a href="pdf/ncs_ppt_eum.pdf" target="_blank">
+                        <div class="in">
+                            <div class="text">
+                                <p class="first">웹 UI 구현 및 테스트</p>
+                                <p>UI 구현<br>UI 테스트</p>
+                                <p>인천e음 웹사이트 리뉴얼</p>
+                            </div>
+                            <p class="img">
+                                <img src="image/arrow_wh.png " alt="">
+                            </p>
+                        </div>
+                        <img class="hoverImg" src="image/ncs_1.png" alt="">
+                    </a>
+                    
+                </li>
+                <li>
+                    <a href="pdf/ncs_ppt_portfolio.pdf" target="_blank">
+                        <div class="in">
+                            <div class="text">
+                                <p class="first">웹 UI/UX 기획, 설계</p>
+                                <p>UI/UX 콘셉트 기획<br>UI/UX 요구 분석<br>UI 아키텍처 설계</p>
+                                <p>포트폴리오 제작</p>
+                            </div>
+                            <p class="img"><img src="image/arrow_wh.png" alt=""></p>
+                        </div>
+                        <img class="hoverImg" src="image/ncs_2.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="pdf/ncs_ppt_apprenewal.pdf" target="_blank">
+                        <div class="in">
+                            <div class="text">
+                                <p class="first">웹 UI 디자인</p>
+                                <p>UI 디자인</p>
+                                <p>여기어때 어플 리뉴얼</p>
+                            </div>
+                            <p class="img"><img src="image/arrow_wh.png" alt=""></p>
+                        </div>
+                        <img class="hoverImg" src="image/ncs_3.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="pdf/ncs_programming.pdf" target="_blank">
+                        <div class="in">
+                            <div class="text">
+                                <p class="first">웹 프론트엔드개발 기초</p>
+                                <p>개발자 환경 구축<br>프로그래밍 언어 활용</p>
+                                <p>인터렉션 구현</p>
+                            </div>
+                            <p class="img"><img src="image/arrow_wh.png" alt=""></p>
+                        </div>
+                        <img class="hoverImg" src="image/ncs_4.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="in">
+                            <div class="text">
+                                <p class="first">Node.js 배포</p>
+                                <p>애플리케이션 배포<br>애플리케이션 테스트 수행</p>
+                                <p>---</p>
+                            </div>
+                            <p class="img"><img src="image/arrow_wh.png" alt=""></p>
+                        </div>
+                        <img class="hoverImg" src="image/ncs_test.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="pdf/ncs_artwork.pdf" target="_blank">
+                        <div class="in">
+                            <div class="text">
+                                <p class="first">2D 그래픽디자인</p>
+                                <p>Figma 활용<br>포토샵</p>
+                                <p>아트워크 제작</p>
+                            </div>
+                            <p class="img"><img src="image/arrow_wh.png" alt=""></p>
+                        </div>
+                        <img class="hoverImg" src="image/ncs_6.png" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="in">
+                            <div class="text">
+                                <p class="first">프론트엔드</p>
+                                <p>React .JS</p>
+                                <p>---</p>
+                            </div>
+                            <p class="img"><img src="image/arrow_wh.png" alt=""></p>
+                        </div>
+                        <img class="hoverImg" src="image/ncs_test.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- footer -->
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

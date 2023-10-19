@@ -1,0 +1,1301 @@
+@charset "utf-8";
+
+/* 한글폰트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+/* 영문폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Ponzu';
+    src: url(../font/ponzu-extralight.otf) format('opentype');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Ponzu';
+    src: url(../font/ponzu-thin.otf) format('opentype');
+    font-weight: 100;
+}
+
+
+/* reset */
+* {margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin: 0; padding: 0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline: none;}
+a:focus {outline: none}
+img {vertical-align: middle;}
+html {font-size: 10px;}
+
+
+
+/* 폰트 */
+.en {font-family: 'Montserrat', sans-serif; font-weight: 200;}
+.en2 {font-family: 'Ponzu';}
+.bold {font-weight: 500;}
+
+
+
+/* layout */
+body {font-family: 'Pretendard'; font-weight: 100; font-size: 2rem; background: #101010; width: 100%; height: 100%; line-height: 1.4; color: #c2c2c2; }
+.wrap {position: relative; margin: 0 auto; overflow: hidden;  color: #fff;}
+
+
+/* 이동메뉴 */
+.moveList {position: fixed; right: 3rem; top: 13%; z-index: 10; background: rgba(51, 51, 51, 0.7); padding: 1%; border-radius: 1.5rem; padding-right: 100px; transform: translateX(65%);}
+.moveList ul li a {display: block; font-size: 1.4rem; line-height: 1.8; font-family: 'Montserrat', sans-serif; font-weight: 300;}
+.moveList ul li.on a {color: #C1FF3E; font-weight: 600; font-size: 1.6rem;}
+.moveList ul li a:hover {color: #B5E74C;}
+
+
+/* visual */
+.visual {width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; padding: 7% 0 4%; box-sizing: border-box;}
+.visual .inner { width: 100%; height: 100%; font-size: 13vw; line-height: 1; position: relative;}
+.visual .inner .img {width: 25%; position: absolute; left: 50%; transform: translateX(-50%); top: 40%;}
+.visual .inner .img img { width: 100%;}
+.visual .inner p.leftText {position: absolute; left: -1.7%; top: -5.5%; animation: slideIn-left .9s ease forwards;}
+.visual .inner p.rightText {position: absolute; right: -1.5%; bottom: -5.5%; text-align: right; animation: slideIn-right .8s .2s ease forwards; transform: translateX(100%);}
+
+/* animation */
+@keyframes slideIn-left {
+    0% {transform: translateX(-100%);}
+    100% {transform: translateX(0);}
+}
+
+@keyframes slideIn-right {
+    0% {transform: translateX(100%);}
+    100% {transform: translateX(0);}
+}
+
+
+
+
+
+/* 공통요소 */
+.inner {width: 85%; margin: 0 auto;}
+.mainTitle {height: 60vh; display: flex; justify-content: center; align-items: center; padding-top: 15vh;}
+.mainTitle .titInner {text-align: center; width: 100%;}
+.mainTitle .titInner h2 {font-size: 10rem; font-weight: 200; border: 1px solid #fff; border-radius: 500px; padding: 0 2%; display: inline-block; line-height: 1.2; overflow: hidden;}
+.mainTitle .titInner p {font-size: 2.5rem; color: #c2c2c2; margin-top: 2rem; font-weight: 300;}
+.commonTitle {position: relative;}
+.commonTitle h3 {text-transform: uppercase; font-size: 6rem; letter-spacing: -0.1rem;}
+.commonTitle .num {font-size: 15rem; position: absolute; top: -172%; left: -4%; letter-spacing: -1rem; color: rgba(193, 255, 62, 0.5); font-weight: 200; opacity: 0;}
+.tit {font-size: 2.2rem; font-weight: 400; text-transform: uppercase; margin-bottom: 1rem;}
+.detail {color: #c2c2c2; font-size: 2rem;}
+.detail span {color: #fff; font-weight: 200;}
+
+/* animation */
+.mainTitle .titInner h2 .aniWrap {transform: translateY(100%); display: block;}
+.mainTitle .titInner h2.motion .aniWrap {animation: titleAni 0.7s forwards;}
+.commonTitle.motion .num {animation: fadeInAni 1s forwards;}
+.commonTitle h3.splitting .char {opacity: 0;}
+.commonTitle.motion h3.splitting .char {
+    display:inline-block;
+    animation: charAni 1s cubic-bezier(.2, 0, .5, 1) forwards;
+    animation-delay: calc(40ms * var(--char-index));
+}
+
+@keyframes titleAni {
+    0% {transform: translateY(100%);}
+    100% {transform: translateY(0%);}
+}
+
+@keyframes fadeInAni {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes upAni {
+    0% {transform: translateY(200px); opacity: 0;}
+    100% {transform: translateY(0%); opacity: 1;}
+}
+
+
+@keyframes charAni {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
+
+
+/* -------------------part1----------------------- */
+/* 01. brain */
+.part1 {padding-bottom: 20%;}
+.part1 .inner .brain {display: flex; justify-content: space-between; margin-bottom: 15%; padding-top: 12%;}
+.part1 .inner .brain .textBox {display: flex; justify-content: space-between; flex-direction: column;}
+.part1 .inner .brain .imgBox {width: 43%;}
+.part1 .inner .brain .imgBox img {border-radius: 2rem; filter: brightness(80%); transform: translateY(200px); opacity: 0; width: 100%;}
+.part1 .inner .brain .commonTitle .num {left: -10%;}
+
+/* animation */
+.part1 .inner .brain .imgBox.motion img {animation: upAni 1s forwards;}
+
+
+
+/* 02. affinity */
+.part1 .inner .affinity {margin-bottom: 15%; padding-top: 12%;}
+.part1 .inner .affinity .commonTitle {text-align: right; margin-bottom: 10%;}
+.part1 .inner .affinity .commonTitle .num {right: -3%;}
+
+.part1 .inner .affinity > .top {display: flex; justify-content: space-between; margin-bottom: 10%;}
+.part1 .inner .affinity > .top .step1 {width: 43%;}
+.part1 .inner .affinity > .top .step1 .imgBox {width: 100%; transform: translateY(200px); opacity: 0;}
+.part1 .inner .affinity > .top .step1 .imgBox img {width: 100%; border-radius: 2rem;}
+.part1 .inner .affinity > .top .detail {margin-bottom: 5%;}
+
+.part1 .inner .affinity > .top .step2 {width: 43%;}
+.part1 .inner .affinity > .top .step2 ul.wordBox {display: flex; justify-content: space-between; width: 80%; margin: 0 auto; text-align: center; transform: translateY(200px); opacity: 0;}
+.part1 .inner .affinity > .top .step2 ul.wordBox li .main {font-size: 2.2rem; font-weight: 400; border: 1px solid #C1FF3E; padding: 0.6rem 1.8rem; border-radius: 50px; display: inline-block; margin: 5rem 0 2rem;}
+.part1 .inner .affinity > .top .step2 ul.wordBox li .sub {line-height: 1.7;}
+
+.part1 .inner .affinity .bottom .step3 .textBox {margin-bottom: 5%;}
+.part1 .inner .affinity .bottom .step3 .sentence > ul { display: flex; justify-content: space-between; width: 75%; margin-left: auto; line-height: 1.2;}
+.part1 .inner .affinity .bottom .step3 .sentence > ul.topText {margin-bottom: 3%;}
+.part1 .inner .affinity .bottom .step3 .sentence > ul > li {font-weight: 200; letter-spacing: -0.3rem; }
+.part1 .inner .affinity .bottom .step3 .sentence > ul > li.left {font-size: 7rem; color: #8e8e8e; width: 25%;}
+.part1 .inner .affinity .bottom .step3 .sentence > ul > li.center {font-size: 6.2rem; color: #fff; width: 35%;}
+.part1 .inner .affinity .bottom .step3 .sentence > ul > li.right {font-size: 7rem; color: #8e8e8e; width: 40%; text-align: right; display: flex; flex-direction: column-reverse;}
+
+/* animation */
+.part1 .inner .affinity > .top.motion .step1 .imgBox {animation: upAni 1s forwards;}
+.part1 .inner .affinity > .top.motion .step2 ul.wordBox {animation: upAni 1.2s forwards;}
+
+/* 애니메이션 시작 시 안보이게 하기 위함 */
+.part1 .inner .affinity .bottom .step3 .sentence > ul.topText .left {opacity: 0;}
+.part1 .inner .affinity .bottom .step3 .sentence > ul.topText > li.center ul.in li {opacity: 0;}
+.part1 .inner .affinity .bottom .step3 .sentence > ul.topText .right {opacity: 0;}
+.part1 .inner .affinity .bottom .step3 .sentence > ul.bottomText > li.center ul.in li {opacity: 0;}
+.part1 .inner .affinity .bottom .step3 .sentence > ul.bottomText .right {opacity: 0;}
+
+.part1 .inner .affinity .bottom.motion .step3 .sentence > ul.topText .left {animation: fadeInAni 1s forwards;}
+.part1 .inner .affinity .bottom.motion .step3 .sentence > ul.topText > li.center ul.in li:nth-child(1) {animation: fadeInAni 1s .2s forwards;}
+.part1 .inner .affinity .bottom.motion .step3 .sentence > ul.topText > li.center ul.in li:nth-child(2) {animation: fadeInAni 1s .3s forwards;}
+.part1 .inner .affinity .bottom.motion .step3 .sentence > ul.topText > li.center ul.in li:nth-child(3) {animation: fadeInAni 1s .4s forwards;}
+.part1 .inner .affinity .bottom.motion .step3 .sentence > ul.topText .right {animation: fadeInAni 1s .6s forwards;}
+
+.part1 .inner .affinity .bottom.motion .step3 .sentence > ul.bottomText > li.center ul.in li:nth-child(1) {animation: fadeInAni 1s .8s forwards;}
+.part1 .inner .affinity .bottom.motion .step3 .sentence > ul.bottomText > li.center ul.in li:nth-child(2) {animation: fadeInAni 1s .9s forwards;}
+.part1 .inner .affinity .bottom.motion .step3 .sentence > ul.bottomText .right {animation: fadeInAni 1s 1.1s forwards;}
+
+
+
+
+/* 03. insights */
+.part1 .inner .insights {padding-top: 12%;}
+.part1 .inner .insights .sub {margin:8% 0 3%;}
+.part1 .inner .insights .slogan { text-align: right; line-height: 1.1; position: relative;}
+.part1 .inner .insights .slogan .slogan1 {margin-bottom: 5%; display: inline-block; position: relative;}
+.part1 .inner .insights .slogan .korean {font-size: 8rem; font-weight: 300; color: #fff; letter-spacing: -0.3rem; position: relative; display: inline-block; z-index: 1;}
+.part1 .inner .insights .slogan .english {font-size: 4rem; font-weight: 100; letter-spacing: -0.1rem; position: relative; z-index: 1;}
+.part1 .inner .insights .slogan .slogan2 {position: relative; display: inline-block;}
+
+/* line */
+.part1 .inner .insights .slogan .slogan1 .korean::before {content: ''; position: absolute; left: 50%; top: 0; height: 1px; width: 110%; transform: translateX(-50%); background: #787878; }
+.part1 .inner .insights .slogan .slogan1 .korean::after {content: ''; position: absolute; left: 50%; bottom: 0; height: 1px; width: 110%; transform: translateX(-50%); background: #787878; }
+.part1 .inner .insights .slogan .slogan1 .korean span.line {position: absolute; left: 50%; bottom: -42%; height: 1px; width: 110%; transform: translateX(-50%); background: #787878;}
+
+.part1 .inner .insights .slogan .slogan2 .korean::before {content: ''; position: absolute; left: 50%; top: 0; height: 1px; width: 104%; transform: translateX(-50%); background: #787878; }
+.part1 .inner .insights .slogan .slogan2 .korean::after {content: ''; position: absolute; left: 50%; bottom: 0; height: 1px; width: 104%; transform: translateX(-50%); background: #787878; }
+.part1 .inner .insights .slogan .slogan2 .korean span.line {position: absolute; left: 50%; bottom: -42%; height: 1px; width: 104%; transform: translateX(-50%); background: #787878;}
+
+/* 세로선 */
+.part1 .inner .insights .slogan .slogan1::before {content: ''; position: absolute; left: 0; top: -15%; height: 290%; width: 1px; background: #787878;}
+.part1 .inner .insights .slogan .slogan2::before {content: ''; position: absolute; left: 0; top: 50%; height: 130%; width: 1px; background: #787878; transform: translateY(-50%);}
+.part1 .inner .insights .slogan::after {content: ''; position: absolute; right: 0%; top: 50%; height: 110%; width: 1px; background: #787878; transform: translateY(-50%);}
+
+
+/* animation */
+.slogan.motion .slogan1 .korean::before {animation: lineAni1 .5s ease forwards; opacity: 0;}
+.slogan.motion .slogan1 .korean::after {animation: lineAni1 .5s .2s ease forwards; opacity: 0;}
+.slogan .slogan1 .korean span.line {animation: lineAni1 .5s .4s ease forwards; opacity: 0;}
+
+@keyframes lineAni1 {
+    0% {width: 0%; opacity: 0;}
+    100% {width: 110%; opacity: 1;}
+}
+
+.slogan.motion .slogan2 .korean::before {animation: lineAni2 .5s .4s ease forwards; opacity: 0;}
+.slogan.motion .slogan2 .korean::after {animation: lineAni2 .5s .6s ease forwards; opacity: 0;}
+.slogan.motion .slogan2 .korean span.line {animation: lineAni2 .5s .8s ease forwards; opacity: 0;}
+
+@keyframes lineAni2 {
+    0% {width: 0%; opacity: 0;}
+    100% {width: 104%; opacity: 1;}
+}
+
+.slogan.motion .slogan1::before {animation: lineAni3 .5s .4s ease forwards; opacity: 0;}
+
+@keyframes lineAni3 {
+    0% {height: 0%; opacity: 0;}
+    100% {height: 290%; opacity: 1;}
+}
+
+.slogan.motion .slogan2::before {animation: lineAni4 .5s .5s ease forwards; opacity: 0;}
+
+@keyframes lineAni4 {
+    0% {height: 0%; opacity: 0;}
+    100% {height: 130%; opacity: 1;}
+}
+
+.slogan.motion::after {animation: lineAni5 .5s .6s ease forwards; opacity: 0;}
+
+@keyframes lineAni5 {
+    0% {height: 0%; opacity: 0;}
+    100% {height: 110%; opacity: 1;}
+}
+
+
+
+
+
+/* -----------------part2------------------ */
+.part2 {background: #fff; color: #101010; padding-bottom: 10%;}
+.part2 .mainTitle .titInner h2 {border-color: #101010;}
+.part2 .mainTitle .titInner p {color: #454545;}
+.part2 .inner .commonTitle h3 {font-weight: 300;}
+
+/* main */
+.part2 .inner {padding-top: 8%;}
+.part2 .inner .main {margin-bottom: 15%;}
+.part2 .greenTitle {color: #B5E74C; font-size: 4rem; font-weight: 600; margin: 15% 0 7%; overflow: hidden;}
+.part2 .textBox .tit {font-weight: 600;}
+.part2 .textBox .detail {color: #454545; font-weight: 300;}
+
+.part2 .inner .main .imgBox {position: relative; height: 120vh;}
+.part2 .inner .main .imgBox div {width: 48%; position: absolute; z-index: 2;}
+.part2 .inner .main .imgBox div .ex {width: 100%; border: #101010 1px solid; border-radius: 2rem; box-sizing: border-box; overflow: hidden;}
+.part2 .inner .main .imgBox div .ex img {width: 100%;}
+.part2 .inner .main .imgBox div .sketch {width: 62%;}
+.part2 .inner .main .imgBox div .sketch img {width: 100%;}
+
+.part2 .inner .main .imgBox div.a .sketch {position: absolute; top: -58%; left: 5%; opacity: 0.4; z-index: -1;}
+.part2 .inner .main .imgBox div.b .sketch {position: absolute; top: -62%; right: 25%; opacity: 0.4; z-index: -1;}
+.part2 .inner .main .imgBox div.c .sketch {position: absolute; top: -53%; left: 49%; opacity: 0.5; z-index: -1; }
+
+.part2 .inner .main .imgBox div.a {position: absolute; right: -10%; top: -5%;  transform: translateX(100%);}
+.part2 .inner .main .imgBox div.b {position: absolute; left: -4%; top: 43%;  transform: translateX(-100%);}
+.part2 .inner .main .imgBox div.c {position: absolute; left: 38%; bottom: 9%;  transform: translateX(-100%);}
+
+/* animation */
+.part2 .inner .main .greenTitle .aniWrap {transform: translateY(200px);}
+.part2 .inner .main.motion .greenTitle .aniWrap {animation: upAni .7s forwards; display: block;}
+.part2 .inner .main.motion .imgBox div.a {animation: slideIn-right 1s ease forwards;}
+.part2 .inner .main.motion .imgBox div.b {animation: slideIn-left 1.2s .3s ease forwards;}
+.part2 .inner .main.motion .imgBox div.c {animation: slideIn-left 1.3s .5s ease forwards;}
+
+
+
+/* sub1 */
+.part2 .inner .sub1 .textBox { width: 40%; margin-left: auto;}
+.part2 .inner .sub1 .imgBox {position: relative; height: 120vh;}
+.part2 .inner .sub1 .imgBox div {width: 35%; position: absolute; z-index: 2;}
+.part2 .inner .sub1 .imgBox div .ex {width: 100%; border: #101010 1px solid; border-radius: 2rem; box-sizing: border-box; overflow: hidden;}
+.part2 .inner .sub1 .imgBox div .ex img {width: 100%;}
+.part2 .inner .sub1 .imgBox div .sketch {width: 85%;}
+.part2 .inner .sub1 .imgBox div .sketch img {width: 100%;}
+
+.part2 .inner .sub1 .imgBox div.a .sketch {position: absolute; bottom: -84%; left: 47%; opacity: 0.4; z-index: -1;}
+.part2 .inner .sub1 .imgBox .a {position: absolute; left: 11%; top: -5%; transform: translate(-100%);}
+.part2 .inner .sub1 .imgBox .b {position: absolute; left: -10%; top: 40%; transform: translate(-100%);}
+.part2 .inner .sub1 .imgBox .c {position: absolute; left: 57%; bottom: 37%; transform: translate(-100%);}
+
+/* animation */
+.part2 .inner .sub1.motion .textBox .greenTitle .aniWrap {animation: upAni .7s; display: block;}
+.part2 .inner .sub1.motion .imgBox .a {animation: slideIn-left 1s ease forwards;}
+.part2 .inner .sub1.motion .imgBox .b {animation: slideIn-left 1.2s ease forwards;}
+.part2 .inner .sub1.motion .imgBox .c {animation: slideIn-left .8s ease forwards;}
+
+
+
+/* sub2 */
+.part2 .inner .sub2 .imgBox {position: relative; height: 100vh;}
+.part2 .inner .sub2 .imgBox div {width: 48%; position: absolute; z-index: 2;}
+.part2 .inner .sub2 .imgBox div .ex {width: 100%; border: #101010 1px solid; border-radius: 2rem; box-sizing: border-box; overflow: hidden;}
+.part2 .inner .sub2 .imgBox div .ex img {width: 100%;}
+.part2 .inner .sub2 .imgBox div .sketch {width: 62%;}
+.part2 .inner .sub2 .imgBox div .sketch img {width: 100%;}
+
+.part2 .inner .sub2 .imgBox div.a .sketch {position: absolute; bottom: -47%; left: 36.5%; opacity: 0.4; z-index: -1;}
+.part2 .inner .sub2 .imgBox .a {position: absolute; right: 0; top: -5%; transform: translateX(100%);}
+.part2 .inner .sub2 .imgBox .b {position: absolute; left: 17%; top: 23%; transform: translateX(100%);}
+
+/* animation */
+.part2 .inner .sub2.motion .imgBox .a {animation: slideIn-right 1s ease forwards;}
+.part2 .inner .sub2.motion .imgBox .b {animation: slideIn-right .8s ease forwards;}
+
+
+/* sub3 */
+.part2 .inner .sub3 {height: 150vh; position: relative;}
+.part2 .inner .sub3 .cosmos {display: flex; gap: 2%;}
+.part2 .inner .sub3 .cosmos .imgBox {position: relative; width: 50%; z-index: 2; transform: translateX(-100%);}
+.part2 .inner .sub3 .cosmos .imgBox p {width: 100%;}
+.part2 .inner .sub3 .cosmos .imgBox p.ex img {width: 100%; border: 1px solid #101010; border-radius: 2rem;}
+.part2 .inner .sub3 .cosmos .imgBox p.sketch {z-index: -1;}
+.part2 .inner .sub3 .cosmos .imgBox p.sketch img {width: 60%; position: absolute; bottom: -78%; left: 40%; opacity: 0.4;}
+.part2 .inner .sub3 .cosmos .textBox {display: flex; justify-content: flex-end; flex-direction: column;}
+
+.part2 .inner .sub3 .deduxer {width: 50%;  position: absolute; right: -10%; top: 52%;}
+.part2 .inner .sub3 .deduxer .imgBox {position: relative; z-index: 2; margin-bottom: 5%;  transform: translateX(100%);}
+.part2 .inner .sub3 .deduxer .imgBox p {width: 100%;}
+.part2 .inner .sub3 .deduxer .imgBox p.ex img {width: 100%; border: 1px solid #101010; border-radius: 2rem;}
+.part2 .inner .sub3 .deduxer .imgBox p.sketch {z-index: -1;}
+.part2 .inner .sub3 .deduxer .imgBox p.sketch img {width: 60%; position: absolute; bottom: -20%; left: -60%; opacity: 0.4;}
+
+/* animation */
+.part2 .inner .sub3.motion .cosmos .imgBox {animation: slideIn-left 1s ease forwards; }
+.part2 .inner .sub3.motion .deduxer .imgBox {animation: slideIn-right 1.2s .3s ease forwards;}
+
+
+
+
+
+
+
+/* -------------part3--------------- */
+/* info */
+.part3 {margin-bottom: 20%;}
+.part3 .inner .info {margin-bottom: 15%; padding-top: 12%;}
+.part3 .inner .info .textBox .sub {margin: 6% 0 3%;}
+.part3 .inner .info .con { text-align: center;}
+.part3 .inner .info .con .titleBox {position: relative;}
+.part3 .inner .info .con .titleBox .txt {font-weight: 300; font-size: 2.5rem; border: #C1FF3E 1px solid; border-radius: 5rem; display: inline-block; padding: 0.7rem 1.8rem; margin-bottom: 5%; position: relative;}
+.part3 .inner .info .con .titleBox .line {position: absolute; width: 56%; left: 50%; bottom: 17%; transform: translateX(-50%);}
+.part3 .inner .info .con .titleBox .line img {width: 100%;}
+
+.part3 .inner .info .con ul {width: 70%; margin: 0 auto; display: flex; justify-content: space-between;}
+.part3 .inner .info .con ul li {width: 20%; transform: translateY(200px); opacity: 0;}
+.part3 .inner .info .con ul li .listTitle {font-weight: 400; font-size: 2.5rem; margin-bottom: 4%;}
+.part3 .inner .info .con ul li .list {line-height: 1.6; color: #d8d8d8;}
+.info .con.motion ul li:nth-child(3) {opacity: 1; transform: translateY(0);}
+.info .con.motion ul li:nth-child(3) .works1 {transform: translateY(200px); opacity: 0; margin-bottom: 7rem;}
+.info .con.motion ul li:nth-child(3) .works2 {transform: translateY(200px); opacity: 0;}
+
+/* animation */
+.info .con.motion ul li:nth-child(1) {animation: upAni .7s forwards;}
+.info .con.motion ul li:nth-child(2) {animation: upAni .8s forwards;}
+.info .con.motion ul li:nth-child(3) .works1 {animation: upAni .9s forwards;}
+.info .con.motion ul li:nth-child(3) .works2 {animation: upAni 1s forwards;}
+.info .con.motion ul li:nth-child(4) {animation: upAni 1.1s forwards;}
+.info .con.motion ul li:nth-child(5) {animation: upAni 1.2s forwards;}
+
+
+
+
+/* flowchart */
+.part3 .inner .flow {margin-bottom: 10%; padding-top: 12%; display: flex; justify-content: space-between;}
+.part3 .inner .flow .textBox .commonTitle {margin-bottom: 23%;}
+.part3 .inner .flow .textBox .commonTitle .num {left: -14%;}
+.part3 .inner .flow .imgBox {width: 45%; transform: translateY(200px); opacity: 0;}
+.part3 .inner .flow .imgBox img {width: 100%;}
+
+/* animation */
+.part3 .inner .flow.motion .imgBox {animation: upAni 1s forwards;}
+
+
+
+
+/* design */
+.part3 .inner .design {margin-bottom: 15%; padding-top: 12%;}
+.part3 .inner .design .commonTitle {margin-bottom: 6%;}
+
+/* design-color */
+.part3 .inner .design .color {margin-bottom: 12%;}
+.part3 .inner .design .color .colorList {display: flex; justify-content: space-between; margin-top: 3%; text-align: center;}
+.part3 .inner .design .color .colorList li {width: 0%; opacity: 0; background: #C1FF3E; color: #101010; font-family: 'Montserrat', sans-serif; font-weight: 500;padding: 10%; padding: 3% 0; border-radius: 2rem 0 0 2rem;}
+.part3 .inner .design .color .colorList li:nth-child(2) {background: #fff; border-radius: 0; opacity: 0;}
+.part3 .inner .design .color .colorList li:nth-child(3) {background: #101010; color: #fff; border-radius: 0 2rem 2rem 0; border: 1px solid #787878; border-left: none; box-sizing: border-box; font-weight: 300;}
+
+/* animation */
+.part3 .inner .design .color.motion .colorList li {animation: widthAni .7s ease forwards;}
+
+@keyframes widthAni {
+    0% {width: 0%; opacity: 0;}
+    100% {width: 33.333%; opacity: 1;}
+}
+
+
+
+/* design-font */
+.part3 .inner .font .textBox {margin-bottom: 10%;}
+
+/* fontBox */
+.font .fontBox { line-height: 1; width: 93%; margin-left: auto; transform: translateX(10.5%); position: relative; margin-bottom: 12%;}
+.font .fontBox .line1 {display: flex;}
+.font .fontBox .line1 li {display: flex; align-items: flex-end;}
+.font .fontBox .line1 .sub {color: #787878; font-weight: 300; transform: translateY(5%);}
+.font .fontBox .line1 .korean {font-size: 2.3vw; letter-spacing: -0.2rem; margin-left: 5%; margin-right: 3%; line-height: 0.8;}
+.font .fontBox .line1 .pretendard {font-size: 20rem; letter-spacing: -1rem; line-height: 0.86;}
+
+.font .fontBox .english {font-size: 2.3vw; letter-spacing: -0.2rem; margin-left: 25%;  line-height: 0.8;}
+.font .fontBox .line2 {display: flex; justify-content: space-between;}
+.font .fontBox .line2 li {display: flex; align-items: flex-end;}
+.font .fontBox .line2 .sub {color: #787878; font-weight: 300; transform: translateY(5%);}
+.font .fontBox .line2 .montserrat {font-size: 20rem; letter-spacing: -1rem; text-align: right; line-height: 0.73;}
+.font .fontBox .ponzu {font-size: 20rem; letter-spacing: -1rem; text-align: right; line-height: 0.72; margin-top: 2%;}
+
+
+/* line */
+.line1, .line2, .ponzu {position: relative;}
+.line1::before, .line2::before, .ponzu::before {content: ''; position: absolute; right: 0; top: 0; width: 91.5%; height: 1px; background: #787878;}
+.line1::after, .line2::after, .ponzu::after {content: ''; position: absolute; right: 0; bottom: 0; width: 91.5%; height: 1px; background: #787878;}
+
+.fontBox::before {content: ''; position: absolute; left: 11.25%; top: 50%; transform: translateY(-50%); width: 1px; height: 115%; background: #787878;}
+.fontBox::after {content: ''; position: absolute; left: 23.6%; top: 50%; transform: translateY(-50%); width: 1px; height: 115%; background: #787878;}
+
+.plusLine1 {height: 115%; width: 1px; background: #787878; position: absolute; left: 25.3%; top: 50%; transform: translateY(-50%);}
+.plusLine2 {height: 115%; width: 1px; background: #787878; position: absolute; left: 37.4%; top: 50%; transform: translateY(-50%);}
+
+/* animation */
+.fontBox.motion .line1::before {animation: fontLineAni1 .7s ease forwards; opacity: 0;}
+.fontBox.motion .line2::before {animation: fontLineAni1 .7s .3s ease forwards; opacity: 0;}
+.fontBox.motion .ponzu::before {animation: fontLineAni1 .7s .5s ease forwards; opacity: 0;}
+.fontBox.motion .line1::after {animation: fontLineAni1 .7s .7s ease forwards; opacity: 0;}
+.fontBox.motion .line2::after {animation: fontLineAni1 .7s .9s ease forwards; opacity: 0;}
+.fontBox.motion .ponzu::after {animation: fontLineAni1 .7s 1.1s ease forwards; opacity: 0;}
+
+@keyframes fontLineAni1 {
+    0% {width: 0%; opacity: 0;}
+    100% {width: 91.5%; opacity: 1;}
+}
+
+.fontBox.motion::before {animation: fontLineAni2 .5s .5s ease forwards; opacity: 0;}
+.fontBox.motion::after {animation: fontLineAni2 .5s .7s ease forwards; opacity: 0;}
+.fontBox.motion .plusLine1 {animation: fontLineAni2 .5s .9s ease forwards; opacity: 0;}
+.fontBox.motion .plusLine2 {animation: fontLineAni2 .5s 1.3s ease forwards; opacity: 0;}
+
+@keyframes fontLineAni2 {
+    0% {height: 0%; opacity: 0;}
+    100% {height: 115%; opacity: 1;}
+}
+
+
+
+/* design-illust */
+.illust {width: 100%;}
+.illust .textBox {margin-bottom: 10%;}
+.illust .illustBox {position: relative; width: 70%; margin-left: auto;}
+.illust .illustBox .guideBg {opacity: 0.65; width: 100%;}
+.illust .illustBox .guideBg img {width: 100%;}
+.illust .illustBox ul {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; justify-content: space-between; align-items: center; width: 80%;}
+.illust .illustBox ul li {transform: translate(200px); opacity: 0;}
+.illust .illustBox ul li img {width: 100%;}
+
+/* animation */
+.illust .illustBox.motion ul li:nth-child(1) {animation: upAni .7s forwards;}
+.illust .illustBox.motion ul li:nth-child(2) {animation: upAni .9s forwards;}
+.illust .illustBox.motion ul li:nth-child(3) {animation: upAni 1.1s forwards;}
+
+
+
+
+/* 04. sketch */
+.part3 .inner .sketch {padding-top: 12%;}
+.part3 .inner .sketch .commonTitle {margin-bottom: 4%;}
+.part3 .inner .sketch ul {display: flex; justify-content: space-between; width: 90%; margin: 4% auto 0;}
+.part3 .inner .sketch ul li {width: 22%; transform: translateY(200px); opacity: 0;}
+.part3 .inner .sketch ul li img {width: 100%; filter: brightness(80%); border-radius: 2rem; }
+
+/* animation */
+.part3 .inner .sketch ul.motion li:nth-child(1) {animation: upAni .5s forwards;}
+.part3 .inner .sketch ul.motion li:nth-child(2) {animation: upAni .7s forwards;}
+.part3 .inner .sketch ul.motion li:nth-child(3) {animation: upAni .9s forwards;}
+.part3 .inner .sketch ul.motion li:nth-child(4) {animation: upAni 1.1s forwards;}
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------part4----------------- */
+.part4 {background: #fff; color: #101010; padding-bottom: 20%;}
+.part4 .mainTitle .titInner h2 {border-color: #101010;}
+.part4 .mainTitle .titInner p {color: #454545;}
+
+/* 01. wireframe , 02. prototype */
+.part4 .inner .part4Title h3 span {font-size: 15rem; font-weight: 200; margin-right: 3%; transform: translateY(200px); opacity: 0;}
+.part4 .inner .part4Title h3 {text-transform: uppercase; font-size: 6rem; letter-spacing: -0.1rem; border-bottom: #101010 1px solid; line-height: 1.1; font-weight: 300; overflow: hidden; }
+
+.part4 .inner .wireframe {padding-top: 5%; margin-bottom: 18%;}
+.part4 .inner .prototype {padding-top: 5%; margin-bottom: 18%;}
+.part4 .inner .wireframe ul, .part4 .inner .prototype ul  {display: flex; justify-content: space-between; width: 90%; margin: 6% auto 0;}
+.part4 .inner .wireframe ul li, .part4 .inner .prototype ul li {width: 18%; display: flex; flex-direction: column; align-items: center;}
+.part4 .inner .wireframe ul li p, .part4 .inner .prototype ul li p {text-align: center; font-size: 2.5rem; font-weight: 00; color: #C1FF3E; background: #101010; padding: 0.2rem 1.5rem; border-radius: 50px; margin-bottom: 10%;}
+.part4 .inner .wireframe ul li img, .part4 .inner .prototype ul li img {width: 100%; border-radius: 1.5rem ;border: #101010 1px solid; transform: translateY(200px); opacity: 0;}
+
+/* animation */
+.part4Title.motion h3 span {animation: upAni .7s forwards; display: inline-block;}
+.part4 .inner ul.motion li:nth-child(1) img {animation: upAni .5s forwards;}
+.part4 .inner ul.motion li:nth-child(2) img {animation: upAni .7s forwards;}
+.part4 .inner ul.motion li:nth-child(3) img {animation: upAni .9s forwards;}
+.part4 .inner ul.motion li:nth-child(4) img {animation: upAni 1.1s forwards;}
+.part4 .inner ul.motion li:nth-child(5) img {animation: upAni 1.3s forwards;}
+
+
+
+
+/* 03. storyboard */
+.part4 .inner .storyboard {padding-top: 5%;}
+.part4 .inner .storyboard .index_Story {display: flex; justify-content: center; align-items: center; flex-direction: column; margin-bottom: 20%;}
+.part4 .inner .storyboard .index_Story .category {text-align: center; font-size: 3rem; font-weight: 00; color: #C1FF3E; background: #101010; padding: 0.2rem 1.5rem; border-radius: 50px; margin: 8% auto 5%; display: inline-block;}
+
+.part4 .inner .storyboard .index_Story .cont {display: flex; justify-content: space-between;  width: 80%;}
+.part4 .inner .storyboard .index_Story .cont .imgBox {width: 35%;}
+.part4 .inner .storyboard .index_Story .cont .imgBox img {width: 100%; border-radius: 2rem; border: 1px solid #101010; box-sizing: border-box;}
+
+.part4 .inner .storyboard .index_Story .cont .txtBox {width: 50%;}
+.part4 .inner .storyboard .index_Story .cont .txtBox li {position: relative;}
+.part4 .inner .storyboard .index_Story .cont .txtBox li p {opacity: 0;}
+.part4 .inner .storyboard .index_Story .cont .txtBox li::before {content: ''; position: absolute; left: -30%; top: 1.5rem; width: 0%; height: 1px; background: #101010;}
+.part4 .inner .storyboard .index_Story .cont .txtBox li::after {content: ''; position: absolute; left: -31%; top: 0.9rem; width: 1.2rem; height: 1.2rem; background: #101010; border-radius: 100%; transform: scale(0);}
+
+.part4 .inner .storyboard .index_Story .cont .txtBox li .title {font-size: 2rem; font-weight: 600; margin-bottom: 2%; letter-spacing: -0.5px;}
+.part4 .inner .storyboard .index_Story .cont .txtBox li .detail {font-size: 1.8rem; color: #454545; font-weight: 300;}
+.part4 .inner .storyboard .index_Story .cont .txtBox li .innerBox {display: flex; justify-content: space-between; align-items: center;}
+.part4 .inner .storyboard .index_Story .cont .txtBox li .innerBox .refe {width: 34%;}
+.part4 .inner .storyboard .index_Story .cont .txtBox li .innerBox .refe img {width: 100%; border-radius: 1rem; border: 1px solid #101010; opacity: 0.7;}
+
+/* .index_story li .txtBox 간격조정 */
+li.first_header {margin-top: 1%; margin-bottom: 5%;}
+li.second_visual{margin-bottom: 7%;}
+li.con01_video {margin-bottom: 20%;}
+li.con02_banner {margin-bottom: 20%;}
+li.con03_introduce {margin-bottom: 40%;}
+li.con04_skills {margin-bottom: 45%;}
+li.con05_hobby {margin-bottom: 32%;}
+li.con06_works {margin-bottom: 17%;}
+li.con07_portfolio {margin-bottom: 35%;}
+li.con08_ncs {margin-bottom: 40%;}
+
+/* animation */
+.part4 .inner .storyboard .index_Story .cont .txtBox li.motion::after {animation: dotAni .6s forwards;}
+.part4 .inner .storyboard .index_Story .cont .txtBox li.motion::before {animation: dotLineAni .6s forwards;}
+.part4 .inner .storyboard .index_Story .cont .txtBox li.motion p {animation: fadeInAni .6s .3s forwards;}
+
+@keyframes dotAni {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+@keyframes dotLineAni {
+    0% {width: 0%; transform-origin: left;}
+    100% {width: 26%; transform-origin: left;}
+}
+
+
+
+
+/* index 제외 나머지 페이지 공통요소 : subPageWrap */
+.subPageWrap > div {width: 50%; display: flex; flex-direction: column;}
+.subPageWrap .category {text-align: center; font-size: 2.5rem; font-weight: 00; color: #C1FF3E; background: #101010; padding: 0.2rem 1.5rem; border-radius: 50px; margin: 0 auto 8%; display: inline-block;}
+.subPageWrap .cont {display: flex; justify-content: space-between;}
+.subPageWrap .cont .imgBox {width: 40%;}
+.subPageWrap .cont .imgBox img {width: 100%; border: #101010 1px solid; box-sizing: border-box; border-radius: 1rem;}
+.subPageWrap .cont .txtBox {width: 50%;}
+.subPageWrap .cont .txtBox li {position: relative;}
+.subPageWrap .cont .txtBox li p { opacity: 0;}
+.subPageWrap .cont .txtBox li::before {content: ''; position: absolute; left: -20%; top: 1.3rem; width: 0%; height: 1px; background: #101010;}
+.subPageWrap .cont .txtBox li::after {content: ''; position: absolute; left: -21.4%; top: 0.9rem; width: 0.8rem; height: 0.8rem; background: #101010; border-radius: 100%; transform: scale(0);}
+.subPageWrap .cont .txtBox li .title {font-size: 1.8rem; font-weight: 600; margin-bottom: 1%; letter-spacing: -0.5px;}
+.subPageWrap .cont .txtBox li .detail {font-size: 1.6rem; color: #454545; font-weight: 300;}
+
+
+/* subPage 위치조정 */
+.subPageWrap .works_story {margin-left: auto; margin-top: -50%;}
+.subPageWrap .contact_story {margin-left: auto;}
+
+
+/* .about_story li .txtBox 간격조정 */
+.about_story .cont .txtBox li.first_visual {margin-top: 10%; margin-bottom: 30%;}
+.about_story .cont .txtBox li.con01_who {margin-bottom: 80%;}
+.about_story .cont .txtBox li.con02_timeline {margin-bottom: 45%;}
+.about_story .cont .txtBox li.con03_strengths {margin-bottom: 80%;}
+
+/* .works_story li .txtBox 간격조정 */
+.works_story .cont .txtBox li.first_visual {margin-top: 10%; margin-bottom: 40%;}
+.works_story .cont .txtBox li.con01_coding {margin-bottom: 60%;}
+.works_story .cont .txtBox li.con02_uiux {margin-bottom: 40%;}
+
+/* .workssub_story li .txtBox 간격조정 */
+.workssub_story .cont .txtBox li.first_main {margin-top: 5%; margin-bottom: 20%;}
+.workssub_story .cont .txtBox li.con01_mode {margin-bottom: 50%;}
+.workssub_story .cont .txtBox li.con02_fullpage {margin-bottom: 130%;}
+
+/* .contact_story li .txtBox 간격조정 */
+.contact_story .cont .txtBox li.first_main {margin-top: 5%; margin-bottom: 20%;}
+
+
+/* animation */
+.subPageWrap .cont .txtBox li.motion::after {animation: dotAni .6s forwards;}
+.subPageWrap .cont .txtBox li.motion::before {animation: dotLineAni2 .6s forwards;}
+.subPageWrap .cont .txtBox li.motion p {animation: fadeInAni .6s .3s forwards;}
+
+@keyframes dotLineAni2 {
+    0% {width: 0%; transform-origin: left;}
+    100% {width: 16%; transform-origin: left;}
+}
+
+
+
+
+
+
+/* ----------------part.5------------------ */
+.part5 .inner .needs {margin: 10% 0 20%;}
+.part5 .inner .needs h2 {font-size: 5.5rem; font-weight: 500; text-align: center; margin-bottom: 5%;}
+.part5 .inner .needs h2 span {color: #C1FF3E; display: block; opacity: 0.5; font-weight: 400; font-size: 3rem;}
+.part5 .inner .needs .QBox { height: 60vh; position: relative; margin-top: 5%;}
+.part5 .inner .needs .QBox li {text-align: center; background: rgba(256, 256, 256, 0.6); color: #101010; font-size: 3rem; font-weight: 700; display: inline-block; padding: 3% 5%; border-radius: 2rem; position: absolute; left: 15%; transform: translateY(200px); opacity: 0;}
+
+.part5 .inner .needs .QBox li:nth-child(2) {background: rgba(256, 256, 256, 0.7); left: 46%; top: 20%;}
+.part5 .inner .needs .QBox li:nth-child(3) {background: rgba(256, 256, 256, 0.8); left:18%; top: 46%;}
+.part5 .inner .needs .QBox li:nth-child(4) {background: rgba(256, 256, 256, 0.9); left: 39%; top: 66%;}
+
+/* animation */
+.part5 .inner .needs .QBox.motion li:nth-child(1) {animation: upAni .8s forwards;}
+.part5 .inner .needs .QBox.motion li:nth-child(2) {animation: upAni .9s forwards;}
+.part5 .inner .needs .QBox.motion li:nth-child(3) {animation: upAni 1s forwards;}
+.part5 .inner .needs .QBox.motion li:nth-child(4) {animation: upAni 1.1s forwards;}
+
+
+
+
+/* .Q.n 공통요소 */
+.part5 .inner .QTitle {font-size: 4.5rem; font-weight: 400; margin-bottom: 8%;}
+.part5 .inner .QTitle .Qnum {color: rgba(193, 255, 62, 0.5); font-size: 10rem; margin-right: 1%; opacity: 0;}
+
+/* animation */
+.part5 .inner .QTitle.motion .Qnum {animation: fadeInAni .7s forwards;}
+.part5 .inner .QTitle .aniWrap.splitting .char {opacity: 0;}
+.part5 .inner .QTitle.motion .aniWrap.splitting .char {
+    display:inline-block;
+    animation: charAni 1s cubic-bezier(.2, 0, .5, 1) forwards;
+    animation-delay: calc(40ms * var(--char-index));
+}
+
+
+
+
+/* Q1 */
+.Q1 {margin-bottom: 20%;}
+.Q1 .top {display: flex; justify-content: space-between; margin-bottom: 15%;}
+.Q1 .top .left {width: 43%;}
+.Q1 .top .left .imgBox {transform: translateY(200px); opacity: 0;}
+.Q1 .top .left .imgBox img {width: 90%; filter: brightness(80%); border-radius: 2rem; margin-top: 10%;}
+
+.Q1 .top .right {width: 43%;}
+.Q1 .top .right .wordBox {display: flex; justify-content: space-between; width: 80%; margin: 5% auto 0; text-align: center; transform: translateY(200px); opacity: 0;}
+.Q1 .top .right .wordBox li .main {font-size: 2.2rem; font-weight: 400; border: 1px solid #C1FF3E; padding: 0.6rem 1.8rem; border-radius: 50px; display: inline-block; margin: 5rem 0 2rem;}
+.Q1 .top .right .wordBox li .sub {line-height: 1.7;}
+
+.Q1 .bottom .imgBox {display: flex; justify-content: flex-end; align-items: flex-end;}
+.Q1 .bottom .imgBox .img {border-radius: 2rem; overflow: hidden; border: 1px solid #fff; box-sizing: border-box; margin-left: 2%; width: 30%; transform: translate(100%);}
+.Q1 .bottom .imgBox .img img {width: 100%}
+
+/* animation */
+.Q1 .top.motion .left .imgBox {animation: upAni 1s forwards;}
+.Q1 .top.motion .right .wordBox {animation: upAni 1.2s forwards;}
+.Q1 .bottom.motion .imgBox .img:nth-child(1) {animation: slideIn-right 1s forwards;}
+.Q1 .bottom.motion .imgBox .img:nth-child(2) {animation: slideIn-right 1.2s forwards;}
+
+
+
+
+/* Q2 */
+.Q2 {margin-bottom: 20%;}
+.Q2 .contBox {display: flex; justify-content: space-between;}
+.Q2 .contBox .left {width: 43%;}
+.Q2 .contBox .left .imgBox {margin-top: 10%;}
+.Q2 .contBox .left .imgBox .img {width: 50%; transform: translateY(200px); opacity: 0;}
+.Q2 .contBox .left .imgBox .img img {width: 100%; border: 1px solid #fff; box-sizing: border-box;border-radius: 15px;}
+.Q2 .contBox .left .imgBox .img:nth-child(2) {width: 45%; margin-left: 55%; margin-top: -18%;}
+.Q2 .contBox .left .imgBox .img:nth-child(3) {margin-left: 25%; margin-top: -10%;}
+
+.Q2 .contBox .right {width: 43%;}
+.Q2 .contBox .right .imgBox {margin-top: 8%; transform: translateY(200px); opacity: 0;}
+.Q2 .contBox .right .imgBox img {width: 80%; border: 1px solid #fff; box-sizing: border-box;border-radius: 2rem;}
+
+/* animation */
+.Q2 .contBox.motion .left .imgBox .img:nth-child(1) {animation: upAni .7s forwards;}
+.Q2 .contBox.motion .left .imgBox .img:nth-child(2) {animation: upAni .9s forwards;}
+.Q2 .contBox.motion .left .imgBox .img:nth-child(3) {animation: upAni 1.1s forwards;}
+.Q2 .contBox.motion .right .imgBox {animation: upAni 1.3s forwards;}
+
+
+
+
+/* Q3 */
+.Q3 {margin-bottom: 20%;}
+.Q3 .top {margin-bottom: 15%;}
+.Q3 .top .imgBox {margin-top: 5%; width: 70%; margin-left: auto;}
+.Q3 .top .imgBox img {width: 100%; border: 1px solid #fff; box-sizing: border-box;border-radius: 2rem; transform: translateX(100%);}
+.Q3 .top .imgBox img:nth-child(1) {margin-bottom: 3%;}
+
+.Q3 .bottom {display: flex; justify-content: space-between;}
+.Q3 .bottom .left {width: 43%;}
+.Q3 .bottom .left .imgBox {width: 80%; margin-top: 10%; transform: translateY(200px); opacity: 0;}
+.Q3 .bottom .left .imgBox img {width: 100%;}
+
+.Q3 .bottom .right {width: 43%;}
+.Q3 .bottom .right .imgBox {width: 70%; margin-top: 10%; margin-left: 10%; transform: translateY(200px); opacity: 0;}
+.Q3 .bottom .right .imgBox img {width: 100%;}
+
+/* animation */
+.Q3 .top.motion .imgBox img:nth-child(1) {animation: slideIn-right .8s forwards;}
+.Q3 .top.motion .imgBox img:nth-child(2) {animation: slideIn-right 1s forwards;}
+
+.Q3 .bottom.motion .left .imgBox {animation: upAni 1s forwards;}
+.Q3 .bottom.motion .right .imgBox {animation: upAni 1.2s forwards;}
+
+
+
+
+
+/* Q4 */
+.Q4 {margin-bottom: 20%;}
+.Q4 .top {margin-bottom: 15%;}
+.Q4 .top .imgBox {display: flex; justify-content: flex-end; align-items: flex-end;}
+.Q4 .top .imgBox .imgLeft {width: 30%; margin-right: 2%;}
+.Q4 .top .imgBox .imgLeft img {width: 100%; border: 1px solid #fff; box-sizing: border-box;border-radius: 2rem; margin-top: 7%; transform: translateX(-100%);}
+.Q4 .top .imgBox .imgRight {width: 30%; transform: translateX(100%);}
+.Q4 .top .imgBox .imgRight img {width: 100%; border: 1px solid #fff; box-sizing: border-box;border-radius: 2rem;}
+
+.Q4 .bottom {display: flex; justify-content: space-between;}
+.Q4 .bottom .left {width: 43%;}
+.Q4 .bottom .left .imgBox {margin-top: 8%;  transform: translateY(200px); opacity: 0;}
+.Q4 .bottom .left .imgBox img {width: 100%;}
+
+.Q4 .bottom .right {width: 43%;}
+.Q4 .bottom .right .imgBox {width: 70%; margin: 10%;}
+.Q4 .bottom .right .imgBox img {width: 100%; border: 1px solid #fff; box-sizing: border-box;border-radius: 2rem; transform: translateY(200px); opacity: 0;}
+.Q4 .bottom .right .imgBox img:nth-child(1) {margin-bottom: 7%;}
+
+/* animation */
+.Q4 .top.motion .imgBox .imgLeft img:nth-child(1) {animation: slideIn-right .7s forwards;}
+.Q4 .top.motion .imgBox .imgLeft img:nth-child(2) {animation: slideIn-right .9s forwards;}
+.Q4 .top.motion .imgBox .imgRight {animation: slideIn-right 1.1s forwards;}
+
+.Q4 .bottom.motion .left .imgBox {animation: upAni .7s forwards;}
+.Q4 .bottom.motion .right .imgBox img:nth-child(1) {animation: upAni .9s forwards;}
+.Q4 .bottom.motion .right .imgBox img:nth-child(2) {animation: upAni 1.1s forwards;}
+
+
+
+
+
+
+
+
+/* 반응형 작은 폰트 사이즈 조절 */
+@media screen and (max-width: 1600px) {html {font-size: 9.5px;}} 
+@media screen and (max-width: 1500px) {html {font-size: 9px;}} 
+@media screen and (max-width: 1400px) {html {font-size: 8.5px;}} 
+@media screen and (max-width: 1200px) {html {font-size: 8px;}} 
+
+
+
+/* responsiveWeb */
+/* pc 1650px ~ 1301px */ /* 1460px */
+@media screen and (max-width:1650px) {
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.center {width: 39%;}
+
+    li.con01_video {margin-bottom: 10%;}
+    li.con02_banner {margin-bottom: 10%;}
+    li.con07_portfolio {margin-bottom: 16%;}
+
+    .about_story .cont .txtBox li.con02_timeline {margin-bottom: 16%;}
+    .part5 .inner .needs .QBox {height: 45vh;}
+    .workssub_story .cont .txtBox li.con02_fullpage {margin-bottom: 108%;}
+}
+
+
+/* tablet 1300px ~ 1025px */ /* 1100px */
+@media screen and (max-width:1300px) {
+    .res_br {display: none;}
+    .commonTitle h3 {font-size: 5rem;}
+    .commonTitle .num {font-size: 13rem;}
+    .mainTitle .titInner h2 {font-size: 8rem;}
+
+    .moveList {padding-left: 2%; right: 4.5rem;}
+    .moveList ul li a {font-size: 1.8rem;}
+    .mainTitle {padding-top: 0;}
+    .visual {padding: 14% 0;}
+    .visual .inner {font-size: 18rem;}
+    .visual .inner .img {top: 28%; width: 30%;}
+
+    .part1 .inner .brain .textBox {width: 50%;}
+    .part1 .inner .affinity > .top .step1 {width: 45%;}
+    .part1 .inner .affinity > .top .step2 {width: 45%;}
+    .part1 .inner .affinity > .top .step2 ul.wordBox {width: 100%;}
+
+    .part1 .inner .affinity .bottom .step3 .textBox {width: 60%; margin-bottom: 10%;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul {width: 82%;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.left {font-size: 6rem;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.center {font-size: 5.2rem;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.right {font-size: 6rem;}
+
+    .part1 .inner .insights .sub {width: 60%; margin: 8% 0 10%;}
+    .part1 .inner .insights .slogan .korean {font-size: 6.5rem;}
+    .part1 .inner .insights .slogan .english {font-size: 3rem;}
+
+    .part2 .textBox {width: 47%;}
+    .part2 .inner .main .imgBox {height: 80rem;}
+    .part2 .inner .main .imgBox div.b {top: 35%;}
+    .part2 .inner .main .imgBox div.c {bottom: 12%;}
+    .part2 .inner .sub1 .imgBox {height: 80rem;}
+    .part2 .inner .sub2 .imgBox {height: 70rem;}
+    .part2 .inner .sub3 {height: 100rem;}
+
+    .part3 .inner .info .textBox .sub {width: 60%; margin: 8% 0 10%;}
+    .part3 .inner .info .con .titleBox .line {width: 72.5%; bottom: 3%;}
+    .part3 .inner .info .con ul {width: 90%; margin-top: 1%;}
+    .part3 .inner .flow.motion .imgBox {width: 50%;}
+    .part3 .inner .design .textBox {width: 60%;}
+    .font .fontBox .line1 .korean {margin-left: 2%;}
+    .font .fontBox .line1 .pretendard { font-size: 13rem;}
+    .font .fontBox .line2 .montserrat {font-size: 13rem;}
+    .font .fontBox .ponzu {font-size: 13rem;}
+    .font .fontBox .line1 .sub {transform: translate(-40%, 5%);}
+    .font .fontBox .line2 .sub {transform: translate(-33%, 5%);}
+
+    .part3 .inner .sketch ul li img {border-radius: 1.2rem;}
+
+    .part4 .inner .part4Title h3 {font-size: 5rem;}
+    .part4 .inner .part4Title h3 span {font-size: 13rem;}
+    .part4 .inner .wireframe ul, .part4 .inner .prototype ul {width: 100%;}
+    .part4 .inner .wireframe ul li img, .part4 .inner .prototype ul li img {border-radius: 1.2rem;}
+
+    .part4 .inner .storyboard .index_Story {margin-bottom: 25%;}
+    .part4 .inner .storyboard .index_Story .cont {width: 100%;}
+    .part4 .inner .storyboard .index_Story .cont .imgBox img {border-radius: 1.2rem;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox li .innerBox .refe {display: none;}
+    .part4 .inner .storyboard .index_Story .cont .imgBox {width: 40%;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox {width: 46.2%;}
+    li.con01_video {margin-bottom: 17%;}
+    li.con02_banner {margin-bottom: 23%;}
+    li.con03_introduce {margin-bottom: 60%;}
+    li.con06_works {margin-bottom: 36%;}
+    li.con07_portfolio {margin-bottom: 39%;}
+
+    .subPageWrap > div {width: 100%; margin-bottom: 25%;}
+    .subPageWrap .category {font-size: 3rem;}
+    .subPageWrap .works_story {margin-top: 10%;}
+    .subPageWrap .cont .txtBox {width: 46.2%;}
+    .subPageWrap .cont .txtBox li .title {font-size: 2rem;}
+    .subPageWrap .cont .txtBox li .detail {font-size: 1.8rem;}
+    .subPageWrap .cont .txtBox li::before {width: 26%; left: -30%; top: 1.5rem;}
+    .subPageWrap .cont .txtBox li::after {width: 1.2rem; height: 1.2rem; transform: scale(1); left: -31%; top: 0.9rem;}
+    .subPageWrap .cont .txtBox li.motion::before {animation: none;}
+    .subPageWrap .cont .txtBox li.motion::after {animation: none;}
+    .about_story .cont .txtBox li.con01_who {margin-bottom: 100%;}
+    .about_story .cont .txtBox li.con02_timeline {margin-bottom: 52%;}
+    .works_story .cont .txtBox li.first_visual {margin-bottom: 53%;}
+    .works_story .cont .txtBox li.con01_coding {margin-bottom: 68%;}
+    .workssub_story .cont .txtBox li.con01_mode {margin-bottom: 70%;}
+    .workssub_story .cont .txtBox li.con02_fullpage {margin-bottom: 140%;}
+    .contact_story .cont .txtBox li.first_main {margin-top: 15%;}
+    .subPageWrap .contact_story {margin-bottom: 0;}
+
+    .part5 .inner .QTitle {font-size: 4rem;}
+    .part5 .inner .QTitle .Qnum {font-size: 9rem;}
+    .part5 .inner .needs .QBox {height: 35vh;}
+    .part5 .inner .needs .QBox li {left: 6%; font-size: 2.6rem;}
+    .part5 .inner .needs .QBox li:nth-child(2) {left: 38%; top: 24%;}
+    .part5 .inner .needs .QBox li:nth-child(3) {left: 11%; top: 60%;}
+    .part5 .inner .needs .QBox li:nth-child(4) {top: 82%;}
+
+    .Q1 .top .left {width: 45%;}
+    .Q1 .top .left .imgBox img {width: 100%;}
+    .Q1 .top .right {width: 45%;}
+    .Q1 .top .right .wordBox {width: 100%;}
+    .Q1 .bottom .textBox {width: 60%;}
+    .Q2 .contBox .left {width: 45%;}
+    .Q2 .contBox .left .imgBox {margin-top: 12%;}
+    .Q2 .contBox .left .imgBox .img img {border-radius: 1.2rem;}
+    .Q2 .contBox .right {width: 45%;}
+    .Q2 .contBox .right .imgBox {margin-top: 12%;}
+    .Q2 .contBox .right .imgBox img {border-radius: 1.2rem;}
+    .Q3 .top .textBox {width: 60%;}
+    .Q3 .top .imgBox img {border-radius: 1.2rem;}
+    .Q3 .bottom .left {width: 45%;}
+    .Q3 .bottom .right {width: 45%;}
+    .Q3 .bottom .left .imgBox {width: 100%;}
+    .Q3 .bottom .right .imgBox {width: 100%; margin-left: 0;}
+    .Q4 .bottom .left {width: 45%;}
+    .Q4 .bottom .right {width: 45%;}
+    .Q4 .top.motion .imgBox .imgLeft img {border-radius: 1.2rem;}
+    .Q4 .top .imgBox .imgRight img {border-radius: 1.2rem;}
+    .Q4 .bottom .right .imgBox {width: 77%;}
+    .Q4 .bottom .right .imgBox img {border-radius: 1.2rem;}
+}
+
+
+/* tablet 1024px ~ 801px */ /* 900px */
+@media screen and (max-width:1024px) {
+    .visual .inner {font-size: 16rem;}
+    .visual .inner img {width: 36%;}
+    .commonTitle h3 {font-size: 4rem;}
+    .commonTitle .num {font-size: 10rem;}
+    .detail {font-size: 1.6rem;}
+    .tit {font-size: 1.8rem;}
+    .mainTitle .titInner p {font-size: 2rem; margin-top: 1.5rem;}
+    .moveList {border-radius: 1.2rem;}
+
+    .part1 .inner .brain .imgBox {width: 46%;}
+    .part1 .inner .brain .imgBox img {border-radius: 1.2rem;}
+    .part1 .inner .affinity > .top .step2 ul.wordBox li .main {font-size: 1.8rem;}
+    .part1 .inner .affinity > .top .step2 ul.wordBox li .sub {font-size: 1.6rem;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.left {font-size: 4.5rem;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.center {font-size: 3.8rem;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.right {font-size: 4.5rem;}
+    .part1 .inner .insights .slogan .korean {font-size: 5rem;}
+    .part1 .inner .insights .slogan .english {font-size: 2.4rem;}
+
+    .part2 .inner .main .imgBox {height: 67rem;}
+    .part2 .inner .main .imgBox div .ex {border-radius: 1.2rem;}
+    .part2 .inner .sub1 .imgBox {height: 67rem;}
+    .part2 .inner .sub1 .imgBox div .ex {border-radius: 1.2rem;}
+    .part2 .inner .sub2 .imgBox {height: 59rem;}
+    .part2 .inner .sub2 .imgBox div .ex {border-radius: 1.2rem;}
+    .part2 .inner .sub3 {height: 80rem;}
+    .part2 .inner .sub3 .cosmos .imgBox p.ex img {border-radius: 1.2rem;}
+    .part2 .inner .sub3 .deduxer .imgBox p.ex img {border-radius: 1.2rem;}
+
+    .part3 .inner .info .con .titleBox .txt {font-size: 2rem;}
+    .part3 .inner .info .con ul li .listTitle {font-size: 2rem;}
+    .part3 .inner .info .con ul li .list {font-size: 1.8rem;}
+    .part3 .inner .design .color .colorList {font-size: 1.6rem; margin-top: 6%;}
+    .part3 .inner .design .color .colorList li {border-radius: 1.2rem 0 0 1.2rem;}
+    .part3 .inner .design .color .colorList li:nth-child(3) {border-radius: 0 1.2rem 1.2rem 0;}
+    .font .fontBox .line1 .korean {margin-left: 4%;}
+    .font .fontBox .line1 .pretendard {font-size: 11rem;}
+    .font .fontBox .line1 .sub {font-size: 1.4rem;}
+    .font .fontBox .line2 .sub {font-size: 1.4rem;}
+    .font .fontBox .line2 .montserrat {font-size: 11rem;}
+    .font .fontBox .ponzu {font-size: 11rem;}
+
+    .part4 .inner .part4Title h3 {font-size: 4rem;}
+    .part4 .inner .part4Title h3 span {font-size: 10rem;}
+    .part4 .inner .wireframe ul li p, .part4 .inner .prototype ul li p {font-size: 1.8rem;}
+    .part4 .inner .storyboard .index_Story .category {font-size: 2.5rem;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox li .title {font-size: 1.8rem;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox li .detail {font-size: 1.6rem;}
+    li.con03_introduce {margin-bottom: 40%;}
+    li.con08_ncs {margin-bottom: 29%;}
+
+    .subPageWrap .category {font-size: 2.5rem;}
+    .subPageWrap .cont .txtBox li .title {font-size: 1.8rem;}
+    .subPageWrap .cont .txtBox li .detail {font-size: 1.6rem;}
+    .workssub_story .cont .txtBox li.con02_fullpage {margin-bottom: 131%;}
+
+    .part5 .inner .needs h2 span {font-size: 2rem;}
+    .part5 .inner .needs h2 {font-size: 3.8rem; margin-bottom: 8%;}
+    .part5 .inner .needs .textBox {width: 60%;}
+    .part5 .inner .needs .QBox {height: 28vh;}
+    .part5 .inner .needs .QBox li {font-size: 2rem; border-radius: 1.2rem;}
+    .part5 .inner .needs .QBox li:nth-child(4) {top: 85%;}
+    .part5 .inner .QTitle {font-size: 3.5rem;}
+    .part5 .inner .QTitle .Qnum {font-size: 7rem; display: block;}
+    .Q1 .top .left .imgBox img {border-radius: 1.2rem; margin-top: 15%;}
+    .Q1 .top .right .wordBox li .main {font-size: 1.8rem; margin: 2rem 0;}
+    .Q1 .top .right .wordBox li .sub {font-size: 1.6rem;}
+    .Q1 .bottom .textBox {margin-bottom: 5%;}
+    .Q1 .bottom .imgBox .img {border-radius: 1.2rem;}
+    .Q4 .top .textBox {margin-bottom: 5%;}
+}
+
+
+/* mobile 800px ~ 501px */ /* 600px */
+@media screen and (max-width:800px) {
+    .visual {padding: 20% 0;}
+    .visual .inner {font-size: 14rem;}
+    .visual .inner .img {width: 43%; top: 31%;}
+    .moveList {right: 2.5rem;}
+    .moveList ul li a {font-size: 1.6rem;}
+    .mainTitle {height: 40vh;}
+    .mainTitle .titInner h2 {font-size: 5rem;}
+    .mainTitle .titInner p {font-size: 1.8rem; margin-top: 1rem;}
+    .commonTitle h3 {font-size: 3.6rem;}
+    .commonTitle .num {font-size: 8.5rem;}
+
+    .part1 {padding-bottom: 30%;}
+    .part1 .inner .brain .commonTitle .num {left: -5%;}
+    .part1 .inner .brain {display: block; margin-bottom: 25%;}
+    .part1 .inner .brain .textBox {width: 100%;}
+    .part1 .inner .brain .textBox .sub {margin: 10% 0 5%;}
+    .part1 .inner .brain .imgBox {width: 100%;}
+    .part1 .inner .affinity {margin-bottom: 25%;}
+    .part1 .inner .affinity > .top {display: block;}
+    .part1 .inner .affinity > .top .step1 {width: 100%; margin-bottom: 20%;}
+    .part1 .inner .affinity > .top .step2 {width: 100%;  margin-bottom: 20%;}
+    .part1 .inner .affinity > .top .step2 ul.wordBox {width: 70%;}
+    .part1 .inner .affinity .bottom .step3 .textBox {width: 100%;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul {width: 100%;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.left {font-size: 3.8rem;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.center {font-size: 3rem; letter-spacing: 0;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.right {font-size: 3.8rem;}
+    .part1 .inner .insights .sub {width: 100%; margin: 10% 0 12%;}
+    .part1 .inner .insights .slogan .korean {font-size: 4rem;}
+    .part1 .inner .insights .slogan .english {font-size: 2rem;}
+
+    .part2 .textBox {width: 60%;}
+    .part2 .greenTitle {font-size: 3rem;}
+    .part2 .inner .main .imgBox {height: 57rem; margin-top: 30%;}
+    .part2 .inner .main .imgBox div {width: 60%;}
+    .part2 .inner .sub1 .textBox {width: 60%;}
+    .part2 .inner .sub1 .imgBox {height: 57rem; margin-top: 17%;}
+    .part2 .inner .sub1 .imgBox div {width: 43%;}
+    .part2 .inner .sub2 .imgBox div {width: 60%;}
+    .part2 .inner .sub2 .imgBox {height: 51rem; margin-top: 15%;}
+    .part2 .inner .sub2 .imgBox .b {left: 0;}
+    .part2 .inner .sub3 .cosmos {display: block;}
+    .part2 .inner .sub3 .cosmos .imgBox {width: 60%; margin-bottom: 5%;}
+    .part2 .inner .sub3 .cosmos .imgBox p.sketch img {bottom: 8%; left: 106%;}
+    .part2 .inner .sub3 .deduxer {width: 60%;}
+    .part2 .inner .sub3 .deduxer .imgBox {margin-bottom: 8%;}
+    .part2 .inner .sub3 .deduxer .textBox {width: 100%;}
+    
+    .part3 {padding-bottom: 20%;}
+    .part3 .inner .info {margin-bottom: 25%;}
+    .part3 .inner .info .textBox .commonTitle {line-height: 1;}
+    .part3 .inner .info .textBox .commonTitle .num {top: -106%;}
+    .part3 .inner .info .textBox .sub {width: 100%; margin: 10% 0 12%;}
+    .part3 .inner .info .con .titleBox .txt {padding: 0.5rem 1.2rem; font-size: 1.8rem;}
+    .part3 .inner .info .con .titleBox .line {width: 80.5%; bottom: 0;}
+    .part3 .inner .info .con ul {width: 100%; margin-top: 3%;}
+    .part3 .inner .info .con ul li .listTitle {font-size: 1.6rem;}
+    .part3 .inner .info .con ul li .list {font-size: 1.4rem;}
+
+    .part3 .inner .flow {display: block; margin-bottom: 25%;}
+    .part3 .inner .flow .textBox .commonTitle .num {left: -4.5%;}
+    .part3 .inner .flow .textBox .commonTitle {margin-bottom: 0;}
+    .part3 .inner .flow .textBox .sub {width: 100%; margin: 10% 0 12%;}
+    .part3 .inner .flow.motion .imgBox {width: 75%; margin-left: auto;}
+
+    .part3 .inner .design .textBox {width: 100%; margin: 10% 0 6%;}
+    .part3 .inner .design .color {margin-bottom: 20%;}
+    .part3 .inner .design .font {margin-bottom: 20%;}
+
+    .font .fontBox {margin-top: 15%;}
+    .font .fontBox .line1 .korean {margin-left: 0;}
+    .font .fontBox .line1 .pretendard {font-size: 8rem;}
+    .font .fontBox .line2 .montserrat {font-size: 8rem;}
+    .font .fontBox .ponzu {font-size: 8rem;}
+    .part3 .inner .design .illust {margin-bottom: 20%;}
+    .illust .illustBox {width: 100%;}
+    .part3 .inner .design .textBox {margin: 10% 0 8%;}
+    .part3 .inner .sketch .commonTitle {margin-bottom: 0;}
+    .part3 .inner .sketch .textBox .sub { margin: 10% 0 12%;}
+    .part3 .inner .sketch ul {width: 100%; margin: 0;}
+    .part3 .inner .sketch ul li img {border-radius: 0.6rem;}
+
+    .part4 {padding-bottom: 30%;}
+    .part4 .inner .part4Title h3 {font-size: 3.6rem;}
+    .part4 .inner .part4Title h3 span {font-size: 7rem;}
+    .part4 .inner .wireframe ul li img, .part4 .inner .prototype ul li img {border-radius: 0.6rem;}
+    .part4 .inner .wireframe ul li p, .part4 .inner .prototype ul li p {font-size: 1.4rem; padding: 0.2rem 1rem;}
+    .part4 .inner .wireframe ul, .part4 .inner .prototype ul {margin: 8% auto 0;}
+    .part4 .inner .storyboard .index_Story .category {font-size: 2rem;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox li::before {display: none;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox li::after {display: none;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox li .title {font-size: 1.6rem;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox li .detail {font-size: 1.5rem;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox {width: 56%;}
+    li.first_header {display: none;}
+    li.con01_video {margin-bottom: 8%;}
+    li.con02_banner {margin-bottom: 8%;}
+    li.con03_introduce {margin-bottom: 15%;}
+    li.con04_skills {margin-bottom: 28%;}
+    li.con05_hobby {margin-bottom: 10%;}
+    li.con06_works {margin-bottom: 10%;}
+    li.con07_portfolio {margin-bottom: 8%;}
+    li.con08_ncs {margin-bottom: 8%;}
+
+    .subPageWrap .category {font-size: 2rem;}
+    .subPageWrap .cont .txtBox {width: 56%;}
+    .subPageWrap .cont .txtBox li.motion::before {display: none;}
+    .subPageWrap .cont .txtBox li.motion::after {display: none;}
+    .about_story .cont .txtBox li.first_visual {margin-top: 0;}
+    .about_story .cont .txtBox li.con01_who {margin-bottom: 38%;}
+    .about_story .cont .txtBox li.con02_timeline {margin-bottom: 12%;}
+    .about_story .cont .txtBox li.con03_strengths {margin-bottom: 60%;}
+    .works_story .cont .txtBox li.first_visual {margin-bottom: 30%;}
+    .works_story .cont .txtBox li.con01_coding {margin-bottom: 34%;}
+    .works_story .cont .txtBox li.con02_uiux {margin-bottom: 17%;}
+    .workssub_story .cont .txtBox li.first_main {margin-top: 0;}
+    .workssub_story .cont .txtBox li.con01_mode {margin-bottom: 38%;}
+    .workssub_story .cont .txtBox li.con02_fullpage {margin-bottom: 57%;}
+    .contact_story .cont .txtBox li.first_main {margin-top: 0; margin-bottom: 15%;}
+
+    .part5 .inner .QTitle {font-size: 2.8rem; margin-bottom: 0;}
+    .part5 .inner .QTitle .Qnum {font-size: 5.5rem;}
+    .part5 .inner .needs .textBox {width: 100%; margin: 10% 0 8%;}
+    .part5 .inner .needs .QBox {position: initial; height: auto;}
+    .part5 .inner .needs .QBox li {position: initial; width: 100%; box-sizing: border-box; padding: 5%; margin-bottom: 2%;}
+
+    .Q1 {margin-bottom: 25%;}
+    .Q1 .top {display: block;}
+    .Q1 .top .textBox {margin: 10% 0 8%;}
+    .Q1 .top .left {width: 100%; margin-bottom: 20%;}
+    .Q1 .top .left .imgBox img {margin-top: 0;}
+    .Q1 .top .right {width: 100%;}
+    .Q1 .top .right .wordBox {width: 70%;}
+    .Q1 .bottom .textBox {width: 100%; margin-bottom: 10%;}
+    .Q1 .bottom .imgBox .img {width: 40%;}
+
+    .Q2 {margin-bottom: 25%;}
+    .Q2 .contBox {display: block;}
+    .Q2 .contBox .left {width: 100%; margin-bottom: 20%;}
+    .Q2 .contBox .left .imgBox {margin-top: 0;}
+    .Q2 .contBox .textBox {margin: 10% 0;}
+    .Q2 .contBox .right {width: 100%;}
+    .Q2 .contBox .right .imgBox {width: 80%; margin: 0 auto;}
+    .Q2 .contBox .right .imgBox img {width: 100%;}
+
+    .Q3 {margin-bottom: 25%;}
+    .Q3 .top {margin-bottom: 20%;}
+    .Q3 .top .textBox {width: 100%; margin: 10% 0 8%;}
+    .Q3 .top .imgBox {width: 100%; margin-top: 0; margin-left: 0;}
+    .Q3 .bottom {display: block;}
+    .Q3 .bottom .left {width: 100%; margin-bottom: 20%;}
+    .Q3 .bottom .left .textBox {margin: 10% 0 8%;}
+    .Q3 .bottom .left .imgBox {width: 80%; margin: 0 auto; }
+    .Q3 .bottom .right {width: 100%;}
+    .Q3 .bottom .right .textBox {margin: 10% 0 8%;}
+    .Q3 .bottom .right .imgBox {width: 80%; margin: 0 auto; }
+
+    .Q4 {margin-bottom: 25%;}
+    .Q4 .top {margin-bottom: 20%;}
+    .Q4 .top .textBox {margin: 10% 0 8%;}
+    .Q4 .top .imgBox .imgLeft {width: 43%;}
+    .Q4 .top .imgBox .imgLeft {width: 43%;}
+    .Q4 .top .imgBox .imgLeft img {margin-top: 5%;}
+    .Q4 .top .imgBox .imgRight {width: 40%;}
+    .Q4 .bottom {display: block;}
+    .Q4 .bottom .left {width: 100%; margin-bottom: 20%;}
+    .Q4 .bottom .left .textBox {margin: 10% 0 8%;}
+    .Q4 .bottom .left .imgBox {margin-top: 0;}
+    .Q4 .bottom .right {width: 100%;}
+    .Q4 .bottom .right .textBox {margin: 10% 0 8%;}
+    .Q4 .bottom .right .imgBox {margin: 0 auto;}
+}
+
+
+
+/* mobile 500px이하 */ /* 390px */
+@media screen and (max-width:500px){
+    .visual {padding: 49% 0;}
+    .visual .inner {font-size: 10rem;}
+    .mainTitle .titInner h2 {font-size: 4rem;}
+    .commonTitle h3 {font-size: 3rem;}
+    .commonTitle .num {font-size: 6.5rem; top: -155%;}
+    .moveList {right: 1.5rem; top: 11%;}
+    .part1 .inner .affinity > .top .step2 ul.wordBox {width: 100%;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.left{font-size: 2.6rem;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.center{font-size: 2.2rem; width: 50%;}
+    .part1 .inner .affinity .bottom .step3 .sentence > ul > li.right{font-size: 2.6rem; width: 50%;}
+    .part1 .inner .insights .slogan .slogan1::before {display: none;}
+    .part1 .inner .insights .slogan::after {display: none;}
+    .part1 .inner .insights .slogan .slogan1 .korean::before {display: none;}
+    .part1 .inner .insights .slogan .slogan1 .korean::after {display: none;}
+    .part1 .inner .insights .slogan .slogan1 .korean span.line {display: none;}
+    .part1 .inner .insights .slogan .slogan2 .korean span.line {display: none;}
+    .part1 .inner .insights .slogan .slogan2 .korean::before {display: none;}
+    .part1 .inner .insights .slogan .slogan2 .korean::after {display: none;}
+    .part1 .inner .insights .slogan .slogan2::before {display: none;}
+    .part1 .inner .insights .slogan .slogan2::after {display: none;}
+
+    .part2 .greenTitle {font-size: 2.5rem;}
+    .part2 .textBox {width: 100%;}
+    .part2 .inner .main .imgBox {margin-top: 48%;}
+    .part2 .inner .main .imgBox div {width: 85%;}
+    .part2 .inner .main .imgBox div.b {top: 45%;}
+    .part2 .inner .main .imgBox div.c {bottom: 5%; left: 20%;}
+    .part2 .inner .main .imgBox div.c .sketch {display: none;}
+    .part2 .inner .sub1 .textBox {width: 100%; margin-top: 30%;}
+    .part2 .inner .sub1 .imgBox {height: 50rem;margin-top: 20%;}
+    .part2 .inner .sub1 .imgBox div {width: 65%;}
+    .part2 .inner .sub1 .imgBox .a {left: 6%;}
+    .part2 .inner .sub1 .imgBox .b {left: -18%; top: 50%;}
+    .part2 .inner .sub1 .imgBox .c {bottom: 26%;}
+    .part2 .inner .sub1 .imgBox div.a .sketch {left: 0;}
+    .part2 .inner .sub2 .imgBox {margin-top: 0; height: 48rem;}
+    .part2 .inner .sub2 .imgBox div {width: 85%;}
+    .part2 .inner .sub2 .imgBox .a {top: 10%;}
+    .part2 .inner .sub2 .imgBox .b {top: 40%;}
+    .part2 .inner .sub2 .imgBox div.a .sketch {display: none;}
+    .part2 .inner .sub3 .cosmos .imgBox {width: 85%;}
+    .part2 .inner .sub3 .cosmos .imgBox p.sketch {display: none;}
+    .part2 .inner .sub3 .deduxer {width: 85%;}
+    .part2 .inner .sub3 .deduxer .imgBox p.sketch {display: none;}
+
+    .part3 .inner .info .con .titleBox .line {display: none;}
+    .info .con.motion ul li:nth-child(3) .works1 {margin-bottom: 3rem;}
+    .part3 .inner .flow.motion .imgBox {width: 100%;}
+    .font .fontBox {transform: translateX(0); width: 100%;}
+    .font .fontBox .line1 .pretendard {font-size: 5rem; letter-spacing: -0.5rem; margin-left: 25%;}
+    .font .fontBox .line1 .sub {display: none;}
+    .font .fontBox .line1 .korean {display: none;}
+    .font .fontBox .line2 .montserrat {font-size: 5rem; letter-spacing: -0.5rem; margin-left: 10%;}
+    .font .fontBox .line2 .sub {display: none;}
+    .font .fontBox .english {display: none;}
+    .font .fontBox .ponzu {font-size: 5rem; letter-spacing: -0.5rem;}
+
+    .part3 .inner .sketch ul {flex-wrap: wrap;}
+    .part3 .inner .sketch ul li {width: 30%;}
+    .part3 .inner .sketch ul.motion li:nth-child(4) {display: none;}
+
+    .part4 .inner .part4Title h3 {font-size: 3rem;}
+    .part4 .inner .part4Title h3 span {font-size: 5rem;}
+    .part4 .inner .wireframe ul li, .part4 .inner .prototype ul li {width: 30%;}
+    .part4 .inner .wireframe ul li:nth-child(4), .part4 .inner .prototype ul li:nth-child(4) {display: none;}
+    .part4 .inner .wireframe ul li:nth-child(5), .part4 .inner .prototype ul li:nth-child(5) {display: none;}
+
+    .part4 .inner .storyboard .index_Story .cont .imgBox {display: none;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox {width: 100%;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox li .title {font-size: 1.8rem;}
+    .part4 .inner .storyboard .index_Story .cont .txtBox li .detail {font-size: 1.6rem;}
+    li.first_header {display: block; margin-top: 0; margin-bottom: 10%;}
+    li.second_visual {margin-bottom: 10%;}
+    li.con01_video {margin-bottom: 10%;}
+    li.con02_banner {margin-bottom: 10%;}
+    li.con03_introduce {margin-bottom: 10%;}
+    li.con04_skills {margin-bottom: 10%;}
+    li.con05_hobby {margin-bottom: 10%;}
+    li.con06_works {margin-bottom: 10%;}
+    li.con07_portfolio {margin-bottom: 10%;}
+    li.con08_ncs {margin-bottom: 10%;}
+
+    .subPageWrap .cont .imgBox {display: none;}
+    .subPageWrap .cont .txtBox {width: 100%;}
+    .subPageWrap .cont .txtBox li .detail {font-size: 1.6rem;}
+    .about_story .cont .txtBox li.first_visual {margin-bottom: 10%;}
+    .about_story .cont .txtBox li.con01_who {margin-bottom: 10%;}
+    .about_story .cont .txtBox li.con02_timeline {margin-bottom: 10%;}
+    .about_story .cont .txtBox li.con03_strengths {margin-bottom: 10%;}
+    .works_story .cont .txtBox li.first_visual {margin-top: 0; margin-bottom: 10%;}
+    .works_story .cont .txtBox li.con01_coding {margin-bottom: 10%;}
+    .works_story .cont .txtBox li.con02_uiux {margin-bottom: 10%;}
+    .workssub_story .cont .txtBox li.first_main {margin-bottom: 10%;}
+    .workssub_story .cont .txtBox li.con01_mode {margin-bottom: 10%;}
+    .workssub_story .cont .txtBox li.con02_fullpage {margin-bottom: 10%;}
+    .contact_story .cont .txtBox li.first_main {margin-bottom: 10%;}
+
+    .part5 .inner .needs h2 {font-size: 2.8rem;}
+    .part5 .inner .QTitle {font-size: 2.4rem;}
+    .Q1 .top .right .wordBox {width: 100%;}
+    .Q1 .bottom .imgBox {width: 100%; justify-content: space-between;}
+    .Q1 .bottom .imgBox .img {width: 48%; margin-left: 0;}
+    .Q4 .top .imgBox {justify-content: space-between; width: 100%;}
+    .Q4 .top .imgBox .imgLeft {width: 48%;}
+    .Q4 .top .imgBox .imgRight {width: 48%;}
+}

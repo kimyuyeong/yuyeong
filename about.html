@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuyeong Portfolio_about</title>
+    <link rel="stylesheet" href="css/about_style.css?ver=1">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/about_script.js"></script>
+    <script src="js/scrolla.jquery.min.js"></script>
+    <script src="js/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+            $("#header_whbg").load("header_whbg.html");
+            $("#footer").load("footer.html");
+        });
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- header -->
+        <div id="header_whbg"></div>
+
+        <!-- section visual -->
+        <section class="visual">
+            <div class="mainText">
+                <p class="en intro"><span>INTRODUCE</span></p>
+                <p class="en2 myself"><span>MYSELF</span></p>
+            </div>
+        </section>
+
+        <!-- con01 who -->
+        <section class="con01 animate" data-animate="motion">
+            <div class="mark"><img src="image/about/mark_who.svg" alt=""></div>
+            <div class="inner">
+                <!-- top -->
+                <div class="top animate" data-animate="motion">
+                    <div class="hello">
+                        <div class="text">
+                            <h3 data-splitting class="animate" data-animate="motion">안녕하세요,<br><span class="gr">퍼블리셔 김유영</span>입니다.</h3>
+                            <p class="en">Hello, my name is kimyuyeong.<br>I am a publisher.</p>
+                            <span class="bottomLine"></span>
+                        </div>
+                        <div class="logo"><img src="image/logo_green.svg" alt=""></div>
+                    </div>
+                    <div class="introduce">
+                        저는 어렸을때 부터 미술, 예술 분야에 두각을 드러내며<br class="res_br">
+                        일러스트 문구 브랜드 운영, 이모티콘 제작 등 다양한 도전을 하였습니다.<br>
+                        이후 IT 회사의 디자이너로 근무하며 개발직군에 관심을 가지게 되었고<br class="res_br">
+                        퍼블리셔로의 새로운 도전을 하게 되었습니다.<br>
+                        <br>
+                        퍼블리셔의 매력은 사용자의 편의성, 사용성을 모두 고려하며<br class="res_br">
+                        디자인 감각을 통해 더 좋은 사용자 경험을 만들어 내는 것이라고 생각합니다.<br>
+                        <br>
+                        저는 퍼블리싱은 물론 디자인까지 놓치지 않는 퍼블리셔가 되겠습니다.
+                    </div>
+                </div>
+                <!-- middle -->
+                <div class="middle animate" data-animate="motion">
+                    <ul class="left">
+                        <li class="profile">
+                            <p class="title en">PROFILE</p>
+                            <div class="aniWrap">
+                                <p class="subtext">
+                                    김유영 Kim Yuyeong<br>
+                                    1998. 03. 03<br>
+                                    인천광역시 연수구
+                                </p>
+                            </div>
+                        </li>
+                        <li class="contact">
+                            <p class="title en">CONTACT</p>
+                            <div class="aniWrap">
+                                <p class="subtext">010. 2434. 8190<br>
+                                dbdud8190@naver.com</p>
+                            </div>
+                        </li>
+                        <li class="award">
+                            <p class="title en">AWARD</p>
+                            <div class="aniWrap">
+                                <p class="subtext">제5회 BNW 그래픽디자인 공모전<br>아트웍 부문 우수상</p>
+                            </div>
+
+                        </li>
+                    </ul>
+                    <div class="img"><img src="image/about/profile.jpg" alt=""></div>
+                    <div class="right">
+                        <div class="mbti">
+                            <p class="title en">MBTI</p>
+                            <div class="aniWrap">
+                                <p class="sub"><span class="line">ENFJ</span> <span class="and">and</span> <span class="line">INFJ</span></p>
+                                <ul class="in">
+                                    <li>공감능력</li>
+                                    <li>아이디어</li>
+                                    <li>계획형</li>
+                                    <li>열정적</li>
+                                    <li>완벽주의</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="skills">
+                            <p class="title en">SKILLS</p>
+                            <ul>
+                                <li><img src="image/about/icon_html.svg" alt=""></li>
+                                <li><img src="image/about/icon_css.svg" alt=""></li>
+                                <li><img src="image/about/icon_js.svg" alt=""></li>
+                                <li><img src="image/about/icon_jq.svg" alt=""></li>
+                                <li><img src="image/about/icon_figma.svg" alt=""></li>
+                                <li><img src="image/about/icon_ps.svg" alt=""></li>
+                                <li><img src="image/about/icon_ai.svg" alt=""></li>
+                                <li><img src="image/about/icon_id.svg" alt=""></li>
+                                <li><img src="image/about/icon_pr.svg" alt=""></li>
+                                <li><img src="image/about/icon_notion.svg" alt=""></li>
+                                <li><img src="image/about/icon_drawing.svg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- bottom -->
+                <div class="bottom animate" data-animate="motion">
+                    <div class="left">
+                        <div class="experience">
+                            <p class="title en">EXPERIENCE</p>
+                            <div class="aniWrap">
+                                <p class="subText1">
+                                    일러스트 문구 브랜드 '일공오 스트리트' 운영
+                                    <span>2019~2021</span>
+                                </p>
+                                <p class="subText2">
+                                    평소 그림그리기를 좋아하던 저는 그림을 올리는<br class="res_br">
+                                    인스타그램 계정을 운영하였습니다.<br>
+                                    취미로 운영하던 중 ‘다꾸(다이어리 꾸미기)’열풍에<br class="res_br">
+                                    힘입어 그림으로 스티커, 메모지 등을 제작해보았으며<br class="res_br">
+                                    이후에는 소품샵들의 입점제안, 페어참가 제안을 받으며<br class="res_br">
+                                    작게나마 사업을 진행하였습니다.<br>
+                                    얼떨결에 시작하여 미숙하고 어려움도 많았지만<br class="res_br">
+                                    혼자서 모든것을 운영, 관리하며 수익을 냈다는 사실이<br class="res_br">
+                                    큰 뿌듯함으로 다가왔으며 값진 경험이 되었습니다. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="education">
+                            <p class="title en">EDUCATION</p>
+                            <div class="aniWrap">
+                                <ul class="subText">
+                                    <li>
+                                        옥련여자고등학교 졸업
+                                        <span>2017~2021</span>
+                                    </li>
+                                    <li>
+                                        명지전문대학 졸업
+                                        <span>2017~2021</span>
+                                    </li>
+                                    <li>
+                                        부평 SBS아카데미 ‘광고편집디자인’ 과정 수료
+                                        <span>2021 .05~2022. 03</span>
+                                    </li>
+                                    <li>
+                                        강남 이젠아카데미 ‘스마트 웹콘텐츠&프론트엔드’ 과정 수료
+                                        <span>2023. 04~2023. 10</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="title en">CAREER AND CERTIFICATES</p>
+                        <ul>
+                            <li>
+                                <div class="aniWrap">
+                                    <p class="tit">경력</p>
+                                    <p class="date">2022 .06~2023 .02</p>
+                                    <p class="name">광고디자이너</p>
+                                    <p class="where">샐러드랩 스튜디오MX</p>
+                                </div>
+                                
+                            </li>
+                            <li>
+                                <div class="aniWrap">
+                                    <p class="tit">자격</p>
+                                    <p class="date">2021 .08</p>
+                                    <p class="name">컬러리스트 산업기사</p>
+                                    <p class="where">한국산업인력공단</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="aniWrap">
+                                    <p class="tit"></p>
+                                    <p class="date">2021 .11</p>
+                                    <p class="name">GTQ 일러스트레이터 1급</p>
+                                    <p class="where">kpc 한국생산성본부</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="aniWrap">
+                                    <p class="tit"></p>
+                                    <p class="date">2021 .12</p>
+                                    <p class="name">GTQ 포토샵 1급</p>
+                                    <p class="where">kpc 한국생산성본부</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="aniWrap">
+                                    <p class="tit"></p>
+                                    <p class="date">2021 .12</p>
+                                    <p class="name">컴퓨터그래픽스운용기능사</p>
+                                    <p class="where">한국산업인력공단</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="aniWrap">
+                                    <p class="tit"></p>
+                                    <p class="date">2022 .02</p>
+                                    <p class="name">GTQ 인디자인 1급</p>
+                                    <p class="where">kpc 한국생산성본부</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="aniWrap">
+                                    <p class="tit"></p>
+                                    <p class="date">2022 .02</p>
+                                    <p class="name">kpc 그래픽 마스터</p>
+                                    <p class="where">kpc 한국생산성본부</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- con02 timeline -->
+        <section class="con02">
+            <div class="mark"><img src="image/about/mark_timeline.svg" alt=""></div>
+            <div class="topCont">
+                <div class="inner">
+                    <div class="left">
+                        <div class="textBox animate" data-animate="motion">
+                            <div class="title">
+                                <p class="a en"><span class="aniWrap">YUYEONG'S</span></p>
+                                <p class="b en2"><span class="aniWrap">LIFE</span></p>
+                            </div>
+                            <p class="sub">꾸준히 노력해 온 저의 성장과정을 소개합니다.</p>
+                        </div>
+                        <p class="arrow"><img src="image/about/timeline_arrow.png" alt=""></p>
+                    </div>
+                    <div class="right animate" data-animate="motion">
+                        <p class="age">Age</p>
+                        <p class="num counter"><span class="num2">2</span><span class="num5">5</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomCont">
+                <svg width="7981" height="614" viewBox="0 0 7981 614" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg">
+                    <path d="M3 2C214 283 422.5 397.658 676.5 402.458C994 408.458 1406.5 124.458 1695.5 119.958C1984.5 115.458 2305.5 423.458 2707.5 414.458C3109.5 405.458 3510 133.458 3732.5 134.958C3955 136.458 4144 335.958 4578 346.458C5012 356.958 5347.5 61.4582 5718 53.4582C6088.5 45.4582 6124 409.499 6753 303.958C7143.55 238.427 7373.5 766.5 7980 569" stroke="#101010"/>
+                    <circle cx="7.5" cy="7.5" r="7.5" fill="#101010"/>
+                </svg>
+                <ul>
+                    <li class="ani01">
+                        <span class="ball"></span>
+                        <div class="textBox">
+                            <p class="detail">3월 3일 출생</p>
+                            <p class="year">1998</p>
+                            <p class="subText">저는 1998년 3월 3일에 태어났습니다.</p>
+                        </div>
+                    </li>
+                    <li class="ani02">
+                        <span class="ball"></span>
+                        <div class="textBox">
+                            <p class="detail">미술을 시작하다</p>
+                            <p class="year">2002</p>
+                            <p class="subText">미술에 대한 재능과 흥미를 일찍이 깨닫고<br class="res_br">
+                                미술을 배우기 시작했습니다.<br class="res_br">
+                                이후 학창시절 동안 각종 그리기 대회 및<br class="res_br">
+                                포스터 공모전에서 상을 받기도 했습니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="ani03">
+                        <span class="ball"></span>
+                        <div class="textBox">
+                            <p class="detail">대학교 입학</p>
+                            <p class="year">2017</p>
+                            <p class="subText">패션을 좋아하여 스타일리스트전공으로<br class="res_br">
+                                대학교에 입학하였습니다.<br class="res_br">
+                                재학중 팀원들과의 조별과제, 현장실습을<br class="res_br">
+                                통해 작은 사회를 경험하였습니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="ani04">
+                        <span class="ball"></span>
+                        <div class="textBox">
+                            <p class="detail">취미, 사업이 되다</p>
+                            <p class="year">2021</p>
+                            <p class="subText">취미로 운영하던 일러스트 그림 계정에서<br class="res_br">
+                                스티커, 메모지 등의 문구를 제작하며<br class="res_br">
+                                작은 사업을 시작하였습니다.<br class="res_br">
+                                소품샵들의 입점제안으로 여러 오프라인<br class="res_br">
+                                소품샵에 입점하였고 페어에도 참가하여<br class="res_br">
+                                직접 판매해보기도 하였습니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="ani05">
+                        <span class="ball"></span>
+                        <div class="textBox">
+                            <p class="detail">디자인을 배우다</p>
+                            <p class="year">2021 .05</p>
+                            <p class="subText">취미로 시작한 일러스트 문구 사업을 마치고<br class="res_br">
+                                전문적으로 디자인을 배웠습니다.<br class="res_br">
+                                약 10개월의 과정 동안 디자인 기술을 익히고<br class="res_br">
+                                포트폴리오까지 제작하였습니다.<br class="res_br">
+                                또한 각종 자격증을 취득하였고 공모전에<br class="res_br">
+                                참가해 수상하기도 하였습니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="ani06">
+                        <span class="ball"></span>
+                        <div class="textBox">
+                            <p class="detail">디자이너가 되다</p>
+                            <p class="year">2022</p>
+                            <p class="subText">디자인을 배우고 난 후 광고대행사의<br class="res_br">
+                                광고디자이너로 취직하였습니다.<br class="res_br">
+                                광고소재 제작 및 기획이 주업무였으며<br class="res_br">
+                                팀원들과의 협력, 클라이언트와의 소통방식을<br class="res_br">
+                                배운 뜻깊은 경험이었습니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="ani07">
+                        <span class="ball"></span>
+                        <div class="textBox">
+                            <p class="detail">퍼블리셔 도전</p>
+                            <p class="year">2023</p>
+                            <p class="subText">IT 회사에 근무 중 동료 개발자분들과<br class="res_br">
+                                이야기를 나누며 퍼블리셔에 관심을<br class="res_br">
+                                가지게 되었습니다.<br class="res_br">
+                                사용자의 편의성, 사용성은 물론 디자인을<br class="res_br">
+                                고려하여 구현해내는 퍼블리싱에 큰 흥미를<br class="res_br">
+                                느꼈고 디자인 능력이 있는 저의 장점과 함께<br class="res_br">
+                                시너지를 발휘할 것이라 생각하여 주저없이<br class="res_br">
+                                퍼블리셔에 도전하게 되었습니다.
+                            </p>
+                        </div>
+                    </li>
+                    <li class="now">
+                        <span class="ball"></span>
+                        <div class="textBox">
+                            <p class="tit en">NOW</p>
+                            <p class="sub">탄탄한 기본기와 실력을 갖추고<br>
+                                퍼블리셔로서의 첫걸음을 내딛습니다.
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- con03 strength-->
+        <section class="con03">
+            <div class="mark"><img src="image/about/mark_strength.svg" alt=""></div>
+            <div class="inner">
+                <div class="left">
+                    <div class="textBox animate" data-animate="motion">
+                        <div class="title">
+                            <p class="a en"><span class="aniWrap">Strengths</span></p>
+                            <p class="b en2"><span class="aniWrap">and</span></p>
+                            <p class="c en2"><span class="aniWrap">Distinctions</span></p>
+                        </div>
+                        <p class="sub">저만의 특별한 차별점을 소개합니다.</p>
+                    </div>
+                    <div class="scroll en">SCROLL DOWN 🠗</div>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li class="box1">
+                            <p class="icon"><img src="image/about/stren_icon_1.png" alt=""></p>
+                            <div class="textBox">
+                                <p class="tit">깔끔하고 견고한 Markup</p>
+                                <p class="subText">
+                                    누구나 이해하기 쉬운 코드를 그려내고자 노력합니다.<br>
+                                    다양한 웹사이트의 클론코딩과 스스로 다시 코딩해 보는 노력으로 다져진<br class="res_br">
+                                    깔끔하고 견고한 Markup이 저의 첫 번째 강점입니다.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="box2">
+                            <p class="icon"><img src="image/about/stren_icon_2.png" alt=""></p>
+                            <div class="textBox">
+                                <p class="tit">유연한 소통능력</p>
+                                <p class="subText">
+                                    일러스트 문구사업을 진행하면서 여러 발주업체 및 입점처, 소비자들과<br class="res_br"> 다양한 소통을, 광고디자이너로 근무하며 클라이언트와의 소통을<br class="res_br">
+                                    경험하였습니다. 서로의 상황을 파악해 알맞은 조율을 할 수 있습니다.
+                                </p>
+                            </div> 
+                        </li>
+                        <li class="box3">
+                            <p class="icon"><img src="image/about/stren_icon_3.png" alt=""></p>
+                            <div class="textBox">
+                                <p class="tit">디자인 감각</p>
+                                <p class="subText">
+                                    디자인 능력을 가지고 툴을 능숙하게 다루는 것이 제 강점입니다.<br>
+                                    웹개발 과정을 배우며 UIUX를 고려한 디자인 능력을 키웠으며<br class="res_br">
+                                    협업에 있어 디자이너의 입장에서 생각할 수 있습니다.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="box4">
+                            <p class="icon"><img src="image/about/stren_icon_4.png" alt=""></p>
+                            <div class="textBox">
+                                <p class="tit">꼼꼼하고 정확한 업무</p>
+                                <p class="subText">
+                                    오타 한 자, 1px의 틀어짐도 넘어가지 않는 섬세하고 꼼꼼한 성격은<br class="res_br">
+                                    업무에 있어서도 좋은 평가를 받았습니다.<br>
+                                    마감기한 엄수는 물론 검토의 검토를 거쳐 최상의 결과물을 만듭니다.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- con04 hobby -->
+        <section class="con04">
+            <div class="mark"><img src="image/about/mark_hobby.svg" alt=""></div>
+            <div class="mainTitle">
+                <div class="title animate" data-animate="motion">
+                    <p class="a en"><span class="aniWrap">HOBBIES</span></p>
+                    <p class="b en2"><span class="aniWrap">I LOVE</span></p>
+                </div>
+                <p class="sub">제 삶의 원동력이 되는 취미 3가지를 소개합니다.</p>
+            </div>
+            <!-- exhibition -->
+            <div class="exhibition">
+                <div class="subTitle">
+                    <p class="sameTitle en">VISIT THE <br><span class="en2">EXHIBITION</span></p>
+                    <p class="sameSub">20살 때 처음 전시회를 접한 후 꾸준한 취미가 되었습니다.<br>
+                        예술은 접할수록 생각하고 보는 관점이 넓어짐이 느껴져<br>
+                        사랑하는 분야입니다.</p>
+                </div>
+                <ul class="exhibitionList" style="margin-right: auto; margin-left: auto;">
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/exhibition_1.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/exhibition_2.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/exhibition_3.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/exhibition_4.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/exhibition_5.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/exhibition_6.-1.jpg" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/exhibition_7.jpg" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- drawing -->
+            <div class="drawing">
+                <div class="subTitle">
+                    <p class="sameTitle en">DRAWING</span></p>
+                    <p class="sameSub">캐릭터와 같은 귀여운 그림을 주로 그립니다.<br>
+                        어릴적부터 자연스러운 취미였던 그림그리기는<br>
+                        저와는 뗄레야 뗄 수 없는 취미입니다.
+                    </p>
+                </div>
+                <ul class="drawingList">
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/drawing_1.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/drawing_2.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/drawing_3.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/drawing_4.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/drawing_5.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- fashion -->
+            <div class="fashion" >
+                <div class="subTitle">
+                    <p class="sameTitle en2">FASHION</span></p>
+                    <p class="sameSub">트렌디한 유행과 패션아이템에 관심이 많습니다.<br>
+                        TPO에 맞춰 스타일링하는 것을 좋아하며<br>
+                        조화로운 스타일링은 저에게 자신감을 불어 넣어주기도 합니다.</p>
+                </div>
+                <ul class="fashionList">
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/fashion_1.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/fashion_2.png" alt="">
+                        </div>
+                    </li>
+                    <li >
+                        <div class="imgBox">
+                            <img src="image/about/fashion_3.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/fashion_4.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/fashion_5.png" alt="">
+                        </div>
+                    </li>
+                    <li>
+                        <div class="imgBox">
+                            <img src="image/about/fashion_6.png" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- footer -->
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

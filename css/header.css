@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* 한글폰트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+/* 영문폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Ponzu';
+    src: url(../font/ponzu-extralight.otf) format('opentype');
+}
+
+
+/* reset */
+* {margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin: 0; padding: 0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline: none;}
+a:focus {outline: none}
+img {vertical-align: middle;}
+html {font-size: 10px;}
+
+
+
+/* 폰트 */
+header .en {font-family: 'Montserrat', sans-serif; font-weight: 300;}
+header .en2 {font-family: 'Ponzu';}
+header .bold {font-weight: bold;}
+
+
+/* header */
+header {width: 100%; padding: 2.5rem 6rem; box-sizing: border-box; position: fixed;  z-index: 100; display: flex; justify-content: space-between; font-size: 1.6rem; align-items: center;  transition: all 0.4s; z-index: 100; background: rgba(16, 16, 16, 0.8); color: #fff;}
+header.active {transform: translateY(-100%);}
+
+header .innerHeader {position: relative;  display: flex; justify-content: space-between; width: 100%; margin: 0 auto; align-items: center;}
+header .innerHeader .logo {transition: all 0.5s; animation: rotate_image 6s linear infinite;transform-origin: 50% 50%; width: 3.5%;}
+header .innerHeader .logo img {width: 100%;}
+/* header.on .logo, header.on .list ul {transform: translateY(-150px); transition: all 0.5s;} */
+
+@keyframes rotate_image{
+100% {transform: rotate(360deg);}
+}
+
+header .list {display: flex; align-items: center;}
+header .list ul {display: flex; transition: all 0.5s; margin-right: 6rem;}
+header .list ul li a {display: block; margin-left: 5rem; transition: all 0.3s; height: 3.5rem; line-height: 3.5rem;}
+
+/* hover */
+header .list ul li a:hover {background: #C1FF3E; padding: 0 1.5rem; border-radius: 5rem; color: #101010; font-weight: 500; transition: all 0.3s;}
+
+
+
+
+
+/* nav .gnb */
+nav.gnb { background: rgba(181, 231, 76, 0.95); position: absolute; right: -1000px; top: 0; height: 100vh; width: 35%; padding: 10%; box-sizing: border-box; transition: all 0.7s; overflow: hidden; border-radius: 0 0 0 40px; color: #101010; display: none;}
+nav.gnb ul {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 6rem; line-height: 2; font-weight: 300;}
+nav.gnb.on {right: 0; transition: all 0.7s;}
+
+/* hover */
+nav.gnb ul li {position: relative; display: block;  line-height: 1.8;}
+nav.gnb ul li a {display: inline-block; line-height: 1.5;  transition: all 0.3s; font-size: 5.5rem; font-weight: 400;}
+nav.gnb ul li a:hover {background: #101010; color: #C1FF3E; padding: 0 10%; border-radius: 500px; transition: all 0.3s;}
+
+
+.menuOpen {position: fixed; right: 6rem; top: 5rem; z-index: 200; display: block; mix-blend-mode: difference !important;}
+.menuOpen span.a {height: 0.2rem; width: 2rem; background: #ffffff; display: block;}
+.menuOpen span.b {height: 0.2rem; width: 2rem; background: #ffffff; display: block; margin-top: 0.6rem;}
+
+
+
+
+
+/* 반응형 작은 폰트 사이즈 조절 */
+@media screen and (max-width: 1600px) {
+    html {font-size: 9.5px;}
+    .menuOpen {top: 4.7rem;}
+} 
+
+@media screen and (max-width: 1500px) {
+    html {font-size: 9px;}
+    header .innerHeader .logo {width: 6rem;}
+    .menuOpen {top: 5rem;}
+}
+
+
+
+/* menuOpen */
+/* tablet 1024px ~ 801px */ /* 900px */
+@media screen and (max-width:1024px) {
+    header {padding: 2.5rem 4rem;}
+    header .list ul li {display: none;}
+    .menuOpen {right: 4rem;}
+    .menuOpen span.a {width: 3rem;}
+    .menuOpen span.b {width: 3rem; margin-top: 1rem;}
+    nav.gnb {display: block; width: 75%;}
+}
+
+/* mobile 500px이하 */ /* 390px */
+@media screen and (max-width:500px) {
+    header {padding: 2rem 3rem;}
+    header .innerHeader .logo {width: 5rem;}
+    .menuOpen {right: 3rem; top: 3.5rem;}
+    nav.gnb {width: 100%;}
+}

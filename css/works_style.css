@@ -1,0 +1,369 @@
+@charset "utf-8";
+
+/* 한글폰트 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+/* 영문폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@font-face {
+    font-family: 'Ponzu';
+    src: url(../font/ponzu-extralight.otf) format('opentype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Ponzu';
+    src: url(../font/ponzu-thin.otf) format('opentype');
+    font-weight: 100;
+}
+
+
+
+/* reset */
+* {margin: 0; padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin: 0; padding: 0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+button:focus {outline: none;}
+a:focus {outline: none}
+img {vertical-align: middle;}
+html {font-size: 10px;}
+
+
+
+/* 폰트 */
+.en {font-family: 'Montserrat', sans-serif; font-weight: 300;}
+.en2 {font-family: 'Ponzu'; font-weight: 100;}
+.bold {font-weight: bold;}
+.gr {color: #c1ff3e;}
+
+
+
+/* 공통요소 */
+section .title {font-size: 5.2vw; text-align: center; letter-spacing: -0.5rem; font-weight: 100; border: 1px #fff solid; display: inline-block; border-radius: 500px; padding: 0 3%; box-sizing: border-box;}
+
+
+
+
+/* layout */
+body {font-family: 'Pretendard'; font-weight: 200; font-size: 1.8rem; background: #fff; width: 100%; height: 100%; line-height: 1.5; background: #101010; color: #fff;}
+.wrap {position: relative; margin: 0 auto; overflow: hidden;}
+
+
+
+/* visual */
+.visual {width: 100%; height: 100vh;}
+.visual .inner {width: 95%; margin: 0 auto; height: 100%; display: flex; flex-direction: column; justify-content: center;}
+.visual .inner h2 {font-size: 12vw; color: #c1ff3e; text-align: right; line-height: 1; transform: translateY(40%);}
+.visual .inner .text {font-size: 7.6vw; text-align: center; width: 100%; letter-spacing: -0.5rem; position: relative;}
+.visual .inner .text div {display: flex; justify-content: space-between; width: 100%; margin-bottom: -1px;}
+.visual .inner .text div p {border: 1px #fff solid; display: inline-block; border-radius: 500px; padding: 0 4%; box-sizing: border-box;}
+
+.visual .inner .text .line1 {position: absolute; left: 0; top: 0; transform-origin: left top;}
+.visual .inner .text .line2 {padding-top: 21.9rem;}
+.visual .inner .text .line1 .line1-coding {font-weight: 100; animation: visualAni  0.6s 0.1s ease-in-out forwards; opacity: 0; }
+.visual .inner .text .line2 .line2-uiux {width: 30%; font-weight: 100; animation: visualAni 0.8s 0.9s ease-in-out forwards; opacity: 0;}
+.visual .inner .text .line2 .line2-and {width: 25%; animation: visualAni 0.7s 0.3s ease-in-out forwards; opacity: 0;}
+.visual .inner .text .line2 .line2-plan {width: 50%; font-weight: 100; animation: visualAni 0.6s 0.8s ease-in-out forwards; opacity: 0;}
+
+.visual .inner .text .line3 .line3-blank {width: 12%; color: transparent; border-color: #c1ff3e; animation: visualAni 0.6s 1.2s ease-in-out forwards; opacity: 0;}
+.visual .inner .text .line3 .line3-design {width: 35%; animation: visualAni 0.8s 0.5s ease-in-out forwards; opacity: 0;}
+.visual .inner .text .line3 .line3-scroll {width: 53%; background: #c1ff3e; border-color: #c1ff3e; color: #101010; animation: visualAni 0.6s 1.3s ease-in-out forwards; opacity: 0;}
+
+
+@keyframes visualAni {
+    0% {transform: scale(0); opacity: 0;}
+    80% {transform: scale(1.1);  opacity: 1;}
+    100% {transform: scale(1);  opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* con01 coding */
+.con01 {width: 100%; padding: 30vh 0 50vh;}
+.con01 .inner {width: 88%; margin: 0 auto;}
+.con01 .inner .title { margin-bottom: 10%; opacity: 0;}
+.con01 .inner ul li {line-height: 1.2;}
+.con01 .inner ul li a {display: inline-block; font-size: 6.3vw; letter-spacing: -0.5rem; color: #b6b6b6; transition: all 0.3s ease-in-out;}
+.con01 .inner ul li a .fadeImg {position: fixed; left: 0; top: 0; width: 18%; object-fit: cover; filter: brightness(70%); opacity: 0; z-index: -1; border-radius: 1.5rem;}
+
+
+.con01 .inner ul li:nth-child(1) {text-align: right; margin-bottom: 10%; position: relative;}
+.con01 .inner ul li:nth-child(1)::before {content: 'Website Renewal'; position: absolute; right: 0.6%; top: -25%; font-family: 'Ponzu'; font-weight: 100; font-size: 2.1vw; opacity: 0.7;}
+.con01 .inner ul li:nth-child(2) {position: relative;}
+.con01 .inner ul li:nth-child(2)::before {content: 'Clone Coding'; position: absolute; left: 0.7%; top: -25%; font-family: 'Ponzu'; font-weight: 100; font-size: 2.1vw; opacity: 0.7;}
+.con01 .inner ul li:nth-child(3), .con01 .inner ul li:nth-child(4) {margin-left: 15%; width: 100%;}
+.con01 .inner ul li:nth-child(5) {line-height: 0.9; margin: 8% 0 4%;}
+.con01 .inner ul li:nth-child(6) {text-align: right;}
+.con01 .inner ul li:nth-child(7) {text-align: right; margin-right: 15%;}
+.con01 .inner ul li:nth-child(8) {text-align: right; margin-bottom: 2%; margin-right: 10.6%;}
+
+/* hover */
+.con01 .inner ul li a:hover {font-weight: 500; color: #c1ff3e; font-size: 6.7vw; transition: all 0.3s ease-in-out; font-weight: 500;}
+.con01 .inner ul li a:hover h3 {mix-blend-mode: screen;}
+
+
+
+/* animation */
+.con01 .inner ul li.ani1.motion {animation: listAni 2s;}
+.con01 .inner ul li.ani2.motion {animation: listAni 2s;}
+.con01 .inner ul li.ani3.motion {animation: listAni 2s;}
+.con01 .inner ul li.ani4.motion {animation: listAni 2s;}
+.con01 .inner ul li.ani5.motion {animation: listAni 2s;}
+.con01 .inner ul li.ani6.motion {animation: listAni 2s;}
+.con01 .inner ul li.ani7.motion {animation: listAni 2s;}
+.con01 .inner ul li.ani8.motion {animation: listAni 2s;}
+.con01 .inner ul li.ani9.motion {animation: listAni 2s;}
+.con01 .inner ul li.ani10.motion {animation: listAni 2s;}
+
+
+@keyframes listAni {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* con02 uiux */
+.con02 {width: 100%; height: auto; display: flex; justify-content: center; align-items: center;}
+.con02 .inner {width: 80%; margin: 0 auto; text-align: center;}
+.con02 .inner .title {margin-bottom: 10%; overflow: hidden;}
+
+
+
+
+.con02 .inner ul li a {display: flex;  border-bottom: rgba(193, 255, 62, 0.7) 1px solid; padding: 3%; height: 20rem; transition: all 0.4s; }
+.con02 .inner ul li:nth-child(3) a {border-bottom: none;}
+.con02 .inner ul li a .imgBox {width: 0; border-radius: 1.5rem; overflow: hidden; height: 100%;}
+.con02 .inner ul li a .imgBox img {width: 100%; height: 100%; filter: brightness(60%); transition: all 0.4s;}
+
+.con02 .inner ul li a .textBox {text-align: left; display: flex; flex-direction: column; justify-content: space-between; width: 67%; padding-left: 5%;}
+.con02 .inner ul li a .textBox .topText {font-size: 4.5vw; font-weight: 400; letter-spacing: -0.3rem; line-height: 1; text-transform: uppercase; white-space: nowrap;}
+.con02 .inner ul li a .textBox .bottomText {font-size: 1.6vw; font-weight: 400;}
+.con02 .inner ul li a .textBox .bottomText span {display: block; font-size: 1vw; color: #c2c2c2;}
+
+.con02 .inner ul li a .arrowBox {width: 7%; transition: all 0.4s; opacity: 0.7;}
+.con02 .inner ul li a .arrowBox img {width: 100%;}
+
+/* hover */
+.con02 .inner ul li a:hover {background: #000; transition: all 0.4s;}
+.con02 .inner ul li a:hover .arrowBox {transform: translateY(48%); transition: all 0.4s; opacity: 1;}
+.con02 .inner ul li a:hover .textBox .topText {color: #c1ff3e;}
+.con02 .inner ul li a:hover .imgBox img {filter: brightness(100%); transition: all 0.4s; transform: scale(1.2);}
+
+
+
+/* animation */
+.con02 .inner.motion .title .aniWrap { animation: titleAni .5s ease-in-out;}
+
+.con02 .inner.motion ul li:nth-child(1) a .imgBox {animation: imgAni 0.6s ease-in-out forwards;}
+.con02 .inner.motion ul li:nth-child(1) a .textBox {animation: textAni 0.7s ease-in-out forwards;}
+.con02 .inner.motion ul li:nth-child(1) a .textBox .topText {animation: letterAni 0.8s forwards;}
+
+.con02 .inner.motion ul li:nth-child(2) a .imgBox {animation: imgAni 0.9s ease-in-out forwards;}
+.con02 .inner.motion ul li:nth-child(2) a .textBox {animation: textAni 1.0s ease-in-out forwards;}
+.con02 .inner.motion ul li:nth-child(2) a .textBox .topText {animation: letterAni 1.1s forwards;}
+
+.con02 .inner.motion ul li:nth-child(3) a .imgBox {animation: imgAni 1.2s ease-in-out forwards;}
+.con02 .inner.motion ul li:nth-child(3) a .textBox {animation: textAni 1.3s ease-in-out forwards;}
+.con02 .inner.motion ul li:nth-child(3) a .textBox .topText {animation: letterAni 1.4s forwards;}
+
+@keyframes imgAni {
+    0% {width: 0; height: 100%;}
+    100% {width: 20%; height: 100%;}
+}
+
+@keyframes textAni {
+    0% {width: 50%;}
+    100% {width: 67%;}
+}
+
+@keyframes letterAni {
+    0% {letter-spacing: -3rem}
+    100% {letter-spacing: -0.3rem;}
+}
+
+
+
+
+
+
+/* con03 design */
+.con03 {width: 100%; height: 100vh; margin-top: 30vh;}
+.con03 .inner {width: 75%; margin: 0 auto; display: flex; justify-content: space-between;}
+.con03 .inner .tit {margin-top: 20vh; }
+.con03 .inner .tit p {overflow: hidden;}
+.con03 .inner .tit p:nth-child(1) {border: none;}
+.con03 .inner .tit p:nth-child(2) {margin-left: 20%;}
+
+.con03 .inner ul {width: 37%; padding: 10% 0 20%;}
+.con03 .inner ul li {margin-bottom: 35%;  position: relative;}
+.con03 .inner ul li a .imgBox {width: 100%; border-radius: 1.5rem; overflow: hidden; margin-bottom: 5%;}
+.con03 .inner ul li a .imgBox img {width: 100%; transition: all 0.4s; filter: brightness(70%);}
+
+.con03 .inner ul li a .textBox {padding: 3%; box-sizing: border-box;}
+.con03 .inner ul li a .textBox .mainText {font-size: 2.5rem; font-weight: 500; text-transform: uppercase; margin-bottom: 2%;}
+.con03 .inner ul li a .textBox .subText {font-size: 2rem; font-weight: 100; color: #c2c2c2;}
+
+.con03 .inner ul li a .arrowBox {width: 10%; margin-top: 1%; position: absolute; right: 3%;}
+.con03 .inner ul li a .arrowBox img {width: 100%; }
+
+/* hover */
+.con03 .inner ul li::before {content: ''; position: absolute; top: 20%; left: 0; width: 100%; height: 50%; background: rgba(256, 256, 256, 0.07); z-index: -1; border-radius: 0 0 1.5rem 1.5rem; transition: all 0.4s;}
+.con03 .inner ul li:hover::before {top: 60%; transition: all 0.4s;}
+.con03 .inner ul li:hover a .imgBox img {transform: scale(1.1); transition: all 0.4s; filter: brightness(100%);}
+
+
+/* aniamation */
+.con03.motion .inner .tit p:nth-child(1) .aniWrap {animation: titleAni 1s ; display: inline-block;  transform: translateY(100%); animation-fill-mode: forwards;}
+.con03.motion .inner .tit p:nth-child(2) .aniWrap {animation: titleAni 1s 0.2s; display: inline-block;  transform: translateY(100%); animation-fill-mode: forwards;}
+
+@keyframes titleAni {
+    0% {opacity: 0; transform: translateY(100%);}
+    100% {opacity: 1; transform: translateY(0); transform-origin: top;}
+}
+
+
+
+
+
+
+
+/* 반응형 작은 폰트 사이즈 조절 */
+@media screen and (max-width: 1600px) {html {font-size: 9.5px;}} 
+@media screen and (max-width: 1500px) {html {font-size: 9px;}} 
+@media screen and (max-width: 1400px) {html {font-size: 8.5px;}} 
+@media screen and (max-width: 1200px) {html {font-size: 8px;}} 
+
+
+
+/* responsiveWeb */
+/* pc 1650px ~ 1301px */ /* 1460px */
+@media screen and (max-width:1650px) {
+    .visual .inner h2 {transform: translateY(0);}
+    .visual .inner .text .line2 {padding-top: 18.6rem;}
+
+    .con01 {padding: 10% 0;}
+
+    .con03 .res_br {display: none;}
+}
+
+
+/* tablet 1300px ~ 1025px */ /* 1100px */
+@media screen and (max-width:1300px) {
+    section .title {font-size: 8rem;}
+    .visual .inner .text .line2 {padding-top: 14rem; width: 100%;}
+    .con01 {padding: 0 0 30%;}
+
+    .con02 .inner {width: 90%;}
+    .con02 .inner ul li a .imgBox {width: auto;}
+    .con02 .inner.motion ul li:nth-child(1) a .imgBox {animation: none;}
+    .con02 .inner.motion ul li:nth-child(2) a .imgBox {animation: none;}
+    .con02 .inner.motion ul li:nth-child(3) a .imgBox {animation: none;}
+    .con02 .inner ul li a .textBox .bottomText {font-size: 3rem;}
+    .con02 .inner ul li a .textBox .bottomText span {font-size: 2rem;}
+
+    .con03 {height: auto;}
+    .con03 .inner {width: 80%;}
+    .con03 .inner ul {width: 47%;}
+}
+
+
+/* tablet 1024px ~ 801px */ /* 900px */
+@media screen and (max-width:1024px) {
+    .visual .inner {width: 90%;}
+    .visual .inner h2 {font-size: 15vw; margin-bottom: 5%;}
+    .visual .inner .text {font-size: 8.6vw;}
+    .visual .inner .text div {flex-direction: column;}
+    .visual .inner .text .line1 {width: 40%; position: initial;}
+    .visual .inner .text .line2 {padding-top: 0;}
+    .visual .inner .text .line3 .line3-blank {display: none;}
+
+    .con01 .inner .title {opacity: 1;}
+
+    .con02 .inner ul li a {height: 16rem;}
+
+    .con03 {margin-bottom: 30%;}
+    .con03 .inner {display: block;}
+    .con03 .inner .tit {margin: 20% 0 15%; width: 70%;}
+    .con03 .inner ul {padding: 0; width: 60%; margin-left: auto;}
+    .con03 .inner ul li:nth-child(3) {margin-bottom: 0;}
+}
+
+
+/* mobile 800px ~ 501px */ /* 600px */
+@media screen and (max-width:800px) {
+    section .title {font-size: 8rem; padding: 0 6%;}
+    .visual .inner h2 {font-size: 13rem; margin-bottom: 9%;}
+    .visual .inner .text {font-size: 8rem;}
+    .visual .inner .text .line1 {width: 55%;}
+    .visual .inner .text .line2 .line2-uiux {width: 43%;}
+    .visual .inner .text .line2 .line2-and {width: 38%;}
+    .visual .inner .text .line2 .line2-plan {width: 68%;}
+    .visual .inner .text .line3 .line3-design {width: 56%;}
+    .visual .inner .text .line3 .line3-scroll {width: 80%;}
+
+    .con01 .inner ul li a {font-size: 6.2rem;}
+    .con01 .inner ul li a:hover {font-size: 6.8rem;}
+    .con01 .inner ul li:nth-child(1)::before {font-size: 2.8rem; top: -45%;}
+    .con01 .inner ul li:nth-child(2)::before {font-size: 2.8rem; top: -45%;}
+    .con01 .inner ul li:nth-child(1) {margin-bottom: 25%;}
+    .con01 .inner ul li:nth-child(5) {margin: 14% 0 12%;}
+    .con01 .inner ul li:nth-child(8) {margin-bottom: 12%;}
+
+    .con02 .inner .title {font-size: 6rem;}
+    .con02 .inner ul li {margin-bottom: 10%;}
+    .con02 .inner ul li:nth-child(3) {margin-bottom: 0%;}
+    .con02 .inner ul li a {display: block; height: auto; position: relative;}
+    .con02 .inner ul li a .textBox {width: 100%; padding: 6% 2%; animation: none;}
+    .con02 .inner ul li a .textBox .topText {font-size: 5rem; margin-bottom: 5%; }
+    .con02 .inner.motion ul li:nth-child(1) a .textBox .topText {animation: none;}
+    .con02 .inner.motion ul li:nth-child(2) a .textBox .topText {animation: none;}
+    .con02 .inner.motion ul li:nth-child(3) a .textBox .topText {animation: none;}
+    .con02 .inner ul li a .arrowBox {position: absolute; right: 4%; bottom: 8%; width: 10%;}
+
+    .con03 {margin-top: 25%;}
+    .con03 .inner ul {width: 100%;}
+}
+
+
+
+/* mobile 500px이하 */ /* 390px */
+@media screen and (max-width:500px){
+    section .title {font-size: 4rem;}
+    .visual .inner h2 {font-size: 9rem;}
+    .visual .inner .text {font-size: 6rem;}
+    
+    .con01 .inner .title {margin-bottom: 30%;}
+    .con01 .inner ul li a {font-size: 5rem;}
+    .con01 .inner ul li a:hover {font-size: 5.6rem;}
+    .con01 .inner ul li:nth-child(1) a, .con01 .inner ul li:nth-child(4) a {line-height: 1;}
+    .con01 .inner ul li:nth-child(5) {margin: 17% 0 15%;}
+
+    .con02 .inner .title {font-size: 4rem;}
+    .con02 .inner ul li a .textBox .topText {font-size: 3.6rem; letter-spacing: 0; margin-bottom: 8%;}
+    .con02 .inner ul li a .textBox .bottomText {font-size: 2.5rem; white-space: nowrap;}
+    .con02 .inner ul li a .textBox .bottomText span {font-size: 1.6rem;}
+}
